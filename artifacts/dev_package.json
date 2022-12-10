@@ -108,6 +108,11 @@
 			"description": null
 		},
 		{
+			"id": "b83b1723-a53e-497c-99f1-58f5adf71975",
+			"name": "ReceiversReset",
+			"description": null
+		},
+		{
 			"id": "796a0aa9-8c84-4bda-b288-d097baf8f925",
 			"name": "SurveySave",
 			"description": null

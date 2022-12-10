@@ -272,6 +272,20 @@
 			"endpoints": [],
 			"serverScript": "3f0d0006-2fdd-47d6-9329-09073b876caf",
 			"tags": "Receivers"
+		},
+		{
+			"id": "5f9d289c-7bf0-4a47-9193-01526565f45d",
+			"method": "GET",
+			"path": "/receiverreset",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "b83b1723-a53e-497c-99f1-58f5adf71975",
+			"tags": "Receivers"
 		}
 	],
 	"definitions": [
@@ -1186,7 +1200,7 @@
 	"documentation": [],
 	"name": "SurveyClient",
 	"endpoint": "/api/serverscript/surveyclient",
-	"ver": "22.12.9.158",
+	"ver": "22.12.10.837",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,

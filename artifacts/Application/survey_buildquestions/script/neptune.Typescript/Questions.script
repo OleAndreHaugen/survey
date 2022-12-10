@@ -27,6 +27,7 @@ namespace QuestionBuilder {
             ...(definition.enableLongAnswer && {
                 type: "TextArea",
                 height: "120px",
+                margin: "MarginBottom3",
             }),
         };
         parent.addItem(new nep.bootstrap.Input(options));
@@ -158,7 +159,13 @@ namespace QuestionBuilder {
         definition: QuestionDefinition,
         modelResponseData: sap.ui.model.json.JSONModel
     ) {
-        const colProp = { width: "100px", hAlign: "Center" };
+        const colProp = {
+            width: "100px",
+            hAlign: "Center",
+            demandPopin: true,
+            popinDisplay: "Block",
+            minScreenWidth: "Large",
+        };
 
         const tabLikert = new sap.m.Table(undefined, {
             alternateRowColors: true,

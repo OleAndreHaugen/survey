@@ -280,6 +280,19 @@ const formBuilder = {
         });
     },
 
+    resetReceivers: function (id) {
+        apiReceiversReset({
+            parameters: {
+                id: id,
+            },
+        }).then(function (res) {
+            tabReceivers.removeSelections();
+            ModelData.UpdateField(modelSurveyMaster.oData.receivers, "id", id, "status", true);
+            modelSurveyMaster.refresh();
+            formBuilder.dataSaved = modelSurveyMaster.getJSON();
+        });
+    },
+
     sendEmails: function (emails) {
         const emailList = emails.map((receiver) => {
             return {

@@ -5,7 +5,6 @@ const survey = await entities.survey_master.findOne(req.body.surveyid);
 const receiver = await entities.survey_receivers.findOne({
     surveyid: req.body.surveyid,
     id: req.body.link,
-    // status: Not("4")
 });
 
 

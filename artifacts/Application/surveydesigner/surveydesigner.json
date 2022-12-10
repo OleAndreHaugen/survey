@@ -12402,6 +12402,18 @@
 																							"data": []
 																						},
 																						{
+																							"fieldNo": "4afad93b-7255-4cbf-b4d2-79f366f6d98e",
+																							"fieldName": "oToolbarSeparator",
+																							"fieldParent": "ce9426f4-e857-467f-b389-f12b439b9596",
+																							"fieldType": "sap.m.ToolbarSeparator",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [],
+																							"data": []
+																						},
+																						{
 																							"fieldNo": "dc18956b-ed7d-496b-be67-5609d9dc73a0",
 																							"fieldName": "toolReceiversSend",
 																							"fieldParent": "ce9426f4-e857-467f-b389-f12b439b9596",
@@ -12441,6 +12453,60 @@
 																									"translation": []
 																								}
 																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "66a26d5f-5441-47b1-bd61-36165dde5a4e",
+																							"fieldName": "toolReceiversReset",
+																							"fieldParent": "ce9426f4-e857-467f-b389-f12b439b9596",
+																							"fieldType": "sap.m.Button",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "type",
+																									"grouping": "Properties",
+																									"value": "Emphasized",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Reset",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "enabled",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "press",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Button/toolReceiversReset/press.script",
+																									"language": "javascript",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "7fac4bcb-2b53-4f28-ef30-5d263ceaa6ef",
+																							"fieldName": "oToolbarSeparator1",
+																							"fieldParent": "ce9426f4-e857-467f-b389-f12b439b9596",
+																							"fieldType": "sap.m.ToolbarSeparator",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [],
 																							"data": []
 																						},
 																						{
@@ -13387,6 +13453,20 @@
 									"customComponent": false,
 									"restSource": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
 									"restOperation": "35285020-fb0f-44a7-d43a-7525c65916ea",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								},
+								{
+									"fieldNo": "1f9c9944-46b3-437f-e832-35b81dd9e527",
+									"fieldName": "ReceiversReset",
+									"fieldParent": "e71ae047-1391-4de9-892f-33df39546183",
+									"fieldType": "neptune.restapi",
+									"script": "",
+									"customComponent": false,
+									"restSource": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
+									"restOperation": "5f9d289c-7bf0-4a47-9193-01526565f45d",
 									"request": [],
 									"response": [],
 									"attributes": [],
@@ -15200,7 +15280,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.10.814",
+	"ver": "22.12.10.846",
 	"application": "surveydesigner",
 	"title": "Neptune Survey",
 	"description": "Neptune Survey",
@@ -15240,7 +15320,7 @@
 		{
 			"id": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
 			"name": "SurveyClient",
-			"ver": "22.12.9.158"
+			"ver": "22.12.10.837"
 		}
 	],
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1"

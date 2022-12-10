@@ -205,7 +205,7 @@ function validateResponses(
             ? "Please provide answers to all questions marked as required before submitting."
             : "";
         const multiChoiceValidationText = !multiChoiceValidationPassed
-            ? "Some multiple choice questions are incomplete; please complete them before submitting."
+            ? "Some multiple choice questions are incomplete."
             : "";
         const compositeValText = [multiChoiceValidationText, reqValidationText]
             .filter((text) => !!text)

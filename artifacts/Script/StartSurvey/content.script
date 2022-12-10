@@ -10,6 +10,7 @@ if (!survey) {
 const receiver = await entities.survey_receivers.findOne({
     surveyid: req.query.surveyid,
     id: req.query.link,
+    status: Not("4")
 });
 
 const form = await entities.survey_form.findOne(survey.formid);

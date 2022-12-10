@@ -1,6 +1,6 @@
 {
-	"id": "df5f4548-0ed7-4460-8d01-33de96ddc525",
-	"createdAt": "2022-12-09T06:25:28.000Z",
+	"id": "b83b1723-a53e-497c-99f1-58f5adf71975",
+	"createdAt": "2022-12-10T07:35:43.000Z",
 	"createdBy": "ole-andre.haugen@neptune-software.com",
 	"globalScripts": [],
 	"externalModules": [],
@@ -9,21 +9,11 @@
 			"id": "5bb63faf-2758-4243-b3ac-b6f91cfe876b",
 			"name": "survey_receivers",
 			"contextname": "survey_receivers"
-		},
-		{
-			"id": "3ab06987-3697-4f9a-9054-94530aace00f",
-			"name": "survey_response",
-			"contextname": "survey_response"
-		},
-		{
-			"id": "d3bbb57a-95de-49e5-967b-e6968bee87ff",
-			"name": "survey_master",
-			"contextname": "survey_master"
 		}
 	],
 	"apis": [],
-	"name": "SubmitSurvey",
-	"ver": "22.12.10.832",
+	"name": "ReceiversReset",
+	"ver": "22.12.10.842",
 	"description": null,
 	"content": "file:///content.script",
 	"useAsGlobalScript": false,
