@@ -18,7 +18,7 @@
 	],
 	"apis": [],
 	"name": "ReceiversSendMail",
-	"ver": "22.12.10.1240",
+	"ver": "22.12.10.1331",
 	"description": null,
 	"content": "file:///content.script",
 	"useAsGlobalScript": false,

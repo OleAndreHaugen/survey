@@ -21,13 +21,13 @@ namespace QuestionBuilder {
         const options = {
             border: "Border0",
             formLayout: "Floating",
+            margin: "MarginBottom2",
             label: "Enter your answer",
             value: "{ResponseData>/response/" + definition.id + "}",
             backgroundColor: getTheme() === "sap_horizon" ? "Light" : "",
             ...(definition.enableLongAnswer && {
                 type: "TextArea",
-                height: "120px",
-                margin: "MarginBottom3",
+                height: "120px",                
             }),
         };
         parent.addItem(new nep.bootstrap.Input(options));

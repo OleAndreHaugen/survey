@@ -12,7 +12,7 @@ const survey = await entities.survey_master.findOne({ id: req.body.surveyid });
 
 receivers.forEach(async function (receiver) {
 
-    const link = `${req.body.hosname}/public/app/surveysubmit?surveyid=${survey.id}&link=${receiver.id}`;
+    const link = `${req.body.hostname}/public/app/surveysubmit?surveyid=${survey.id}&link=${receiver.id}`;
 
     let primitives = {
         surveyName: survey.name,

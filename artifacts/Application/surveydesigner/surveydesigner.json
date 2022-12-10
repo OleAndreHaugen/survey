@@ -12299,7 +12299,6 @@
 																									"grouping": "Events",
 																									"value": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
 																									"script": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
-																									"language": "javascript",
 																									"translation": []
 																								}
 																							],
@@ -13134,7 +13133,6 @@
 																									"grouping": "Events",
 																									"value": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
 																									"script": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
-																									"language": "javascript",
 																									"translation": []
 																								}
 																							],
@@ -15327,7 +15325,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.10.1318",
+	"ver": "22.12.10.1333",
 	"application": "surveydesigner",
 	"title": "Neptune Survey",
 	"description": "Neptune Survey",

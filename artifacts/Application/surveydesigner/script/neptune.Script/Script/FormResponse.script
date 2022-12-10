@@ -293,7 +293,7 @@ const formResponse = {
 
         // Default Settings
         if (!modelpanResponse.oData["chartType" + question.id]) {
-            modelpanResponse.oData["chartType" + question.id] = "column";
+            modelpanResponse.oData["chartType" + question.id] = "bar";
         }
 
         const chartparent = new sap.m.Panel({ height: "500px" });
