@@ -1,0 +1,39 @@
+const { Not } = operators;
+
+const survey = await entities.survey_master.findOne(req.body.surveyid);
+
+const receiver = await entities.survey_receivers.findOne({
+    surveyid: req.body.surveyid,
+    id: req.body.link,
+    // status: Not("4")
+});
+
+
+if (survey && receiver) {
+
+    // Receiver Status
+    receiver.status = "4";
+    await entities.survey_receivers.save(receiver);
+
+    await entities.survey_response.save({
+        surveyid: req.body.surveyid,
+        response: req.body.response,
+        groupid: receiver.groupid
+    });
+
+    result.data = {
+        status: "OK"
+    };
+
+} else {
+
+    result.data = {
+        status: "ERROR",
+        message: "Survey or Receiver is not Active",
+        survey,
+        receiver
+    };
+
+}
+
+complete();

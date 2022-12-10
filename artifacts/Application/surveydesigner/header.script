@@ -1,0 +1,4 @@
+<link rel="stylesheet" href="/public/css/neptune.css" type="text/css" charset="utf-8">
+<script type="text/javascript" src="/public/highsuite/themes/dark-unica.js"></script>
+<script type="text/javascript" src="/public/highsuite/modules/treemap.js"></script>
+<script type="text/javascript" src="/public/highsuite/modules/heatmap.js"></script>

@@ -1,0 +1,48 @@
+{
+	"id": "2c0c7e7e-337e-4bae-b0a2-32166e1f2aee",
+	"createdAt": "2022-12-09T06:20:43.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [
+		{
+			"id": "80525ecb-f0e9-4115-a2b0-a2441eeca5b6",
+			"name": "typeorm",
+			"contextname": "typeorm",
+			"path": "C:\\Planet9\\customnpm/node_modules/typeorm"
+		}
+	],
+	"entitySets": [
+		{
+			"id": "e7b354dd-f2ba-4f33-bd28-e8873b2cb895",
+			"name": "survey_form",
+			"contextname": "survey_form"
+		},
+		{
+			"id": "2e6fc249-1913-409d-bd24-92dd79a20dcd",
+			"name": "survey_groups",
+			"contextname": "survey_groups"
+		},
+		{
+			"id": "d3bbb57a-95de-49e5-967b-e6968bee87ff",
+			"name": "survey_master",
+			"contextname": "survey_master"
+		},
+		{
+			"id": "ad946778-fcf8-4c3d-93e2-7b2982069e92",
+			"name": "survey_status",
+			"contextname": "survey_status"
+		}
+	],
+	"apis": [],
+	"name": "MasterData",
+	"ver": "22.12.9.1415",
+	"description": null,
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "28f52a8c-9bcc-46ba-be8a-3527792f199a",
+	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1"
+}

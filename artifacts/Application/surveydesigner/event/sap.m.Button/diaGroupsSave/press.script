@@ -1,0 +1,6 @@
+apiGroupSave({
+    data: modeldiaGroups.oData,
+});
+
+diaGroups.close();
+apiMaster();

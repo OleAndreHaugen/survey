@@ -1,0 +1,6 @@
+await entities.survey_form.delete(req.query.id);
+result.data = {
+    status: "OK",
+    message: "Form Deleted"
+};
+complete();

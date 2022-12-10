@@ -1,0 +1,4 @@
+const selectedItems = tabReceivers.getSelectedItems();
+
+toolReceiversSend.setEnabled(selectedItems.length > 0);
+toolReceiversDelete.setEnabled(selectedItems.length > 0);

@@ -1,0 +1,15 @@
+const context = oEvent.oSource.getBindingContext("MasterData");
+const data = context.getObject();
+
+modelSurveyMaster.setData({
+    name: "",
+    description: "",
+    formid: data.id,
+    distribution: {
+        emailTemplate: null,
+        anonymous: true
+    },
+});
+
+formBuilder.dataSaved = modelSurveyMaster.getJSON();
+oApp.to(pageSurveyDetail);

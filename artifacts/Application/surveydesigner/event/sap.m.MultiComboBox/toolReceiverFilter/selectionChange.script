@@ -1,0 +1,13 @@
+const selectedItems = toolReceiverFilter.getSelectedItems();
+
+const filterItems = [];
+
+if (selectedItems) {
+    selectedItems.forEach(item => {
+        const context = item.getBindingContext("MasterData");
+        const data = context.getObject();
+        filterItems.push(data)
+    })
+}
+
+formBuilder.filterStatus(filterItems);

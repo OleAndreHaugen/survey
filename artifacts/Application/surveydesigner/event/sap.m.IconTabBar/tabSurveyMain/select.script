@@ -1,0 +1,11 @@
+const selected = oEvent.getParameter("selectedKey");
+
+if (selected == "preview") {
+    const formData = ModelData.FindFirst(
+        modelMasterData.oData.form,
+        "id",
+        modelSurveyMaster.oData.survey.formid
+    );
+
+    buildForm(panPreviewSurvey, formData, "preview", modelResponseData, null); //modelSurveyMaster.oData.responses);
+}
