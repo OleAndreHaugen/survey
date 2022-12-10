@@ -21,6 +21,12 @@
 			"application": "surveydesigner",
 			"title": "Neptune Survey",
 			"description": "Neptune Survey"
+		},
+		{
+			"id": "37aaeb45-bcc3-4fef-b167-fcdf4961cd04",
+			"application": "surveysubmit",
+			"title": "Neptune Survey",
+			"description": "Neptune Survey"
 		}
 	],
 	"api": [
