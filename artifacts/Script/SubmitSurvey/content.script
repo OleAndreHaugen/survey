@@ -14,11 +14,17 @@ if (survey && receiver) {
     receiver.status = "4";
     await entities.survey_receivers.save(receiver);
 
-    await entities.survey_response.save({
+    let response = {
         surveyid: req.body.surveyid,
         response: req.body.response,
         groupid: receiver.groupid
-    });
+    }
+
+    if (!survey.distribution.anonymous) {
+        response.email = receiver.email;
+    }
+
+    await entities.survey_response.save(response);
 
     result.data = {
         status: "OK"

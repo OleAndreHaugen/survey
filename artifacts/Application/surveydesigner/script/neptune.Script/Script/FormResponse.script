@@ -1,6 +1,8 @@
 const formResponse = {
     response: null,
+    anonymous: null,
     build: function (responses) {
+        formResponse.anonymous = modelSurveyMaster.oData.survey.distribution.anonymous;
         formResponse.response = {};
 
         tabSurveyResponse.setCount(responses.length);
@@ -8,8 +10,6 @@ const formResponse = {
         responses.forEach(function (response) {
             formResponse.flatten(response);
         });
-
-        console.log(formResponse.response);
 
         formResponse.buildReport();
     },
@@ -213,7 +213,7 @@ const formResponse = {
             itemValues.push(parseFloat((totValue / groupData.responseCount).toFixed(2)));
 
             let seriesData = {
-                name: group.name,
+                name: group.name || "No Group",
                 data: itemValues,
                 borderWidth: 0,
             };
@@ -222,7 +222,7 @@ const formResponse = {
                 seriesData.pointPlacement = "on";
             }
 
-            if (group.setup.color) seriesData.color = group.setup.color;
+            if (group && group.setup && group.setup.color) seriesData.color = group.setup.color;
 
             series.push(seriesData);
         });
@@ -258,7 +258,7 @@ const formResponse = {
             let data = [];
 
             let seriesData = {
-                name: group.name,
+                name: group.name || "No Group",
                 borderWidth: 0,
             };
 
@@ -272,7 +272,7 @@ const formResponse = {
                 seriesData.pointPlacement = "on";
             }
 
-            if (group.setup.color) seriesData.color = group.setup.color;
+            if (group && group.setup && group.setup.color) seriesData.color = group.setup.color;
 
             series.push(seriesData);
         });
@@ -323,7 +323,7 @@ const formResponse = {
             });
 
             let seriesData = {
-                name: group.name,
+                name: group.name || "No Group",
                 data: itemValues,
                 borderWidth: 0,
             };
@@ -332,7 +332,7 @@ const formResponse = {
                 seriesData.pointPlacement = "on";
             }
 
-            if (group.setup.color) seriesData.color = group.setup.color;
+            if (group && group.setup && group.setup.color) seriesData.color = group.setup.color;
 
             series.push(seriesData);
         });
@@ -388,10 +388,22 @@ const formResponse = {
             growingThreshold: 10,
         });
 
+        const columnText = new sap.m.ColumnListItem();
+
         tableText.addColumn(new sap.m.Column());
         tableText.addColumn(new sap.m.Column());
 
-        const columnText = new sap.m.ColumnListItem();
+        if (!formResponse.anonymous) {
+            tableText.addColumn(new sap.m.Column());
+
+            columnText.addCell(
+                new nep.bootstrap.Text({
+                    text: "{email}",
+                    fontSize: "FontSize6",
+                    textColor: "Muted",
+                })
+            );
+        }
 
         columnText.addCell(
             new nep.bootstrap.Text({
@@ -426,8 +438,17 @@ const formResponse = {
             const groupData = response.group[keyGroup];
             const group = ModelData.FindFirst(modelMasterData.oData.groups, "id", keyGroup);
 
-            groupData.answer.forEach(function (answer) {
-                answers.push({ text: answer, group: group.name });
+            groupData.answer.forEach(function (answer, index) {
+                let newRec = {
+                    text: answer,
+                    group: group.name,
+                };
+
+                if (!formResponse.anonymous) {
+                    newRec.email = groupData.items[index];
+                }
+
+                answers.push(newRec);
             });
         });
 
@@ -561,6 +582,9 @@ const formResponse = {
                         formResponse.response[question.id].group[response.groupid].responseCount++;
                         formResponse.response[question.id].group[response.groupid].answer.push(
                             resData
+                        );
+                        formResponse.response[question.id].group[response.groupid].items.push(
+                            response.email
                         );
                     }
                     break;

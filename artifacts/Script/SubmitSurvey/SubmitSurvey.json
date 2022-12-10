@@ -23,7 +23,7 @@
 	],
 	"apis": [],
 	"name": "SubmitSurvey",
-	"ver": "22.12.10.832",
+	"ver": "22.12.10.1247",
 	"description": null,
 	"content": "file:///content.script",
 	"useAsGlobalScript": false,

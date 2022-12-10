@@ -240,7 +240,7 @@ const formBuilder = {
                 if (group) {
                     return { key: group.name, text: group.name };
                 } else {
-                    return { key: "Not Found", text: "Not Found" };
+                    return { key: "No Group", text: "No Group" };
                 }
             });
             const oSorter2 = new sap.ui.model.Sorter("email", false, false);
@@ -297,7 +297,7 @@ const formBuilder = {
         const emailList = emails.map((receiver) => {
             return {
                 id: receiver.id,
-                link: `${location.host}/public/app/surveysubmit?surveyid=${receiver.surveyid}&link=${receiver.id}`,
+                // link: `${location.host}/public/app/surveysubmit?surveyid=${receiver.surveyid}&link=${receiver.id}`,
             };
         });
 
@@ -306,14 +306,12 @@ const formBuilder = {
         if (selectedEmailTemplate !== "") {
             apiReceiversSend({
                 data: {
+                    hostname: location.origin,
                     surveyid: modelSurveyMaster.oData.survey.id,
-                    formName: modelSurveyMaster.oData.survey.name,
-                    formDescription: modelSurveyMaster.oData.survey.description,
-                    templateId: selectedEmailTemplate,
                     receivers: emailList,
                 },
             }).then(function (data) {
-                toolReceiversupdate.firePress();
+                toolReceiversUpdate.firePress();
                 sap.m.MessageToast.show("Invites sent successfully!");
             });
         } else {
@@ -329,13 +327,25 @@ const formBuilder = {
             );
         }
     },
-    filterStatus: function (selectedItems) {
+    filterStatus: function () {
+        const selectedItems = toolReceiverFilter.getSelectedItems();
+        const filterItems = [];
+
+        if (selectedItems) {
+            selectedItems.forEach((item) => {
+                const context = item.getBindingContext("MasterData");
+                const data = context.getObject();
+                filterItems.push(data);
+            });
+        }
+
         const statusFilter = [];
-        selectedItems.forEach((item) => {
+        filterItems.forEach((item) => {
             statusFilter.push(new sap.ui.model.Filter("status", "EQ", item.status));
         });
 
         const binding = tabReceivers.getBinding("items");
+        
         if (statusFilter.length) {
             binding.filter(new sap.ui.model.Filter(statusFilter, false));
         } else {

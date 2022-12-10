@@ -9,11 +9,16 @@
 			"id": "5bb63faf-2758-4243-b3ac-b6f91cfe876b",
 			"name": "survey_receivers",
 			"contextname": "survey_receivers"
+		},
+		{
+			"id": "d3bbb57a-95de-49e5-967b-e6968bee87ff",
+			"name": "survey_master",
+			"contextname": "survey_master"
 		}
 	],
 	"apis": [],
 	"name": "ReceiversSendMail",
-	"ver": "22.12.10.1014",
+	"ver": "22.12.10.1240",
 	"description": null,
 	"content": "file:///content.script",
 	"useAsGlobalScript": false,
