@@ -14911,6 +14911,13 @@
 											"translation": []
 										},
 										{
+											"attribute": "responsive",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
 											"attribute": "icon",
 											"grouping": "Properties",
 											"value": "sap-icon://email",
@@ -15287,7 +15294,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.10.911",
+	"ver": "22.12.10.934",
 	"application": "surveydesigner",
 	"title": "Neptune Survey",
 	"description": "Neptune Survey",

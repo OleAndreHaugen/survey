@@ -127,8 +127,8 @@ const formBuilder = {
     },
 
     copy: function () {
-        delete modelSurveyData.oData.id;
-        modelSurveyData.oData.name = modelSurveyData.oData.name + " (COPY)";
+        delete modelSurveyData.oData.survey.id;
+        modelSurveyData.oData.survey.name = modelSurveyData.oData.name + " (COPY)";
         formBuilder.save();
     },
 
