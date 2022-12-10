@@ -18,55 +18,68 @@ function getTheme() {
 }
 
 const validateMultipleChoice = (validationType, validationParam, response) => {
-    const checkedBoxes = Object.values(response).reduce(
-        (prev: number, curr) => prev + Number(curr),
-        0
-    );
-    if (!validationParam && !validationType) {
-        return { valid: true, checkedBoxes };
+    let valid = false;
+
+    if (validationType === "noLimit") {
+        return { valid: true };
     }
 
-    const valLogic = {
-        equalTo: (valParam, checked) => +valParam === checked,
-        atMost: (valParam, checked) => +valParam >= checked,
-        atLeast: (valParam, checked) => +valParam <= checked,
-    };
+    if (!response) {
+        return { valid: false };
+    }
 
-    const output = {
-        valid: valLogic[validationType](validationParam, checkedBoxes),
-        checkedBoxes,
-    };
-    return output;
-};
+    const selections = Object.keys(response);
 
-const genRelevantResponse = (arr, id) => {
-    const relevantResponse = { ...arr };
-    Object.keys(relevantResponse).map((key) => {
-        if (key.split("_")[0] !== id) {
-            delete relevantResponse[key];
-        }
-    });
-    return relevantResponse;
+    switch (validationType) {
+        case "equalTo":
+            if (selections.length === parseInt(validationParam)) {
+                valid = true;
+            } else {
+                valid = false;
+            }
+            break;
+
+        case "atMost":
+            if (selections.length <= parseInt(validationParam)) {
+                valid = true;
+            } else {
+                valid = false;
+            }
+            break;
+
+        case "atLeast":
+            if (selections.length >= parseInt(validationParam)) {
+                valid = true;
+            } else {
+                valid = false;
+            }
+            break;
+
+        default:
+            break;
+    }
+
+    return { valid: valid };
 };
 
 function debounce(func, wait, immediate) {
-  var timeout;
+    var timeout;
 
-  return function executedFunction() {
-    var context = this;
-    var args = arguments;
+    return function executedFunction() {
+        var context = this;
+        var args = arguments;
 
-    var later = function() {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+
+        var callNow = immediate && !timeout;
+
+        clearTimeout(timeout);
+
+        timeout = setTimeout(later, wait);
+
+        if (callNow) func.apply(context, args);
     };
-
-    var callNow = immediate && !timeout;
-
-    clearTimeout(timeout);
-
-    timeout = setTimeout(later, wait);
-
-    if (callNow) func.apply(context, args);
-  };
-};
+}

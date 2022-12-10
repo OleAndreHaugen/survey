@@ -83,18 +83,18 @@ namespace QuestionBuilder {
 
     export function SingleChoice(
         parent: ItemController,
-        definition: QuestionDefinition,
+        question: QuestionDefinition,
         modelResponseData: sap.ui.model.json.JSONModel
     ) {
-        definition.items.forEach((option) => {
+        question.items.forEach((item) => {
             parent.addItem(
                 new sap.m.RadioButton(undefined, {
-                    text: option.title,
+                    text: item.title,
                     //@ts-ignore
-                    selected: `{'ResponseData>/response/${definition.id}'}`,
-                    groupName: definition.id,
+                    selected: `{'ResponseData>/response/${question.id}'}`,
+                    groupName: question.id,
                     select: function (oEvent) {
-                        modelResponseData.getData().response[definition.id] = option.value;
+                        modelResponseData.getData().response[question.id] = item.id;
                     },
                 })
             );
@@ -103,10 +103,10 @@ namespace QuestionBuilder {
 
     export function MultipleChoice(
         parent: ItemController,
-        definition: QuestionDefinition,
+        question: QuestionDefinition,
         modelResponseData: sap.ui.model.json.JSONModel
     ) {
-        const { validationType, validationParam } = definition;
+        const { validationType, validationParam } = question;
         const textVersion = {
             noLimit: "Please select all that apply",
             atLeast: "Please select at least",
@@ -120,40 +120,20 @@ namespace QuestionBuilder {
         //@ts-ignore
         parent.addItem(new sap.m.Label({ text: labelText }));
 
-        definition.items.forEach((item, index) => {
+        question.items.forEach((item, index) => {
             parent.addItem(
                 new sap.m.CheckBox(undefined, {
                     text: item.title,
                     //@ts-ignore
-                    selected: `{ResponseData>/response/${definition.id}/${item.id}}`,
                     select: function (oEvent) {
-                        const { response } = modelResponseData.getData();
-                        response[`${definition.id}/${item.id}`] = this.getSelected();
-                        const boxes = this.getParent()
-                            .getItems()
-                            .filter((item) =>
-                                ["sap.m.CheckBox"].includes(item.getMetadata().getElementName())
-                            );
-                        const relevantResponse = genRelevantResponse(response, item.id); // TODO
-                        const { valid, checkedBoxes } = validateMultipleChoice(
-                            validationType,
-                            validationParam,
-                            relevantResponse
-                        );
-                        if (
-                            !valid ||
-                            ("atMost" === validationType && checkedBoxes < Number(validationParam))
-                        ) {
-                            return boxes.forEach((box) => box.setEnabled(true));
+                        if (!modelResponseData.getData().response[question.id]) {
+                            modelResponseData.getData().response[question.id] = {};
                         }
-                        if (
-                            "equalTo" === validationType ||
-                            ("atMost" === validationType &&
-                                checkedBoxes === Number(validationParam))
-                        ) {
-                            return boxes.forEach(
-                                (box) => !box.getProperty("selected") && box.setEnabled(false)
-                            );
+
+                        if (this.getSelected()) {
+                            modelResponseData.getData().response[question.id][item.id] = item.value;
+                        } else {
+                            delete modelResponseData.getData().response[question.id][item.id];
                         }
                     },
                 })

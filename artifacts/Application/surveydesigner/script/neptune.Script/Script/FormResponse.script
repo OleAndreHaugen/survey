@@ -166,10 +166,6 @@ const formResponse = {
                 break;
 
             default:
-                // chartTypes.addItem(new sap.ui.core.Item({ key: "area", text: "Area" }));
-                // chartTypes.addItem(
-                //     new sap.ui.core.Item({ key: "areaspline", text: "Area Spline" })
-                // );
                 chartTypes.addItem(new sap.ui.core.Item({ key: "spline", text: "Spline" }));
                 chartTypes.addItem(new sap.ui.core.Item({ key: "bar", text: "Bar" }));
                 chartTypes.addItem(new sap.ui.core.Item({ key: "line", text: "Line" }));
@@ -177,33 +173,7 @@ const formResponse = {
                 break;
         }
 
-        // switch (question.type) {
-        //     case "MultipleChoice":
-        //     case "SingleChoice":
-        //     case "NPS":
-        //         chartTypes.addItem(new sap.ui.core.Item({ key: "pie", text: "Pie" }));
-        //         break;
-
-        //     default:
-        //         break;
-        // }
-
         toolbar.addContent(chartTypes);
-
-        // if (question.type === "Likert" || question.type === "NPS") {
-        //     const chartCalc = new sap.m.Select({
-        //         width: "150px",
-        //         selectedKey: "{/chartCalc" + question.id + "}",
-        //         change: function (oEvent) {
-        //             formResponse.buildReport();
-        //         },
-        //     });
-
-        //     chartCalc.addItem(new sap.ui.core.Item({ key: "count", text: "Count" }));
-        //     chartCalc.addItem(new sap.ui.core.Item({ key: "average", text: "Average" }));
-        //     toolbar.addContent(chartCalc);
-        // }
-
         parent.addItem(toolbar);
     },
 
@@ -220,8 +190,8 @@ const formResponse = {
         parent.addItem(chartparent);
 
         // Chart Data
-        let enableLegend = true;
         let series = [];
+        const categories = [question.title];
 
         const resGroupsItems = Object.keys(response.group);
 
@@ -241,6 +211,7 @@ const formResponse = {
             let seriesData = {
                 name: group.name,
                 data: itemValues,
+                borderWidth: 0,
             };
 
             if (modelpanResponse.oData["chartPolar" + question.id]) {
@@ -253,50 +224,14 @@ const formResponse = {
         });
 
         chartparent.onAfterRendering = function () {
-            let options = {
-                credits: false,
-                chart: {
-                    style: { fontFamily: "72", fontSize: "12px" },
-                    backgroundColor: "transparent",
-                    type: modelpanResponse.oData["chartType" + question.id],
-                    polar: modelpanResponse.oData["chartPolar" + question.id],
-                },
-                title: { text: null },
-                yAxis: {
-                    title: { text: null },
-                    labels: { enabled: true },
-                },
-                xAxis: {
-                    title: { text: null },
-                    labels: { enabled: true },
-                    categories: [question.title],
-                },
-                legend: {
-                    enabled: enableLegend,
-                    backgroundColor: "transparent",
-                    itemStyle: { fontSize: "12px", fontWeight: "Normal" },
-                    align: "center",
-                    verticalAlign: "bottom",
-                },
-                series: series,
-            };
-
-            if (modelpanResponse.oData["chartPolar" + question.id]) {
-                options.yAxis.gridLineInterpolation = "polygon";
-                options.yAxis.lineWidth = 0;
-                options.yAxis.min = 0;
-                options.xAxis.lineWidth = 0;
-                options.xAxis.tickmarkPlacement = "on";
-            }
-
+            let options = formResponse.setChartDefaults(categories, series, question);
             Highcharts.chart(chartparent.getDomRef(), options);
         };
     },
 
     buildReportChoice: function (question, parent) {
-        return;
         const response = formResponse.response[question.id];
-        if (!response || !response.items) return;
+        if (!response) return;
 
         // Default Settings
         if (!modelpanResponse.oData["chartType" + question.id]) {
@@ -307,92 +242,43 @@ const formResponse = {
         parent.addItem(chartparent);
 
         // Chart Data
-        let enableLegend = true;
         let categories = [];
         let series = [];
-        let data = [];
 
-        switch (modelpanResponse.oData["chartType" + question.id]) {
-            case "pie":
-                question.items.forEach(function (item) {
-                    data.push({
-                        name: item.title,
-                        y: response.count[item.value],
-                    });
-                });
+        const resGroupsItems = Object.keys(response.group);
 
-                series.push({
-                    name: question.title,
-                    data: data,
-                });
+        resGroupsItems.forEach(function (keyGroup) {
+            const groupData = response.group[keyGroup];
+            const group = ModelData.FindFirst(modelMasterData.oData.groups, "id", keyGroup);
 
-                break;
+            let data = [];
 
-            default:
-                let seriesData = {};
+            let seriesData = {
+                name: group.name,
+                borderWidth: 0,
+            };
 
-                question.items.forEach(function (item) {
-                    data.push(response.count[item.value]);
-                });
+            question.items.forEach(function (item) {
+                data.push(groupData.count[item.id]);
+            });
 
-                seriesData.data = data;
+            seriesData.data = data;
 
-                if (modelpanResponse.oData["chartPolar" + question.id]) {
-                    seriesData.pointPlacement = "on";
-                }
+            if (modelpanResponse.oData["chartPolar" + question.id]) {
+                seriesData.pointPlacement = "on";
+            }
 
-                series.push(seriesData);
-                enableLegend = false;
-                break;
-        }
+            if (group.setup.color) seriesData.color = group.setup.color;
+
+            series.push(seriesData);
+        });
 
         question.items.forEach(function (item) {
             categories.push(item.title);
         });
 
         chartparent.onAfterRendering = function () {
-            let options = {
-                credits: false,
-                chart: {
-                    style: { fontFamily: "72", fontSize: "12px" },
-                    backgroundColor: "transparent",
-                    type: modelpanResponse.oData["chartType" + question.id],
-                    polar: modelpanResponse.oData["chartPolar" + question.id],
-                },
-                title: { text: null },
-                tooltip: {
-                    formatter: function () {
-                        const key = this.x ? this.x : this.key;
-                        return "Counter for <b>" + key + "</b> : <b>" + this.y + "</b>";
-                    },
-                },
-                yAxis: {
-                    title: { text: null },
-                    labels: { enabled: true },
-                },
-                xAxis: {
-                    title: { text: null },
-                    labels: { enabled: true },
-                    categories: categories,
-                },
-                legend: {
-                    enabled: enableLegend,
-                    backgroundColor: "transparent",
-                    itemStyle: { fontSize: "12px", fontWeight: "Normal" },
-                    align: "center",
-                    verticalAlign: "bottom",
-                },
-                series: series,
-            };
-
-            if (modelpanResponse.oData["chartPolar" + question.id]) {
-                options.yAxis.gridLineInterpolation = "polygon";
-                options.yAxis.lineWidth = 0;
-                options.yAxis.min = 0;
-                options.xAxis.lineWidth = 0;
-                options.xAxis.tickmarkPlacement = "on";
-            }
-
+            let options = formResponse.setChartDefaults(categories, series, question);
             Highcharts.chart(chartparent.getDomRef(), options);
         };
     },
@@ -435,6 +321,7 @@ const formResponse = {
             let seriesData = {
                 name: group.name,
                 data: itemValues,
+                borderWidth: 0,
             };
 
             if (modelpanResponse.oData["chartPolar" + question.id]) {
@@ -447,49 +334,42 @@ const formResponse = {
         });
 
         chartparent.onAfterRendering = function () {
-            let options = {
-                credits: false,
-                chart: {
-                    style: { fontFamily: "72", fontSize: "12px" },
-                    backgroundColor: "transparent",
-                    type: modelpanResponse.oData["chartType" + question.id],
-                    polar: modelpanResponse.oData["chartPolar" + question.id],
-                },
-                title: { text: null },
-                yAxis: {
-                    title: { text: null },
-                    labels: { enabled: true },
-                    // tickInterval:1
-                },
-                xAxis: {
-                    title: { text: null },
-                    labels: { enabled: true },
-                    categories: categories,
-                    // tickInterval: 1
-                },
-                legend: {
-                    backgroundColor: "transparent",
-                    itemStyle: { fontSize: "12px", fontWeight: "Normal" },
-                    align: "center",
-                    verticalAlign: "bottom",
-                },
-                series,
-            };
-
-            if (modelpanResponse.oData["chartPolar" + question.id]) {
-                formResponse.setChartPolarProps(options);
-            }
-
+            let options = formResponse.setChartDefaults(categories, series, question);
             Highcharts.chart(chartparent.getDomRef(), options);
         };
     },
 
-    setChartPolarProps: function (options) {
-        options.yAxis.gridLineInterpolation = "polygon";
-        options.yAxis.lineWidth = 0;
-        options.yAxis.min = 0;
-        options.xAxis.lineWidth = 0;
-        options.xAxis.tickmarkPlacement = "on";
+    setChartDefaults: function (categories, series, question) {
+        let options = {
+            credits: false,
+            chart: {
+                style: { fontFamily: "72", fontSize: "12px" },
+                backgroundColor: "transparent",
+                type: modelpanResponse.oData["chartType" + question.id],
+                polar: modelpanResponse.oData["chartPolar" + question.id],
+            },
+            title: { text: null },
+            yAxis: { title: { text: null } },
+            xAxis: {
+                title: { text: null },
+                categories,
+            },
+            legend: {
+                backgroundColor: "transparent",
+                itemStyle: { fontSize: "12px", fontWeight: "Normal" },
+                align: "center",
+                verticalAlign: "bottom",
+            },
+            series,
+        };
+
+        if (modelpanResponse.oData["chartPolar" + question.id]) {
+            options.yAxis.gridLineInterpolation = "polygon";
+            options.yAxis.lineWidth = 0;
+            options.yAxis.min = 0;
+            options.xAxis.lineWidth = 0;
+            options.xAxis.tickmarkPlacement = "on";
+        }
 
         return options;
     },
@@ -584,9 +464,10 @@ const formResponse = {
                     (question.type === "SingleChoice" || question.type === "MultipleChoice")
                 ) {
                     count = {};
+                    total = {};
                     question.items.forEach(function (item) {
-                        count[item.value] = 0;
-                        total[item.value] = 0;
+                        count[item.id] = 0;
+                        total[item.id] = 0;
                     });
                 }
 
@@ -647,9 +528,9 @@ const formResponse = {
 
                     resItems.forEach(function (keyItem) {
                         const resItem = resData[keyItem];
-                        formResponse.response[question.id].group[response.groupid].count[resItem]++;
+                        formResponse.response[question.id].group[response.groupid].count[keyItem]++;
                         formResponse.response[question.id].group[response.groupid].total[
-                            resItem
+                            keyItem
                         ] += parseInt(resItem);
                     });
                     break;
@@ -657,9 +538,10 @@ const formResponse = {
                 case "SingleChoice":
                     formResponse.response[question.id].group[response.groupid].responseCount++;
                     formResponse.response[question.id].group[response.groupid].count[resData]++;
-                    formResponse.response[question.id].group[response.groupid].total[
-                        resData
-                    ] += parseInt(resData);
+
+                    const item = ModelData.FindFirst(question.items, "id", resData);
+                    formResponse.response[question.id].group[response.groupid].total[resData] +=
+                        item.value;
                     break;
 
                 case "NPS":

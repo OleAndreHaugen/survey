@@ -18,7 +18,7 @@ if (survey && receiver && form) {
 
     // Update Receiver Status
     if (receiver.status !== '4') {
-        receiver.status = '2';
+        receiver.status = '3';
     }
 
     await entities.survey_receivers.save(receiver);

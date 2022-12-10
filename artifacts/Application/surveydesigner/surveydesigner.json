@@ -42,7 +42,7 @@
 						{
 							"attribute": "sideExpanded",
 							"grouping": "Properties",
-							"value": "false",
+							"value": "true",
 							"script": "",
 							"translation": []
 						}
@@ -1322,8 +1322,84 @@
 																							"customComponent": false,
 																							"request": [],
 																							"response": [],
-																							"attributes": [],
+																							"attributes": [
+																								{
+																									"attribute": "renderType",
+																									"grouping": "Properties",
+																									"value": "Bare",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
 																							"data": [
+																								{
+																									"fieldNo": "340e9055-5fc6-4f34-da59-c7c8e10d47dd",
+																									"fieldName": "gridFormUpdatedAt",
+																									"fieldParent": "465bb133-9152-41ee-f3d0-fc1ae984effe",
+																									"fieldType": "nep.bootstrap.Text",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{MasterData>updatedAt}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "type",
+																											"grouping": "Properties",
+																											"value": "Small",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "text",
+																											"grouping": "Formatter",
+																											"value": "date:Relative",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "b434c6c8-ced3-4515-ab5b-6a5df14ca34c",
+																									"fieldName": "gridFormUpdatedBy",
+																									"fieldParent": "465bb133-9152-41ee-f3d0-fc1ae984effe",
+																									"fieldType": "nep.bootstrap.Text",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{MasterData>updatedBy}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "padding",
+																											"grouping": "Properties",
+																											"value": "PaddingBottom2",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "type",
+																											"grouping": "Properties",
+																											"value": "Small",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
 																								{
 																									"fieldNo": "9f1b89e4-7d08-418d-cd4b-73b56c9a0d6c",
 																									"fieldName": "gridFormTitle",
@@ -1342,9 +1418,9 @@
 																											"translation": []
 																										},
 																										{
-																											"attribute": "padding",
+																											"attribute": "margin",
 																											"grouping": "Properties",
-																											"value": "PaddingBottom2",
+																											"value": "MarginTopBottom2",
 																											"script": "",
 																											"translation": []
 																										},
@@ -10412,13 +10488,6 @@
 																			"translation": []
 																		},
 																		{
-																			"attribute": "mode",
-																			"grouping": "Properties",
-																			"value": "Delete",
-																			"script": "",
-																			"translation": []
-																		},
-																		{
 																			"attribute": "updateFinished",
 																			"grouping": "Events",
 																			"value": "Anonymous Function",
@@ -11119,6 +11188,55 @@
 																							"grouping": "Events",
 																							"value": "formBuilder.copy();",
 																							"script": "formBuilder.copy();",
+																							"translation": []
+																						}
+																					],
+																					"data": []
+																				},
+																				{
+																					"fieldNo": "a2fe2437-e008-4c48-a7c8-b428f29472ff",
+																					"fieldName": "toolSurveyDetailRefresh",
+																					"fieldParent": "69681aae-c167-481e-cad3-b88d56f5ff33",
+																					"fieldType": "sap.m.Button",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "visible",
+																							"grouping": "Properties",
+																							"value": "{= ${SurveyData>/id} ? true:false}",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "type",
+																							"grouping": "Properties",
+																							"value": "Ghost",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "text",
+																							"grouping": "Properties",
+																							"value": "Update",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "enableCompactMode",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "press",
+																							"grouping": "Events",
+																							"value": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
+																							"script": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
+																							"language": "javascript",
 																							"translation": []
 																						}
 																					],
@@ -12269,7 +12387,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Add email(s)",
+																									"value": "Add",
 																									"script": "",
 																									"translation": []
 																								},
@@ -12303,14 +12421,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Send invite to selected",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "styleClassMargin",
-																									"grouping": "Properties",
-																									"value": "sapUiSmallMarginBegin",
+																									"value": "Send Invite",
 																									"script": "",
 																									"translation": []
 																								},
@@ -12352,14 +12463,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Remove selected receiver(s)",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "styleClassMargin",
-																									"grouping": "Properties",
-																									"value": "sapUiSmallMarginBegin",
+																									"value": "Delete",
 																									"script": "",
 																									"translation": []
 																								},
@@ -12532,6 +12636,13 @@
 																									"translation": []
 																								},
 																								{
+																									"attribute": "fixedLayout",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
 																									"attribute": "updateFinished",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
@@ -12550,6 +12661,13 @@
 																									"attribute": "sticky",
 																									"grouping": "Properties",
 																									"value": "[\"ColumnHeaders\",\"HeaderToolbar\"]",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "contextualWidth",
+																									"grouping": "Properties",
+																									"value": "Auto",
 																									"script": "",
 																									"translation": []
 																								}
@@ -12588,39 +12706,6 @@
 																													"attribute": "text",
 																													"grouping": "Properties",
 																													"value": "Link",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										}
-																									]
-																								},
-																								{
-																									"fieldNo": "d4aa042d-1594-40b4-9eb0-ae0652484a9b",
-																									"fieldName": "coltabReceiversgroup",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [],
-																									"data": [
-																										{
-																											"fieldNo": "b13b04fd-826d-4a13-b312-b8a362c648ca",
-																											"fieldName": "colHtabReceiversgroup",
-																											"fieldParent": "d4aa042d-1594-40b4-9eb0-ae0652484a9b",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "Group",
 																													"script": "",
 																													"translation": []
 																												}
@@ -12704,15 +12789,7 @@
 																									"customComponent": false,
 																									"request": [],
 																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "width",
-																											"grouping": "Properties",
-																											"value": "200px",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
+																									"attributes": [],
 																									"data": [
 																										{
 																											"fieldNo": "a3efc69f-7ba2-46c1-bd62-922d1d3573fa",
@@ -12747,9 +12824,9 @@
 																									"response": [],
 																									"attributes": [
 																										{
-																											"attribute": "width",
+																											"attribute": "minScreenWidth",
 																											"grouping": "Properties",
-																											"value": "300px",
+																											"value": "XXLarge",
 																											"script": "",
 																											"translation": []
 																										}
@@ -12842,33 +12919,6 @@
 																													"data": []
 																												}
 																											]
-																										},
-																										{
-																											"fieldNo": "64313db3-0eed-40d6-a7d7-e0b51748141e",
-																											"fieldName": "txttabReceiversgroup",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>groupid}",
-																													"script": "",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "text",
-																													"grouping": "Formatter",
-																													"value": "Anonymous Function",
-																													"script": "file://event/sap.m.Text/txttabReceiversgroup/text.script",
-																													"translation": []
-																												}
-																											],
-																											"data": []
 																										},
 																										{
 																											"fieldNo": "f056e19e-d233-434e-9ff2-4cddbec8d1a9",
@@ -13815,7 +13865,7 @@
 												{
 													"attribute": "type",
 													"grouping": "Properties",
-													"value": "Navigation",
+													"value": "Active",
 													"script": "",
 													"translation": []
 												},
@@ -14382,13 +14432,6 @@
 															"attribute": "text",
 															"grouping": "Properties",
 															"value": "Chart Color",
-															"script": "",
-															"translation": []
-														},
-														{
-															"attribute": "required",
-															"grouping": "Properties",
-															"value": "false",
 															"script": "",
 															"translation": []
 														}
@@ -15157,7 +15200,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.9.1726",
+	"ver": "22.12.10.814",
 	"application": "surveydesigner",
 	"title": "Neptune Survey",
 	"description": "Neptune Survey",

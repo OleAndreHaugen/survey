@@ -3,7 +3,8 @@ function buildForm(
     data: SurveyData,
     link: string,
     modelResponseData: sap.ui.model.json.JSONModel,
-    surveyid: string
+    surveyid: string,
+    submitCallBack: Function
 ) {
     setFormBackground(data.setup.backgroundImage);
 
@@ -12,7 +13,7 @@ function buildForm(
     modelResponseData.setData({
         surveyid: surveyid,
         link,
-        response: {}
+        response: {},
     });
 
     const surveyHeader = new nep.bootstrap.Alert({
@@ -99,11 +100,8 @@ function buildForm(
                             },
                             body: JSON.stringify(modelResponseData.getData()),
                         }).then(async function (result) {
-                            if (result.status === 200) {
-                                const data = await result.json();
-                                if (data.status !== "preview" && data.anonymous) {
-                                    window.location.reload();
-                                }
+                            if (result.status === 200 && submitCallBack) {
+                                submitCallBack();
                             }
                         });
                     }
@@ -151,8 +149,10 @@ function validateResponses(
                 //@ts-ignore
                 likertQuestionItem.setHighlight("None");
 
-                if (!modelResponseData.getData().response[`${question.id}_${index}`]) {
-                    // TODO
+                if (
+                    !modelResponseData.getData().response[question.id] ||
+                    !modelResponseData.getData().response[question.id][item.id]
+                ) {
                     //@ts-ignore
                     likertQuestionItem.setHighlight("Error");
                     invalidResponse = true;
@@ -163,12 +163,14 @@ function validateResponses(
         if (extendedValReq && question.type === "MultipleChoice") {
             const { validationType, validationParam } = question;
             const response = modelResponseData.getData().response;
-            const relevantResponse = genRelevantResponse(response, question.id);
+            const relevantResponse = response[question.id];
+
             const { valid } = validateMultipleChoice(
                 validationType,
                 validationParam,
                 relevantResponse
             );
+
             invalidResponse = !valid;
         }
 
@@ -186,13 +188,11 @@ function validateResponses(
         questionPanel.removeStyleClass("invalidResponse");
         const { validationType, validationParam } = question;
         const response = modelResponseData.getData().response;
-        const relevantResponse = genRelevantResponse(response, question.id);
-        const { valid, checkedBoxes } = validateMultipleChoice(
-            validationType,
-            validationParam,
-            relevantResponse
-        );
-        if (!valid && !!checkedBoxes) {
+        const relevantResponse = response[question.id];
+
+        const { valid } = validateMultipleChoice(validationType, validationParam, relevantResponse);
+
+        if (!valid) {
             //@ts-ignore
             questionPanel.addStyleClass("invalidResponse");
             allQuestionsAnswered = false;

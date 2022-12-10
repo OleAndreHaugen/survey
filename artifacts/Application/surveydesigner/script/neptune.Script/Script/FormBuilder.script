@@ -233,6 +233,19 @@ const formBuilder = {
             modelSurveyData.setData(form);
             formResponse.build(res.responses);
 
+            const oSorter1 = new sap.ui.model.Sorter("groupid", false, function (oContext) {
+                const item = oContext.getObject();
+                var group = ModelData.FindFirst(modelMasterData.oData.groups, "id", item.groupid);
+
+                if (group) {
+                    return { key: group.name, text: group.name };
+                } else {
+                    return { key: "Not Found", text: "Not Found" };
+                }
+            });
+            const oSorter2 = new sap.ui.model.Sorter("email", false, false);
+            tabReceivers.getBinding("items").sort([oSorter1, oSorter2]);
+
             oApp.to(pageSurveyDetail);
         });
     },
