@@ -3,13 +3,6 @@ const { Like } = operators;
 // const manager = modules.typeorm.getConnection().manager;
 // const emailTemplates = await manager.find('wf_notifications');
 
-// const form = await entities.survey_form.find({
-    // select: ["name", "description", "id", "setup", "updatedAt", "updatedBy"],
-    // order: {
-    //     name: "ASC"
-    // }
-// });
-
 const form = await entities.survey_form.find();
 
 const survey = await entities.survey_master.find({

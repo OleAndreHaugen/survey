@@ -166,6 +166,10 @@ const formResponse = {
                 break;
 
             default:
+                chartTypes.addItem(new sap.ui.core.Item({ key: "area", text: "Area" }));
+                chartTypes.addItem(
+                    new sap.ui.core.Item({ key: "areaspline", text: "Area Spline" })
+                );
                 chartTypes.addItem(new sap.ui.core.Item({ key: "spline", text: "Spline" }));
                 chartTypes.addItem(new sap.ui.core.Item({ key: "bar", text: "Bar" }));
                 chartTypes.addItem(new sap.ui.core.Item({ key: "line", text: "Line" }));

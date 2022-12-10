@@ -35,7 +35,7 @@
 	],
 	"apis": [],
 	"name": "MasterData",
-	"ver": "22.12.9.1415",
+	"ver": "22.12.10.951",
 	"description": null,
 	"content": "file:///content.script",
 	"useAsGlobalScript": false,

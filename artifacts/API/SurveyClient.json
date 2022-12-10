@@ -90,38 +90,6 @@
 			"tags": "Receivers"
 		},
 		{
-			"id": "8e8e1ed0-bdc1-4bae-fef6-5ba0345b6adc",
-			"method": "DELETE",
-			"path": "/receiversdelete",
-			"description": "",
-			"parameters": [
-				{
-					"name": "formid",
-					"description": "",
-					"required": true,
-					"inPath": false,
-					"value": "",
-					"default": "Form ID",
-					"example": ""
-				},
-				{
-					"name": "email",
-					"description": "",
-					"required": true,
-					"inPath": false,
-					"value": "",
-					"default": "eMail",
-					"example": ""
-				}
-			],
-			"headers": [],
-			"responses": [],
-			"content": [],
-			"auth": [],
-			"endpoints": [],
-			"serverScript": "ec72e430-dbcd-49f1-aec6-ef2a8c664044"
-		},
-		{
 			"id": "7cf821df-f4dc-4295-c4ce-96873e4c29dd",
 			"method": "POST",
 			"path": "/receiverssend",
@@ -132,48 +100,8 @@
 			"content": [],
 			"auth": [],
 			"endpoints": [],
-			"serverScript": "c23951c3-d88a-4198-aaba-d026678742ca",
+			"serverScript": "00bd1d53-6578-4dfd-9eee-f6d98ac6553a",
 			"tags": "Receivers"
-		},
-		{
-			"id": "5120a60c-d37a-4c2d-b433-ec016da27b94",
-			"method": "GET",
-			"path": "/getEmailTemplates",
-			"description": "",
-			"parameters": [],
-			"headers": [],
-			"responses": [],
-			"content": [],
-			"auth": [],
-			"endpoints": [],
-			"serverScript": "61114142-12fe-446f-8d20-508818dad153"
-		},
-		{
-			"id": "c034c23f-321d-4923-e75f-92f76c953133",
-			"method": "GET",
-			"path": "/responseget",
-			"description": "",
-			"parameters": [],
-			"headers": [],
-			"responses": [],
-			"content": [],
-			"auth": [],
-			"endpoints": [],
-			"tags": "Response",
-			"serverScript": "1634c89d-93a1-4ee8-a9f0-7e7928f060ec"
-		},
-		{
-			"id": "888666c9-1522-4919-8bb0-85e87fcd6f76",
-			"method": "GET",
-			"path": "/getStatusData",
-			"description": "",
-			"parameters": [],
-			"headers": [],
-			"responses": [],
-			"content": [],
-			"auth": [],
-			"endpoints": [],
-			"serverScript": "85481a69-b730-4975-9f89-1096bc5cfc36"
 		},
 		{
 			"id": "7285450e-f940-4e8c-8944-925b092905c8",
@@ -1200,7 +1128,7 @@
 	"documentation": [],
 	"name": "SurveyClient",
 	"endpoint": "/api/serverscript/surveyclient",
-	"ver": "22.12.10.837",
+	"ver": "22.12.10.957",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,

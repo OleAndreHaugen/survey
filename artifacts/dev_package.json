@@ -157,6 +157,11 @@
 			"id": "17081f73-234b-4aa3-9c2f-9fa7a9500bc9",
 			"name": "FormGet",
 			"description": null
+		},
+		{
+			"id": "00bd1d53-6578-4dfd-9eee-f6d98ac6553a",
+			"name": "ReceiversSendMail",
+			"description": null
 		}
 	],
 	"jsscript_group": [
@@ -185,7 +190,13 @@
 	"role": [],
 	"systems": [],
 	"doc": [],
-	"wf_notifications": [],
+	"wf_notifications": [
+		{
+			"id": "cdccf4de-54cd-4ffb-b863-8a240a12971b",
+			"name": "Survey Invitation Template",
+			"description": "{=surveyName} Survey"
+		}
+	],
 	"department": [],
 	"script_scheduler": [],
 	"wf_definition": [],

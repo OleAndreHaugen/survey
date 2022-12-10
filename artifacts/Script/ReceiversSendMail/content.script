@@ -1,0 +1,31 @@
+const { In } = operators;
+
+let receiverFilter = req.body.receivers.map(function (receiver) {
+    return receiver.id
+});
+
+const receivers = await entities.survey_receivers.find({
+    id: In(receiverFilter)
+});
+
+receivers.forEach(async function (receiver) {
+
+    let primitives = {
+        surveyName: req.body.formName,
+        description: req.body.formDescription,
+        link: receiver.link,
+    }
+
+    await sendEmail({
+        to: receiver.email,
+        subject: `${req.body.formName} Survey`,
+        templateId: req.body.templateId,
+        primitives: primitives
+    });
+
+    receiver.status = '2';
+    await entities.survey_receivers.save(receiver);
+
+})
+
+complete();

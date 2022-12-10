@@ -296,20 +296,19 @@ const formBuilder = {
     sendEmails: function (emails) {
         const emailList = emails.map((receiver) => {
             return {
-                email: receiver.email,
                 id: receiver.id,
-                formURL: `${location.host}/public/app/formssurvey?survey=${receiver.formid}&link=${receiver.id}`,
+                link: `${location.host}/public/app/surveysubmit?surveyid=${receiver.surveyid}&link=${receiver.id}`,
             };
         });
 
-        const selectedEmailTemplate = inpageFormDistribTemplate.getSelectedKey();
+        const selectedEmailTemplate = modelSurveyMaster.oData.survey.distribution.emailTemplate;
 
         if (selectedEmailTemplate !== "") {
             apiReceiversSend({
                 data: {
-                    formid: modelSurveyData.oData.id,
-                    formName: modelSurveyData.oData.name,
-                    formDescription: modelSurveyData.oData.description,
+                    surveyid: modelSurveyMaster.oData.survey.id,
+                    formName: modelSurveyMaster.oData.survey.name,
+                    formDescription: modelSurveyMaster.oData.survey.description,
                     templateId: selectedEmailTemplate,
                     receivers: emailList,
                 },

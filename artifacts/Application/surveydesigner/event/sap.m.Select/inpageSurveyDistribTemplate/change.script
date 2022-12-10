@@ -1,6 +1,0 @@
-const selectedKey = inpageFormDistribTemplate.getSelectedKey();
-
-if (selectedKey !== '') {
-    modelSurveyData.oData.distribution.emailTemplate = selectedKey;
-    inpageFormDistribTemplate.setValueState('None');
-};
