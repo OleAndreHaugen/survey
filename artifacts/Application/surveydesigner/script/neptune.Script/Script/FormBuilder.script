@@ -2,6 +2,26 @@ const formBuilder = {
     currentIndex: null,
     dataSaved: null,
 
+    buildForm: function () {
+        let formData = ModelData.FindFirst(
+            modelMasterData.oData.form,
+            "id",
+            modelSurveyMaster.oData.survey.formid
+        );
+
+        formData = JSON.parse(JSON.stringify(formData));
+
+        if (modelSurveyMaster.oData.survey.distribution.enableSurveyTitle) {
+            formData.name = modelSurveyMaster.oData.survey.name;
+        }
+
+        if (modelSurveyMaster.oData.survey.distribution.enableSurveySubTitle) {
+            formData.description = modelSurveyMaster.oData.survey.description;
+        }
+
+        buildForm(panPreviewSurvey, formData, "preview", modelResponseData, null);
+    },
+
     questionTypes: [
         { icon: "sap-icon://date-time", text: "Date", type: "Date" },
         { icon: "sap-icon://text", text: "Text", type: "Text" },
@@ -345,7 +365,7 @@ const formBuilder = {
         });
 
         const binding = tabReceivers.getBinding("items");
-        
+
         if (statusFilter.length) {
             binding.filter(new sap.ui.model.Filter(statusFilter, false));
         } else {

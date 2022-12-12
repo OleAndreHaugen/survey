@@ -2234,7 +2234,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Name",
+																									"value": "Title",
 																									"script": "",
 																									"translation": []
 																								}
@@ -2281,7 +2281,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Description",
+																									"value": "SubTitle",
 																									"script": "",
 																									"translation": []
 																								}
@@ -11527,7 +11527,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Name",
+																									"value": "Title",
 																									"script": "",
 																									"translation": []
 																								}
@@ -11549,6 +11549,13 @@
 																									"grouping": "Properties",
 																									"value": "{SurveyMaster>/survey/name}",
 																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "change",
+																									"grouping": "Events",
+																									"value": "formBuilder.buildForm();",
+																									"script": "formBuilder.buildForm();",
 																									"translation": []
 																								},
 																								{
@@ -11574,7 +11581,7 @@
 																								{
 																									"attribute": "text",
 																									"grouping": "Properties",
-																									"value": "Description",
+																									"value": "SubTitle",
 																									"script": "",
 																									"translation": []
 																								}
@@ -11610,6 +11617,13 @@
 																									"grouping": "Properties",
 																									"value": "true",
 																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "change",
+																									"grouping": "Events",
+																									"value": "formBuilder.buildForm();",
+																									"script": "formBuilder.buildForm();",
 																									"translation": []
 																								}
 																							],
@@ -11650,7 +11664,7 @@
 																								{
 																									"attribute": "selectedKey",
 																									"grouping": "Properties",
-																									"value": "{SurveyMaster>/formid}",
+																									"value": "{SurveyMaster>/survey/formid}",
 																									"script": "",
 																									"translation": []
 																								}
@@ -11684,6 +11698,86 @@
 																									"data": []
 																								}
 																							]
+																						},
+																						{
+																							"fieldNo": "f237fc5a-cd73-4ce5-cb5b-c8dd1126ec36",
+																							"fieldName": "lblpageSurveyDetailSurveyOveride",
+																							"fieldParent": "918f4cf8-cb41-488b-bd19-69d054b7d2ae",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "7b6a853d-8d2f-450b-9647-64cf77245c50",
+																							"fieldName": "inpageSurveyDetailSurveyOverideTitle",
+																							"fieldParent": "918f4cf8-cb41-488b-bd19-69d054b7d2ae",
+																							"fieldType": "sap.m.CheckBox",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Use Title from Survey",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "selected",
+																									"grouping": "Properties",
+																									"value": "{SurveyMaster>/survey/distribution/enableSurveyTitle}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "select",
+																									"grouping": "Events",
+																									"value": "formBuilder.buildForm();",
+																									"script": "formBuilder.buildForm();",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "1037c496-58cd-4d2d-91cd-0819dd4fd422",
+																							"fieldName": "inpageSurveyDetailSurveyOverideSubTitle",
+																							"fieldParent": "918f4cf8-cb41-488b-bd19-69d054b7d2ae",
+																							"fieldType": "sap.m.CheckBox",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Use SubTitle from Survey",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "selected",
+																									"grouping": "Properties",
+																									"value": "{SurveyMaster>/survey/distribution/enableSurveySubTitle}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "select",
+																									"grouping": "Events",
+																									"value": "formBuilder.buildForm();",
+																									"script": "formBuilder.buildForm();",
+																									"translation": []
+																								}
+																							],
+																							"data": []
 																						}
 																					]
 																				},
@@ -15325,7 +15419,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.10.1333",
+	"ver": "22.12.12.933",
 	"application": "surveydesigner",
 	"title": "Neptune Survey",
 	"description": "Neptune Survey",

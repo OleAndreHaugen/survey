@@ -13,7 +13,7 @@ const receiver = await entities.survey_receivers.findOne({
     status: Not("4")
 });
 
-const form = await entities.survey_form.findOne(survey.formid);
+let form = await entities.survey_form.findOne(survey.formid);
 
 if (survey && receiver && form) {
 
@@ -22,6 +22,11 @@ if (survey && receiver && form) {
         receiver.status = '3';
     }
 
+    // Title & SubTitle
+    if (survey.distribution.enableSurveyTitle) form.name = survey.name;
+    if (survey.distribution.enableSurveySubTitle) form.description = survey.description;
+
+    // Send data to Client
     await entities.survey_receivers.save(receiver);
     result.data = {
         form,
