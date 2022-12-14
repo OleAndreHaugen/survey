@@ -1,7 +1,7 @@
 const { Like } = operators;
 
-// const manager = modules.typeorm.getConnection().manager;
-// const emailTemplates = await manager.find('wf_notifications');
+const manager = modules.typeorm.getConnection().manager;
+const emailTemplates = await manager.find('wf_notifications', { select: ["name", "description", "id"] });
 
 const form = await entities.survey_form.find();
 
@@ -20,7 +20,7 @@ result.data = {
     status,
     groups,
     survey,
-    // emailTemplates,
+    emailTemplates,
     user: {
         username: req.user.username
     }

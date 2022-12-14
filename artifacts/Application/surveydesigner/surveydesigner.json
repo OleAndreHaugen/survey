@@ -11667,6 +11667,13 @@
 																									"value": "{SurveyMaster>/survey/formid}",
 																									"script": "",
 																									"translation": []
+																								},
+																								{
+																									"attribute": "change",
+																									"grouping": "Events",
+																									"value": "formBuilder.buildForm();",
+																									"script": "formBuilder.buildForm();",
+																									"translation": []
 																								}
 																							],
 																							"data": [
@@ -11951,31 +11958,90 @@
 																							"data": []
 																						},
 																						{
-																							"fieldNo": "95f110af-61a9-4537-e7e2-48c1b8e60505",
+																							"fieldNo": "699dd3b4-95a2-4075-9aaf-2a0651079268",
 																							"fieldName": "inpageSurveyDistribTemplate",
 																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
-																							"fieldType": "sap.m.Input",
+																							"fieldType": "sap.m.Select",
 																							"script": "",
 																							"customComponent": false,
+																							"bindingType": "h",
+																							"modelPath": "MasterData>/emailTemplates",
 																							"request": [],
 																							"response": [],
 																							"attributes": [
 																								{
-																									"attribute": "value",
+																									"attribute": "valueStateText",
+																									"grouping": "Properties",
+																									"value": "Please select an email template",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "showSecondaryValues",
+																									"grouping": "Properties",
+																									"value": "true",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "selectedKey",
 																									"grouping": "Properties",
 																									"value": "{SurveyMaster>/survey/distribution/emailTemplate}",
 																									"script": "",
 																									"translation": []
 																								},
 																								{
-																									"attribute": "required",
+																									"attribute": "forceSelection",
 																									"grouping": "Properties",
-																									"value": "true",
+																									"value": "false",
 																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "change",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Select/inpageSurveyDistribTemplate/change.script",
+																									"language": "javascript",
 																									"translation": []
 																								}
 																							],
-																							"data": []
+																							"data": [
+																								{
+																									"fieldNo": "0083afdf-3bd8-4a84-e3b8-4e274c61542c",
+																									"fieldName": "oListItemTemplate",
+																									"fieldParent": "699dd3b4-95a2-4075-9aaf-2a0651079268",
+																									"fieldType": "sap.ui.core.ListItem",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{MasterData>name}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "{MasterData>id}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "additionalText",
+																											"grouping": "Properties",
+																											"value": "{MasterData>description}",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								}
+																							]
 																						}
 																					]
 																				},
@@ -15419,7 +15485,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.12.933",
+	"ver": "22.12.14.719",
 	"application": "surveydesigner",
 	"title": "Neptune Survey",
 	"description": "Neptune Survey",

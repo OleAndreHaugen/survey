@@ -335,7 +335,7 @@ const formBuilder = {
                 sap.m.MessageToast.show("Invites sent successfully!");
             });
         } else {
-            inpageFormDistribTemplate.setValueState("Error");
+            inpageSurveyDistribTemplate.setValueState("Error");
 
             sap.m.MessageBox.show(
                 "Please select an email template to send invites, or create an email template if none exist.",

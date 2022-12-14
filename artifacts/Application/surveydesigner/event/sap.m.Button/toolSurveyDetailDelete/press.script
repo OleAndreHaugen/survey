@@ -7,7 +7,7 @@ sap.m.MessageBox.confirm("Delete survey from database? This cannot be undone!", 
         if (sAction === "YES") {
             apiSurveyDelete({
                 parameters: {
-                    id: modelpageSurveyDetail.oData.id,
+                    id: modelSurveyMaster.oData.survey.id,
                 },
             }).then(function (data) {
                 apiMaster();
