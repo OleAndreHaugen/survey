@@ -1,6 +1,8 @@
 const formResponse = {
+    pdfContent: null,
     response: null,
     anonymous: null,
+    charts: [],
     build: function (responses) {
         formResponse.anonymous = modelSurveyMaster.oData.survey.distribution.anonymous;
         formResponse.response = {};
@@ -16,6 +18,7 @@ const formResponse = {
 
     buildReport: function () {
         const parent = panResponse;
+        formResponse.charts = [];
 
         parent.destroyContent();
 
@@ -190,7 +193,7 @@ const formResponse = {
             modelpanResponse.oData["chartType" + question.id] = "bar";
         }
 
-        const chartparent = new sap.m.Panel({ height: "500px" });
+        const chartparent = new sap.m.Panel("questionParent" + question.id, { height: "500px" });
         parent.addItem(chartparent);
 
         // Chart Data
@@ -230,6 +233,7 @@ const formResponse = {
         chartparent.onAfterRendering = function () {
             let options = formResponse.setChartDefaults(categories, series, question);
             Highcharts.chart(chartparent.getDomRef(), options);
+            formResponse.charts.push(chartparent.sId);
         };
     },
 
@@ -242,7 +246,7 @@ const formResponse = {
             modelpanResponse.oData["chartType" + question.id] = "bar";
         }
 
-        const chartparent = new sap.m.Panel({ height: "500px" });
+        const chartparent = new sap.m.Panel("questionParent" + question.id, { height: "500px" });
         parent.addItem(chartparent);
 
         // Chart Data
@@ -284,6 +288,7 @@ const formResponse = {
         chartparent.onAfterRendering = function () {
             let options = formResponse.setChartDefaults(categories, series, question);
             Highcharts.chart(chartparent.getDomRef(), options);
+            formResponse.charts.push(chartparent.sId);
         };
     },
 
@@ -296,7 +301,7 @@ const formResponse = {
             modelpanResponse.oData["chartType" + question.id] = "bar";
         }
 
-        const chartparent = new sap.m.Panel({ height: "500px" });
+        const chartparent = new sap.m.Panel("questionParent" + question.id, { height: "500px" });
         parent.addItem(chartparent);
 
         // Chart Data
@@ -340,6 +345,7 @@ const formResponse = {
         chartparent.onAfterRendering = function () {
             let options = formResponse.setChartDefaults(categories, series, question);
             Highcharts.chart(chartparent.getDomRef(), options);
+            formResponse.charts.push(chartparent.sId);
         };
     },
 
@@ -382,7 +388,7 @@ const formResponse = {
         const response = formResponse.response[question.id];
         if (!response) return;
 
-        const tableText = new sap.m.Table({
+        const tableText = new sap.m.Table("questionParent" + question.id, {
             alternateRowColors: true,
             growing: true,
             growingThreshold: 10,
@@ -589,6 +595,86 @@ const formResponse = {
                     }
                     break;
             }
+        });
+    },
+
+    generatePDF: function () {
+        let pdfData = {
+            survey: {
+                title: modelSurveyData.oData.name,
+                subTitle: modelSurveyData.oData.description,
+            },
+            questions: [],
+        };
+
+        let qNum = 1;
+        let actions = [];
+
+        modelSurveyData.oData.questions.forEach((question) => {
+            let questionData = {
+                id: question.id,
+                type: question.type,
+                title: qNum + ". " + question.title,
+                subTitle: question.subTitle,
+                imageData: "/public/images/nsball.png",
+                imageWidth: 550,
+                enableImage: false,
+                enableTable: false,
+                responsesCount: formResponse.response[question.id].responseCount,
+                responses: [],
+            };
+
+            switch (question.type) {
+                case "NPS":
+                case "Likert":
+                case "SingleChoice":
+                case "MultipleChoice":
+                    questionData.enableImage = true;
+                    actions.push(formResponse.generateImage(question));
+                    break;
+
+                default:
+                    const questionParent = sap.ui.getCore().byId("questionParent" + question.id);
+                    questionData.responses = questionParent.getModel().getData();
+                    questionData.imageWidth = 0;
+                    questionData.enableTable = true;
+                    break;
+            }
+
+            pdfData.questions.push(questionData);
+
+            qNum++;
+        });
+
+        Promise.all(actions).then(function (values) {
+            values.forEach((value) => {
+                var questionData = ModelData.FindFirst(pdfData.questions, "id", value.id);
+                questionData.imageData = value.imageData;
+            });
+
+            apiReportGenerate({
+                data: pdfData,
+            }).then(function (res) {
+                formResponse.pdfContent = res;
+                diaPDF.open();
+            });
+        });
+    },
+
+    generateImage: function (question) {
+        return new Promise(function (resolve) {
+            const node = document.getElementById("questionParent" + question.id);
+
+            domtoimage
+                .toJpeg(node, {
+                    cacheBust: true,
+                })
+                .then(function (dataUrl) {
+                    resolve({ id: question.id, imageData: dataUrl });
+                })
+                .catch(function (error) {
+                    resolve({});
+                });
         });
     },
 };

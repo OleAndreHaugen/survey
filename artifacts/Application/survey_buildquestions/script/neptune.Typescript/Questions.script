@@ -9,6 +9,7 @@ namespace QuestionBuilder {
             new nep.bootstrap.Input({
                 type: "Number",
                 border: "Border0",
+                margin: "MarginBottom3",
                 formLayout: "Floating",
                 label: "Enter your answer",
                 value: "{ResponseData>/response/" + definition.id + "}",
@@ -21,7 +22,7 @@ namespace QuestionBuilder {
         const options = {
             border: "Border0",
             formLayout: "Floating",
-            margin: "MarginBottom2",
+            margin: "MarginBottom3",
             label: "Enter your answer",
             value: "{ResponseData>/response/" + definition.id + "}",
             backgroundColor: getTheme() === "sap_horizon" ? "Light" : "",
@@ -38,6 +39,7 @@ namespace QuestionBuilder {
             new nep.bootstrap.Input({
                 type: "Date",
                 border: "Border0",
+                margin: "MarginBottom3",
                 formLayout: "Floating",
                 label: "Enter your answer",
                 value: "{ResponseData>/response/" + definition.id + "}",

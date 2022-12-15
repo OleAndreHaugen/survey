@@ -1,0 +1,28 @@
+{
+	"id": "b886ecb2-d482-436e-9bf0-229a923a7b95",
+	"createdAt": "2022-12-15T06:19:16.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [],
+	"apis": [
+		{
+			"id": "2e6d6396-4601-4e86-da7d-195246600d51",
+			"parent": "62d15798-88e5-4c5a-b748-e12f33693b1d",
+			"name": "/surveyreport",
+			"contextname": "surveyreport",
+			"method": "POST"
+		}
+	],
+	"name": "ReportGenerate",
+	"ver": "22.12.15.832",
+	"description": null,
+	"content": "file:///content.script",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "28f52a8c-9bcc-46ba-be8a-3527792f199a",
+	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1"
+}

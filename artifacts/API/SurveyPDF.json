@@ -1,0 +1,54 @@
+{
+	"id": "62d15798-88e5-4c5a-b748-e12f33693b1d",
+	"createdAt": "2022-12-15T06:24:57.000Z",
+	"createdBy": "ole-andre.haugen@neptune-software.com",
+	"auth": [
+		{
+			"role": "DEF",
+			"apiAuth": "22470aca-32d4-458a-bced-5e814f82363e",
+			"authName": "ServiceUser for Local System",
+			"authDesc": "",
+			"id": "9c6dde27-ddfe-425c-b2a5-0cb36064920a"
+		}
+	],
+	"endpoints": [],
+	"paths": [
+		{
+			"id": "2e6d6396-4601-4e86-da7d-195246600d51",
+			"method": "POST",
+			"path": "/surveyreport",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": []
+		}
+	],
+	"definitions": [],
+	"documentation": [],
+	"name": "SurveyPDF",
+	"endpoint": "http://localhost:8080/pdf",
+	"ver": "22.12.15.729",
+	"version": "1.0",
+	"description": null,
+	"mediaType": null,
+	"securitySchemes": null,
+	"swaggerURI": null,
+	"swaggerSystem": null,
+	"apiType": "",
+	"about": null,
+	"enableProxy": true,
+	"restrictAccess": false,
+	"enableTrace": false,
+	"enableIDE": false,
+	"internalAPI": false,
+	"isPublic": false,
+	"tlsAllowUntrusted": false,
+	"useOwnProcess": false,
+	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1",
+	"apiGroup": "461c2f81-ce9f-4ae4-815f-1a833e040315",
+	"apiFormat": 0,
+	"roles": []
+}

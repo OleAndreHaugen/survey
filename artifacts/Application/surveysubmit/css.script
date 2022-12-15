@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+.nbsInput .form-control {
+    color: #b1b1b1;
+    background-color: #3b3b3b;
+}
+
 .root {
     --formBackground: ""
 }

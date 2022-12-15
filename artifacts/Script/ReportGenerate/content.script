@@ -1,0 +1,4 @@
+const pdfData = await apis.surveyreport({ data: req.body });
+
+result.data = pdfData.data;
+complete();

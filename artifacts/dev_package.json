@@ -19,14 +19,14 @@
 		{
 			"id": "e219876b-b2f4-48cc-b55a-9e6494909e4a",
 			"application": "surveydesigner",
-			"title": "Neptune Survey",
-			"description": "Neptune Survey"
+			"title": "Neptune FORMS",
+			"description": "Neptune FORMS"
 		},
 		{
 			"id": "37aaeb45-bcc3-4fef-b167-fcdf4961cd04",
 			"application": "surveysubmit",
-			"title": "Neptune Survey",
-			"description": "Neptune Survey"
+			"title": "Neptune FORMS",
+			"description": "Neptune FORMS"
 		}
 	],
 	"api": [
@@ -39,6 +39,12 @@
 		{
 			"id": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
 			"name": "SurveyClient",
+			"description": null,
+			"apiGroup": "461c2f81-ce9f-4ae4-815f-1a833e040315"
+		},
+		{
+			"id": "62d15798-88e5-4c5a-b748-e12f33693b1d",
+			"name": "SurveyPDF",
 			"description": null,
 			"apiGroup": "461c2f81-ce9f-4ae4-815f-1a833e040315"
 		}
@@ -114,6 +120,11 @@
 			"description": null
 		},
 		{
+			"id": "b886ecb2-d482-436e-9bf0-229a923a7b95",
+			"name": "ReportGenerate",
+			"description": null
+		},
+		{
 			"id": "b83b1723-a53e-497c-99f1-58f5adf71975",
 			"name": "ReceiversReset",
 			"description": null
@@ -172,7 +183,13 @@
 		}
 	],
 	"theme": [],
-	"pdf": [],
+	"pdf": [
+		{
+			"id": "f890bab8-548b-4789-bb68-8e74e60df8b7",
+			"application": "surveyreport",
+			"description": ""
+		}
+	],
 	"rulesengine": [],
 	"reports": [],
 	"api_authentication": [],

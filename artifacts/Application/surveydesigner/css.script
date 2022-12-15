@@ -10,6 +10,11 @@
     box-sizing: border-box;
 }
 
+.nbsInput .form-control {
+    color: #b1b1b1;
+    background-color: #3b3b3b;
+}
+
 .root {
     --formBackground: ""
 }
@@ -138,4 +143,11 @@ html.sap-desktop .sapFDynamicPageTitle.sapFDynamicPageTitleFocus {
 
 .invalidResponse {
     border: 1px solid red;
+}
+
+/* IFRAMES */
+#iframeRun {
+    border: none;
+    height: 100%;
+    width: 100%;
 }

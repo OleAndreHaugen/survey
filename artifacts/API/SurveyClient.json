@@ -214,6 +214,20 @@
 			"endpoints": [],
 			"serverScript": "b83b1723-a53e-497c-99f1-58f5adf71975",
 			"tags": "Receivers"
+		},
+		{
+			"id": "831ba709-856b-4a51-d81d-a1ff3fdc5373",
+			"method": "POST",
+			"path": "/reportgenerate",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "b886ecb2-d482-436e-9bf0-229a923a7b95",
+			"tags": "Report"
 		}
 	],
 	"definitions": [
@@ -1128,7 +1142,7 @@
 	"documentation": [],
 	"name": "SurveyClient",
 	"endpoint": "/api/serverscript/surveyclient",
-	"ver": "22.12.10.957",
+	"ver": "22.12.15.721",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,

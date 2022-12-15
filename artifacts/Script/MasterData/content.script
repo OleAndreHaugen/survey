@@ -1,7 +1,12 @@
 const { Like } = operators;
 
 const manager = modules.typeorm.getConnection().manager;
-const emailTemplates = await manager.find('wf_notifications', { select: ["name", "description", "id"] });
+const emailTemplates = await manager.find('wf_notifications', {
+    select: ["name", "description", "id"],
+        order: {
+        name: "ASC"
+    }
+});
 
 const form = await entities.survey_form.find();
 
