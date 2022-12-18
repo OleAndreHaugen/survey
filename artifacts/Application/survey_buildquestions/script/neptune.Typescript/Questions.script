@@ -8,7 +8,6 @@ namespace QuestionBuilder {
         parent.addItem(
             new nep.bootstrap.Input({
                 type: "Number",
-                border: "Border0",
                 margin: "MarginBottom3",
                 formLayout: "Floating",
                 label: "Enter your answer",
@@ -20,7 +19,6 @@ namespace QuestionBuilder {
 
     export function Text(parent: ItemController, definition: QuestionDefinition) {
         const options = {
-            border: "Border0",
             formLayout: "Floating",
             margin: "MarginBottom3",
             label: "Enter your answer",
@@ -38,7 +36,6 @@ namespace QuestionBuilder {
         parent.addItem(
             new nep.bootstrap.Input({
                 type: "Date",
-                border: "Border0",
                 margin: "MarginBottom3",
                 formLayout: "Floating",
                 label: "Enter your answer",
@@ -170,7 +167,7 @@ namespace QuestionBuilder {
         };
 
         const tabLikert = new sap.m.Table(undefined, {
-            alternateRowColors: true,
+            alternateRowColors: false,
             fixedLayout: false,
             showSeparators: sap.m.ListSeparators.None,
             mode: sap.m.ListMode.None,

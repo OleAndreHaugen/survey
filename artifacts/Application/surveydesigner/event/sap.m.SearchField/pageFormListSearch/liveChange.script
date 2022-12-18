@@ -1,4 +1,4 @@
-let binding = gridForms.getBinding('items');
+let binding = gridForm.getBinding('items');
 let filter = new sap.ui.model.Filter({
     filters: [
         new sap.ui.model.Filter('name', 'Contains', this.getValue()),

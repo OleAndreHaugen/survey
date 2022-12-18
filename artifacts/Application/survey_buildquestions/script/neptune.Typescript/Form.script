@@ -49,7 +49,7 @@ function buildForm(
         questionTitle.addItem(
             new nep.bootstrap.Text({
                 text: `${qNum++}. ${question.title}`,
-                textColor: data.setup.textColor,
+                textColor: "Secondary",
                 fontSize: "FontSize5",
                 fontWeight: "Bold",
             })
@@ -68,7 +68,7 @@ function buildForm(
             questionParent.addItem(
                 new nep.bootstrap.Text({
                     text: question.subtitle,
-                    textColor: data.setup.textColor,
+                    textColor: "Secondary",
                     fontSize: "FontSize6",
                 })
             );
@@ -88,7 +88,7 @@ function buildForm(
             new sap.m.Button(undefined, {
                 text: "Submit",
                 width: "150px",
-                type: sap.m.ButtonType.Attention,
+                type: sap.m.ButtonType.Ghost,
                 press: async function (oEvent) {
                     const isValidResponses = validateResponses(data.questions, modelResponseData);
 

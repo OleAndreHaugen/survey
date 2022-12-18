@@ -5,17 +5,9 @@
 	"globalScripts": [],
 	"externalModules": [],
 	"entitySets": [],
-	"apis": [
-		{
-			"id": "2e6d6396-4601-4e86-da7d-195246600d51",
-			"parent": "62d15798-88e5-4c5a-b748-e12f33693b1d",
-			"name": "/surveyreport",
-			"contextname": "surveyreport",
-			"method": "POST"
-		}
-	],
+	"apis": [],
 	"name": "ReportGenerate",
-	"ver": "22.12.15.832",
+	"ver": "22.12.18.747",
 	"description": null,
 	"content": "file:///content.script",
 	"useAsGlobalScript": false,

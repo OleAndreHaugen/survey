@@ -49,6 +49,7 @@ const formResponse = {
             const questionTop = new sap.m.Panel({
                 expanded: true,
                 expandable: true,
+                backgroundDesign: "Solid"
             });
             questionTop.addStyleClass("formBorder sapUiMediumMarginTopBottom");
 
@@ -61,12 +62,12 @@ const formResponse = {
 
             const questionParent = new sap.m.VBox({
                 renderType: sap.m.FlexRendertype.Bare,
-            });
+            }).addStyleClass("formChart"); 
 
             questionToolbar.addContent(
                 new nep.bootstrap.Text({
                     text: `${qNum++}. ${question.title}`,
-                    textColor: modelSurveyData.oData.setup.textColor,
+                    textColor: "Secondary",
                     fontSize: "FontSize5",
                     fontWeight: "Bold",
                     textWrapping: true,
@@ -85,7 +86,7 @@ const formResponse = {
                 questionParent.addItem(
                     new nep.bootstrap.Text({
                         text: question.subtitle,
-                        textColor: modelSurveyData.oData.setup.textColor,
+                        textColor: "Secondary",
                         fontSize: "FontSize6",
                     })
                 );
@@ -140,7 +141,7 @@ const formResponse = {
     buildToolbar: function (question, parent) {
         const toolbar = new sap.m.Toolbar({
             width: "100%",
-        }).addStyleClass("sapUiSmallMarginTop sapUiSizeCompact formNoBorder formToolbar");
+        }).addStyleClass("sapUiSmallMarginTop sapUiSizeCompact formToolbar");
 
         toolbar.addContent(new sap.m.ToolbarSpacer());
 
@@ -301,7 +302,10 @@ const formResponse = {
             modelpanResponse.oData["chartType" + question.id] = "bar";
         }
 
-        const chartparent = new sap.m.Panel("questionParent" + question.id, { height: "500px" });
+        const chartparent = new sap.m.Panel("questionParent" + question.id, {
+            height: "500px",
+        }).addStyleClass("formChart");
+
         parent.addItem(chartparent);
 
         // Chart Data
@@ -354,7 +358,7 @@ const formResponse = {
             credits: false,
             chart: {
                 style: { fontFamily: "72", fontSize: "12px" },
-                backgroundColor: "transparent",
+                backgroundColor: "white",
                 type: modelpanResponse.oData["chartType" + question.id],
                 polar: modelpanResponse.oData["chartPolar" + question.id],
             },
@@ -636,6 +640,12 @@ const formResponse = {
                 default:
                     const questionParent = sap.ui.getCore().byId("questionParent" + question.id);
                     questionData.responses = questionParent.getModel().getData();
+
+                    // Remove illegal characters
+                    questionData.responses.forEach((response) => {
+                        response.text = response.text.replace(/\n/g, " ");
+                    });
+
                     questionData.imageWidth = 0;
                     questionData.enableTable = true;
                     break;
@@ -663,7 +673,7 @@ const formResponse = {
 
     generateImage: function (question) {
         return new Promise(function (resolve) {
-            const node = document.getElementById("questionParent" + question.id);
+            const node = document.getElementById("questionParent" + question.id).childNodes[0];
 
             domtoimage
                 .toJpeg(node, {

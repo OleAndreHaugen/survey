@@ -1,4 +1,7 @@
-const pdfData = await apis.surveyreport({ data: req.body });
+const pdfData = await p9.pdf.generatePdf({
+    pdfName: "surveyreport",
+    body: req.body
+});
 
-result.data = pdfData.data;
+result.data = pdfData;
 complete();

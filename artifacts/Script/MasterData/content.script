@@ -1,14 +1,19 @@
 const { Like } = operators;
 
 const manager = modules.typeorm.getConnection().manager;
+
 const emailTemplates = await manager.find('wf_notifications', {
     select: ["name", "description", "id"],
-        order: {
+    order: {
         name: "ASC"
     }
 });
 
-const form = await entities.survey_form.find();
+const form = await entities.survey_form.find({
+    order: {
+        name: "ASC"
+    }
+});
 
 const survey = await entities.survey_master.find({
     select: ["name", "description", "id", "updatedAt", "updatedBy"],
@@ -17,8 +22,17 @@ const survey = await entities.survey_master.find({
     }
 });
 
-const groups = await entities.survey_groups.find();
-const status = await entities.survey_status.find();
+const groups = await entities.survey_groups.find({
+    order: {
+        name: "ASC"
+    }
+});
+
+const status = await entities.survey_status.find({
+    order: {
+        name: "ASC"
+    }
+});
 
 result.data = {
     form,

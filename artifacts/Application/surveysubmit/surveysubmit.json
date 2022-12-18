@@ -610,7 +610,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.15.652",
+	"ver": "22.12.18.825",
 	"application": "surveysubmit",
 	"title": "Neptune FORMS",
 	"description": "Neptune FORMS",
@@ -629,7 +629,7 @@
 	"ui5_tnt": false,
 	"ui5_uxap": false,
 	"ui5_chart": false,
-	"ui5_theme": "sap_horizon_dark",
+	"ui5_theme": "sap_horizon",
 	"ui5_version": "1.108",
 	"ui5_language": null,
 	"ui5_url": "",

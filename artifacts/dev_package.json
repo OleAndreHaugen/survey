@@ -41,12 +41,6 @@
 			"name": "SurveyClient",
 			"description": null,
 			"apiGroup": "461c2f81-ce9f-4ae4-815f-1a833e040315"
-		},
-		{
-			"id": "62d15798-88e5-4c5a-b748-e12f33693b1d",
-			"name": "SurveyPDF",
-			"description": null,
-			"apiGroup": "461c2f81-ce9f-4ae4-815f-1a833e040315"
 		}
 	],
 	"odataSource": [],

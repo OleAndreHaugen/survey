@@ -2685,298 +2685,6 @@
 																							]
 																						},
 																						{
-																							"fieldNo": "32faa964-3f74-4693-837a-c1507de93142",
-																							"fieldName": "lblpageFormSetupTextColor",
-																							"fieldParent": "9874885b-2426-4083-c5d4-a7194683e671",
-																							"fieldType": "sap.m.Label",
-																							"script": "",
-																							"customComponent": false,
-																							"request": [],
-																							"response": [],
-																							"attributes": [
-																								{
-																									"attribute": "text",
-																									"grouping": "Properties",
-																									"value": "Question Text Color",
-																									"script": "",
-																									"translation": []
-																								}
-																							],
-																							"data": []
-																						},
-																						{
-																							"fieldNo": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																							"fieldName": "inpageFormSetupTextColor",
-																							"fieldParent": "9874885b-2426-4083-c5d4-a7194683e671",
-																							"fieldType": "sap.m.Select",
-																							"script": "",
-																							"customComponent": false,
-																							"request": [],
-																							"response": [],
-																							"attributes": [
-																								{
-																									"attribute": "selectedKey",
-																									"grouping": "Properties",
-																									"value": "{SurveyData>/setup/textColor}",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "change",
-																									"grouping": "Events",
-																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Select/inpageFormSetupTextColor/change.script",
-																									"language": "javascript",
-																									"translation": []
-																								}
-																							],
-																							"data": [
-																								{
-																									"fieldNo": "aa17af2e-8666-451f-f449-99e6fd9e6e56",
-																									"fieldName": "oItemTextCol5",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Danger",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Danger",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "9550c9d8-6b55-44ef-a2cf-655773161c15",
-																									"fieldName": "oItemTextCol6",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Dark",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Dark",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "406689aa-0820-4eb8-bb8e-94baffae5c42",
-																									"fieldName": "oItemTextCol7",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Info",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Info",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "2016834a-b04f-43c0-ea86-84d4e7123deb",
-																									"fieldName": "oItemTextCol8",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Light",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Light",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "23abee1a-c96a-442e-dc0c-eee41a5cb223",
-																									"fieldName": "oItemTextCol20",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Primary",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Primary",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "1da3fd4d-ad52-4236-c627-55ccf001ac90",
-																									"fieldName": "oItemTextCol2",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Secondary",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Secondary",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "0f997873-8808-4526-e250-986cf39eb353",
-																									"fieldName": "oItemTextCol22",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Success",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Success",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "a861c2fa-3812-4087-fa08-32eb385d9ffb",
-																									"fieldName": "oItemTextCol23",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "Warning",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "Warning",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								},
-																								{
-																									"fieldNo": "3323aa38-63f4-418b-b7d3-d16110609c39",
-																									"fieldName": "oItemTextCol24",
-																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
-																									"fieldType": "sap.ui.core.Item",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [
-																										{
-																											"attribute": "text",
-																											"grouping": "Properties",
-																											"value": "White",
-																											"script": "",
-																											"translation": []
-																										},
-																										{
-																											"attribute": "key",
-																											"grouping": "Properties",
-																											"value": "White",
-																											"script": "",
-																											"translation": []
-																										}
-																									],
-																									"data": []
-																								}
-																							]
-																						},
-																						{
 																							"fieldNo": "4350a9c7-6d07-4e01-f145-97c2822b856b",
 																							"fieldName": "lblpageFormSetupBackground",
 																							"fieldParent": "9874885b-2426-4083-c5d4-a7194683e671",
@@ -3863,7 +3571,7 @@
 																																		{
 																																			"attribute": "backgroundColor",
 																																			"grouping": "Properties",
-																																			"value": "Accent7",
+																																			"value": "Accent6",
 																																			"script": "",
 																																			"translation": []
 																																		}
@@ -3958,7 +3666,7 @@
 																																				{
 																																					"attribute": "textColor",
 																																					"grouping": "Properties",
-																																					"value": "{SurveyData>/setup/textColor}",
+																																					"value": "Secondary",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -4009,26 +3717,6 @@
 																																			"request": [],
 																																			"response": [],
 																																			"attributes": [],
-																																			"data": []
-																																		},
-																																		{
-																																			"fieldNo": "e78faebb-446e-47be-b24b-af84d4537bb4",
-																																			"fieldName": "questionTypeLabel",
-																																			"fieldParent": "82f9f93b-32d2-4c3e-bbd5-1e543ebb65bd",
-																																			"fieldType": "sap.m.Label",
-																																			"script": "",
-																																			"customComponent": false,
-																																			"request": [],
-																																			"response": [],
-																																			"attributes": [
-																																				{
-																																					"attribute": "text",
-																																					"grouping": "Properties",
-																																					"value": "{SurveyData>typeText}",
-																																					"script": "",
-																																					"translation": []
-																																				}
-																																			],
 																																			"data": []
 																																		},
 																																		{
@@ -4217,9 +3905,9 @@
 																																			"translation": []
 																																		},
 																																		{
-																																			"attribute": "border",
+																																			"attribute": "backgroundColor",
 																																			"grouping": "Properties",
-																																			"value": "Border0",
+																																			"value": "Light",
 																																			"script": "",
 																																			"translation": []
 																																		},
@@ -4279,9 +3967,9 @@
 																																			"translation": []
 																																		},
 																																		{
-																																			"attribute": "border",
+																																			"attribute": "backgroundColor",
 																																			"grouping": "Properties",
-																																			"value": "Border0",
+																																			"value": "Light",
 																																			"script": "",
 																																			"translation": []
 																																		},
@@ -4367,9 +4055,9 @@
 																																					"translation": []
 																																				},
 																																				{
-																																					"attribute": "border",
+																																					"attribute": "backgroundColor",
 																																					"grouping": "Properties",
-																																					"value": "Border0",
+																																					"value": "Light",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -4450,9 +4138,9 @@
 																																					"translation": []
 																																				},
 																																				{
-																																					"attribute": "border",
+																																					"attribute": "backgroundColor",
 																																					"grouping": "Properties",
-																																					"value": "Border0",
+																																					"value": "Light",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -4500,7 +4188,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -4740,9 +4428,9 @@
 																																					"translation": []
 																																				},
 																																				{
-																																					"attribute": "border",
+																																					"attribute": "backgroundColor",
 																																					"grouping": "Properties",
-																																					"value": "Border0",
+																																					"value": "Light",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -4797,7 +4485,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -4976,6 +4664,13 @@
 																																					"value": "Select your date",
 																																					"script": "",
 																																					"translation": []
+																																				},
+																																				{
+																																					"attribute": "backgroundColor",
+																																					"grouping": "Properties",
+																																					"value": "Light",
+																																					"script": "",
+																																					"translation": []
 																																				}
 																																			],
 																																			"data": []
@@ -5007,7 +4702,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -5169,9 +4864,23 @@
 																																			"response": [],
 																																			"attributes": [
 																																				{
+																																					"attribute": "showSeparators",
+																																					"grouping": "Properties",
+																																					"value": "None",
+																																					"script": "",
+																																					"translation": []
+																																				},
+																																				{
 																																					"attribute": "mode",
 																																					"grouping": "Properties",
 																																					"value": "Delete",
+																																					"script": "",
+																																					"translation": []
+																																				},
+																																				{
+																																					"attribute": "backgroundDesign",
+																																					"grouping": "Properties",
+																																					"value": "Transparent",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -5289,9 +4998,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -5358,9 +5067,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -5427,9 +5136,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -5496,9 +5205,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -5565,9 +5274,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -5634,9 +5343,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -5679,13 +5388,6 @@
 																																									"value": "sap-icon://menu2",
 																																									"script": "",
 																																									"translation": []
-																																								},
-																																								{
-																																									"attribute": "color",
-																																									"grouping": "Properties",
-																																									"value": "#83c8bc",
-																																									"script": "",
-																																									"translation": []
 																																								}
 																																							],
 																																							"data": []
@@ -5708,9 +5410,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								}
@@ -5848,7 +5550,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -6421,9 +6123,9 @@
 																																							"translation": []
 																																						},
 																																						{
-																																							"attribute": "border",
+																																							"attribute": "backgroundColor",
 																																							"grouping": "Properties",
-																																							"value": "Border0",
+																																							"value": "Light",
 																																							"script": "",
 																																							"translation": []
 																																						},
@@ -6462,9 +6164,9 @@
 																																							"translation": []
 																																						},
 																																						{
-																																							"attribute": "border",
+																																							"attribute": "backgroundColor",
 																																							"grouping": "Properties",
-																																							"value": "Border0",
+																																							"value": "Light",
 																																							"script": "",
 																																							"translation": []
 																																						},
@@ -6514,7 +6216,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -6844,13 +6546,6 @@
 																																									"value": "sap-icon://menu2",
 																																									"script": "",
 																																									"translation": []
-																																								},
-																																								{
-																																									"attribute": "color",
-																																									"grouping": "Properties",
-																																									"value": "#83c8bc",
-																																									"script": "",
-																																									"translation": []
 																																								}
 																																							],
 																																							"data": []
@@ -6885,9 +6580,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -6926,9 +6621,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -6973,7 +6668,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -7345,13 +7040,6 @@
 																																									"value": "sap-icon://menu2",
 																																									"script": "",
 																																									"translation": []
-																																								},
-																																								{
-																																									"attribute": "color",
-																																									"grouping": "Properties",
-																																									"value": "#83c8bc",
-																																									"script": "",
-																																									"translation": []
 																																								}
 																																							],
 																																							"data": []
@@ -7386,9 +7074,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -7427,9 +7115,9 @@
 																																									"translation": []
 																																								},
 																																								{
-																																									"attribute": "border",
+																																									"attribute": "backgroundColor",
 																																									"grouping": "Properties",
-																																									"value": "Border0",
+																																									"value": "Light",
 																																									"script": "",
 																																									"translation": []
 																																								},
@@ -7474,7 +7162,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -7971,7 +7659,7 @@
 																																				{
 																																					"attribute": "styleClass",
 																																					"grouping": "Properties",
-																																					"value": "formNoBorder formToolbar",
+																																					"value": "formToolbar",
 																																					"script": "",
 																																					"translation": []
 																																				},
@@ -8454,7 +8142,7 @@
 																												{
 																													"attribute": "backgroundColor",
 																													"grouping": "Properties",
-																													"value": "Accent7",
+																													"value": "Accent6",
 																													"script": "",
 																													"translation": []
 																												}
@@ -9269,8 +8957,8 @@
 																				{
 																					"attribute": "selectionChange",
 																					"grouping": "Events",
-																					"value": "pageFormListSearch.fireLiveChange();",
-																					"script": "pageFormListSearch.fireLiveChange();",
+																					"value": "pageGroupListSearch.fireLiveChange();",
+																					"script": "pageGroupListSearch.fireLiveChange();",
 																					"translation": []
 																				}
 																			],
@@ -10361,8 +10049,8 @@
 																				{
 																					"attribute": "selectionChange",
 																					"grouping": "Events",
-																					"value": "pageFormListSearch.fireLiveChange();",
-																					"script": "pageFormListSearch.fireLiveChange();",
+																					"value": "pageSurveyListSearch.fireLiveChange();",
+																					"script": "pageSurveyListSearch.fireLiveChange();",
 																					"translation": []
 																				}
 																			],
@@ -10699,6 +10387,13 @@
 																					"request": [],
 																					"response": [],
 																					"attributes": [
+																						{
+																							"attribute": "wrapping",
+																							"grouping": "Properties",
+																							"value": "false",
+																							"script": "",
+																							"translation": []
+																						},
 																						{
 																							"attribute": "text",
 																							"grouping": "Properties",
@@ -15720,7 +15415,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.15.833",
+	"ver": "22.12.18.821",
 	"application": "surveydesigner",
 	"title": "Neptune FORMS",
 	"description": "Neptune FORMS",
@@ -15739,13 +15434,13 @@
 	"ui5_tnt": true,
 	"ui5_uxap": false,
 	"ui5_chart": false,
-	"ui5_theme": "sap_horizon_dark",
+	"ui5_theme": "sap_horizon",
 	"ui5_version": "1.108",
 	"ui5_language": null,
 	"ui5_url": "",
 	"cus_theme": "",
 	"css": "file:///css.script",
-	"header": "file:///header.script",
+	"header": "",
 	"manifest": "",
 	"globalScript": null,
 	"deleted": false,
