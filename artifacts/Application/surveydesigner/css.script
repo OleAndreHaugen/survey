@@ -10,7 +10,7 @@
     --nepCantDrop: #be636363;
     --nepBoxShadow: 0 0 0.125rem 0 rgba(85, 107, 130, 0.72);
     --nepBorderWidth: 1px;
-    --nepBorder: var(--nepBorderWidth) solid var(--nepBorderColor);
+    --nepBorder: var(--nepBorderWidth) solid #ced4da;
     --xsmall: 450px;
     --small: 780px;
     --medium: 1180px;
