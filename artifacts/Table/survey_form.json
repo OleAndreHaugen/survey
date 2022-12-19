@@ -34,13 +34,22 @@
 			"isUnique": false,
 			"description": "Setup",
 			"isNullable": true
+		},
+		{
+			"id": "b507525a-c832-46c6-907f-9f5f77f8fbc8",
+			"fieldName": "deleted",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"description": "Deleted",
+			"isNullable": true,
+			"default": ""
 		}
 	],
 	"indices": [],
 	"foreignKeys": [],
 	"name": "survey_form",
 	"description": "Survey: Form",
-	"ver": "22.12.9.727",
+	"ver": "22.12.19.1131",
 	"enableAudit": false,
 	"includeDataInPackage": false,
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1",

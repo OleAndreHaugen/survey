@@ -1,4 +1,4 @@
-const { Like } = operators;
+const { Like, Any, IsNull } = operators;
 
 const manager = modules.typeorm.getConnection().manager;
 
@@ -17,10 +17,22 @@ const users = await manager.find('users', {
 });
 
 const form = await entities.survey_form.find({
+    where: [
+        {
+            deleted: IsNull()
+        }, {
+            deleted: false
+        }
+    ],
     order: {
         name: "ASC"
     }
 });
+
+[
+    { firstName: "Timber", lastName: "Saw" },
+    { firstName: "Stan", lastName: "Lee" },
+]
 
 const survey = await entities.survey_master.find({
     select: ["name", "description", "id", "updatedAt", "updatedBy", "protected", "createdAt", "createdBy"],
