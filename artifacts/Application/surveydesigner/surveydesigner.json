@@ -11135,7 +11135,7 @@
 																		{
 																			"attribute": "height",
 																			"grouping": "Properties",
-																			"value": "100%",
+																			"value": "calc(100% - 100px)",
 																			"script": "",
 																			"translation": []
 																		}
@@ -11693,60 +11693,6 @@
 																					],
 																					"data": [
 																						{
-																							"fieldNo": "a6064f5b-bbdc-4b4c-8e90-57ee1d4be351",
-																							"fieldName": "lblpageSurveyDistribAnonymous",
-																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
-																							"fieldType": "sap.m.Label",
-																							"script": "",
-																							"customComponent": false,
-																							"request": [],
-																							"response": [],
-																							"attributes": [
-																								{
-																									"attribute": "text",
-																									"grouping": "Properties",
-																									"value": "Anonymous survey",
-																									"script": "",
-																									"translation": []
-																								}
-																							],
-																							"data": []
-																						},
-																						{
-																							"fieldNo": "2924ff47-0df7-4426-8318-e2e2993ac23b",
-																							"fieldName": "inpageSurveyDistribAnonSwitch",
-																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
-																							"fieldType": "sap.m.Switch",
-																							"script": "",
-																							"customComponent": false,
-																							"request": [],
-																							"response": [],
-																							"attributes": [
-																								{
-																									"attribute": "state",
-																									"grouping": "Properties",
-																									"value": "{SurveyMaster>/survey/distribution/anonymous}",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "customTextOn",
-																									"grouping": "Properties",
-																									"value": "Yes",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "customTextOff",
-																									"grouping": "Properties",
-																									"value": "No",
-																									"script": "",
-																									"translation": []
-																								}
-																							],
-																							"data": []
-																						},
-																						{
 																							"fieldNo": "39ce4afc-87b0-497a-ce2d-fb00e2781773",
 																							"fieldName": "lblpageSurveyDistribTemplate",
 																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
@@ -11851,6 +11797,72 @@
 																									"data": []
 																								}
 																							]
+																						},
+																						{
+																							"fieldNo": "a6064f5b-bbdc-4b4c-8e90-57ee1d4be351",
+																							"fieldName": "lblpageSurveyDistribAnonymous",
+																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "4355e607-dbda-4935-8622-c297422a432c",
+																							"fieldName": "inpageSurveyDistribAnonumous",
+																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
+																							"fieldType": "sap.m.CheckBox",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Anonymous Survey",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "selected",
+																									"grouping": "Properties",
+																									"value": "{SurveyMaster>/survey/distribution/anonymous}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "d3d36eb3-8598-4851-f51a-fe28fac3bf61",
+																							"fieldName": "inpageSurveyDistribProtected",
+																							"fieldParent": "cb738c86-4e0e-4fc2-ff2a-2986423e89db",
+																							"fieldType": "sap.m.CheckBox",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Protected Survey",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "selected",
+																									"grouping": "Properties",
+																									"value": "{SurveyMaster>/survey/protected}",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
 																						}
 																					]
 																				},
@@ -12037,6 +12049,107 @@
 																									"attribute": "value",
 																									"grouping": "Properties",
 																									"value": "{SurveyMaster>/survey/updatedBy}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "editable",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "9d7b80c6-78ba-4a5e-ee2b-b99cdf5326af",
+																							"fieldName": "lblpageSurveyDetailSurveycreatedAt",
+																							"fieldParent": "852c1683-5f53-4819-d437-904499b78cb3",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Created On",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "2916c1a7-9314-40ae-dec9-ee29a97102e3",
+																							"fieldName": "inpageSurveyDetailSurveycreatedAt",
+																							"fieldParent": "852c1683-5f53-4819-d437-904499b78cb3",
+																							"fieldType": "sap.m.Input",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "value",
+																									"grouping": "Properties",
+																									"value": "{SurveyMaster>/survey/createdAt}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "editable",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "value",
+																									"grouping": "Formatter",
+																									"value": "date:BrowserSetting",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "3e97236b-c5a3-40be-f505-43a9942d94cc",
+																							"fieldName": "lblpageSurveyDetailSurveycreatedBy",
+																							"fieldParent": "852c1683-5f53-4819-d437-904499b78cb3",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Created By",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "3cbce366-d0f6-4165-c612-b389d3d0f3fa",
+																							"fieldName": "inpageSurveyDetailSurveycreatedBy",
+																							"fieldParent": "852c1683-5f53-4819-d437-904499b78cb3",
+																							"fieldType": "sap.m.Input",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "value",
+																									"grouping": "Properties",
+																									"value": "{SurveyMaster>/survey/createdBy}",
 																									"script": "",
 																									"translation": []
 																								},
@@ -12593,9 +12706,23 @@
 																							"response": [],
 																							"attributes": [
 																								{
+																									"attribute": "showNoData",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
 																									"attribute": "mode",
 																									"grouping": "Properties",
 																									"value": "MultiSelect",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "includeItemInSelection",
+																									"grouping": "Properties",
+																									"value": "true",
 																									"script": "",
 																									"translation": []
 																								},
@@ -13380,6 +13507,512 @@
 																					]
 																				}
 																			]
+																		},
+																		{
+																			"fieldNo": "04e237e7-3efb-4b37-e9ce-404ae2216ece",
+																			"fieldName": "tabSurveyUsers",
+																			"fieldParent": "596ebaea-fab4-43a6-ac97-1138bbb8df6b",
+																			"fieldType": "sap.m.IconTabFilter",
+																			"script": "",
+																			"customComponent": false,
+																			"request": [],
+																			"response": [],
+																			"attributes": [
+																				{
+																					"attribute": "visible",
+																					"grouping": "Properties",
+																					"value": "{= ${SurveyMaster>/survey/protected} ? true:false }",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "text",
+																					"grouping": "Properties",
+																					"value": "Users",
+																					"script": "",
+																					"translation": []
+																				},
+																				{
+																					"attribute": "key",
+																					"grouping": "Properties",
+																					"value": "users",
+																					"script": "",
+																					"translation": []
+																				}
+																			],
+																			"data": [
+																				{
+																					"fieldNo": "2cb5c80e-c3a2-4624-b78b-8ec2dfc43eb5",
+																					"fieldName": "toolUsers",
+																					"fieldParent": "04e237e7-3efb-4b37-e9ce-404ae2216ece",
+																					"fieldType": "sap.m.Toolbar",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "width",
+																							"grouping": "Properties",
+																							"value": "100%",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "enableCompactMode",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "position",
+																							"grouping": "Parent",
+																							"value": "HeaderToolbar",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "b03a6c8f-18dd-4abd-c51b-957b8db9612b",
+																							"fieldName": "toolUsersUpdate",
+																							"fieldParent": "2cb5c80e-c3a2-4624-b78b-8ec2dfc43eb5",
+																							"fieldType": "sap.m.Button",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "visible",
+																									"grouping": "Properties",
+																									"value": "{= ${SurveyData>/id} ? true:false}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "type",
+																									"grouping": "Properties",
+																									"value": "Ghost",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Update",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "enableCompactMode",
+																									"grouping": "Properties",
+																									"value": "true",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "press",
+																									"grouping": "Events",
+																									"value": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
+																									"script": "formBuilder.getSurvey(modelSurveyMaster.oData.survey.id);",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "0bf3a3e0-9cf6-449a-90d0-bf6f238c5832",
+																							"fieldName": "toolUsersSep4",
+																							"fieldParent": "2cb5c80e-c3a2-4624-b78b-8ec2dfc43eb5",
+																							"fieldType": "sap.m.ToolbarSeparator",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "4cd087f1-793b-47cc-885b-e104bc780a6e",
+																							"fieldName": "toolUsersAdd",
+																							"fieldParent": "2cb5c80e-c3a2-4624-b78b-8ec2dfc43eb5",
+																							"fieldType": "sap.m.Button",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "type",
+																									"grouping": "Properties",
+																									"value": "Attention",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Add",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "press",
+																									"grouping": "Events",
+																									"value": "diaAddUsers.open();",
+																									"script": "diaAddUsers.open();",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "1d31ba0d-c726-4929-cb89-61c7a4a6c283",
+																							"fieldName": "toolUsersSpacer",
+																							"fieldParent": "2cb5c80e-c3a2-4624-b78b-8ec2dfc43eb5",
+																							"fieldType": "sap.m.ToolbarSpacer",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "b7c14c1e-9dcb-44ae-f011-204a1d99c7b4",
+																							"fieldName": "toolUsersDelete",
+																							"fieldParent": "2cb5c80e-c3a2-4624-b78b-8ec2dfc43eb5",
+																							"fieldType": "sap.m.Button",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "type",
+																									"grouping": "Properties",
+																									"value": "Reject",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Delete",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "enabled",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "press",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Button/toolUsersDelete/press.script",
+																									"language": "javascript",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						}
+																					]
+																				},
+																				{
+																					"fieldNo": "9b226edf-5120-4a05-d162-8c006742c510",
+																					"fieldName": "scrollUsers",
+																					"fieldParent": "04e237e7-3efb-4b37-e9ce-404ae2216ece",
+																					"fieldType": "sap.m.ScrollContainer",
+																					"script": "",
+																					"customComponent": false,
+																					"request": [],
+																					"response": [],
+																					"attributes": [
+																						{
+																							"attribute": "vertical",
+																							"grouping": "Properties",
+																							"value": "true",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "horizontal",
+																							"grouping": "Properties",
+																							"value": "false",
+																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "height",
+																							"grouping": "Properties",
+																							"value": "calc(100% - 50px)",
+																							"script": "",
+																							"translation": []
+																						}
+																					],
+																					"data": [
+																						{
+																							"fieldNo": "233a0629-5e49-48d7-9538-b566a9099ed7",
+																							"fieldName": "tabUsers",
+																							"fieldParent": "9b226edf-5120-4a05-d162-8c006742c510",
+																							"fieldType": "sap.m.Table",
+																							"script": "",
+																							"customComponent": false,
+																							"bindingType": "h",
+																							"modelPath": "SurveyMaster>/users",
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "showNoData",
+																									"grouping": "Properties",
+																									"value": "false",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "mode",
+																									"grouping": "Properties",
+																									"value": "MultiSelect",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "fixedLayout",
+																									"grouping": "Properties",
+																									"value": "true",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "updateFinished",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Table/tabUsers/updateFinished.script",
+																									"language": "javascript",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "selectionChange",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Table/tabUsers/selectionChange.script",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "sticky",
+																									"grouping": "Properties",
+																									"value": "[\"ColumnHeaders\",\"HeaderToolbar\"]",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "contextualWidth",
+																									"grouping": "Properties",
+																									"value": "Auto",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": [
+																								{
+																									"fieldNo": "a4cbee81-9396-4f4c-b027-d179268a11c9",
+																									"fieldName": "coltabUsersName",
+																									"fieldParent": "233a0629-5e49-48d7-9538-b566a9099ed7",
+																									"fieldType": "sap.m.Column",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [],
+																									"data": [
+																										{
+																											"fieldNo": "fde66aed-72bd-4498-c62b-ebf7181a33fa",
+																											"fieldName": "colHtabUsersName",
+																											"fieldParent": "a4cbee81-9396-4f4c-b027-d179268a11c9",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "Username",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										}
+																									]
+																								},
+																								{
+																									"fieldNo": "fa47c677-21cb-4a5c-b730-d9a9d82d6c96",
+																									"fieldName": "coltabUsersupdatedat",
+																									"fieldParent": "233a0629-5e49-48d7-9538-b566a9099ed7",
+																									"fieldType": "sap.m.Column",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [],
+																									"data": [
+																										{
+																											"fieldNo": "2418d49a-a96f-4cf7-82d8-8332fcad72e0",
+																											"fieldName": "colHtabUsersupdatedat",
+																											"fieldParent": "fa47c677-21cb-4a5c-b730-d9a9d82d6c96",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "Updated At",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										}
+																									]
+																								},
+																								{
+																									"fieldNo": "eded4620-7be7-4f90-fbf8-803f28310d0a",
+																									"fieldName": "coltabUsersupdatedby",
+																									"fieldParent": "233a0629-5e49-48d7-9538-b566a9099ed7",
+																									"fieldType": "sap.m.Column",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "minScreenWidth",
+																											"grouping": "Properties",
+																											"value": "XXLarge",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": [
+																										{
+																											"fieldNo": "fbdb135f-950b-446b-e0b7-80be50a5f778",
+																											"fieldName": "colHtabUsersupdatedby",
+																											"fieldParent": "eded4620-7be7-4f90-fbf8-803f28310d0a",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "Updated By",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										}
+																									]
+																								},
+																								{
+																									"fieldNo": "49f3124c-d1c4-4ea1-86c1-51cee2a91f91",
+																									"fieldName": "colItemtabUsers",
+																									"fieldParent": "233a0629-5e49-48d7-9538-b566a9099ed7",
+																									"fieldType": "sap.m.ColumnListItem",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [],
+																									"data": [
+																										{
+																											"fieldNo": "4ec624b9-e086-4c9e-a2cc-0f84f3b45f2d",
+																											"fieldName": "txttabUsersName",
+																											"fieldParent": "49f3124c-d1c4-4ea1-86c1-51cee2a91f91",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "{SurveyMaster>username}",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										},
+																										{
+																											"fieldNo": "1bfacdfc-de4e-4ce0-e736-80f8075e23d5",
+																											"fieldName": "txttabUsersupdatedat",
+																											"fieldParent": "49f3124c-d1c4-4ea1-86c1-51cee2a91f91",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "{SurveyMaster>updatedAt}",
+																													"script": "",
+																													"translation": []
+																												},
+																												{
+																													"attribute": "text",
+																													"grouping": "Formatter",
+																													"value": "date:Relative",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										},
+																										{
+																											"fieldNo": "c7da125f-f304-43ae-fa6a-ca73c1cff77e",
+																											"fieldName": "txttabUsersupdatedby",
+																											"fieldParent": "49f3124c-d1c4-4ea1-86c1-51cee2a91f91",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "{SurveyMaster>updatedBy}",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										}
+																									]
+																								}
+																							]
+																						}
+																					]
+																				}
+																			]
 																		}
 																	]
 																}
@@ -13678,6 +14311,47 @@
 									"customComponent": false,
 									"restSource": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
 									"restOperation": "5a9718f7-c87d-4c41-dd36-1abfc77d5790",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								}
+							]
+						},
+						{
+							"fieldNo": "aee5e7c7-45f8-4f29-f729-e6a9490c9a61",
+							"fieldName": "Users",
+							"fieldParent": "bed80c55-cb30-49b7-9d1c-26198e172796",
+							"fieldType": "neptune.folder",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "e656219b-4302-4f0b-8546-5f04612bd3ec",
+									"fieldName": "UsersSave",
+									"fieldParent": "aee5e7c7-45f8-4f29-f729-e6a9490c9a61",
+									"fieldType": "neptune.restapi",
+									"script": "",
+									"customComponent": false,
+									"restSource": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
+									"restOperation": "90c26154-c0ca-4af1-acc3-666e6bd7a842",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								},
+								{
+									"fieldNo": "dc218468-33f0-45ed-a84c-df2901df9952",
+									"fieldName": "UsersDelete",
+									"fieldParent": "aee5e7c7-45f8-4f29-f729-e6a9490c9a61",
+									"fieldType": "neptune.restapi",
+									"script": "",
+									"customComponent": false,
+									"restSource": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
+									"restOperation": "f462cbd9-9f14-4daf-d709-5b37499e0a42",
 									"request": [],
 									"response": [],
 									"attributes": [],
@@ -15316,6 +15990,330 @@
 							]
 						},
 						{
+							"fieldNo": "2f47fb07-f07c-4b78-ee97-4c0712212674",
+							"fieldName": "diaAddUsersClose",
+							"fieldParent": "ec12e509-2cdb-4db2-d745-1a72e6b35c2f",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Close",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableCompactMode",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "diaAddUsers.close();",
+									"script": "diaAddUsers.close();",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "a9db9ad7-5edd-41db-b24a-08c6ff52034d",
+							"fieldName": "diaAddUsersSave",
+							"fieldParent": "ec12e509-2cdb-4db2-d745-1a72e6b35c2f",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Emphasized",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Save",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "enableCompactMode",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": "file://event/sap.m.Button/diaAddUsersSave/press.script",
+									"language": "javascript",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "10df7a42-f3c1-4ebe-9449-6d86100f9d7e",
+							"fieldName": "diaAddUsers",
+							"fieldParent": "ec12e509-2cdb-4db2-d745-1a72e6b35c2f",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Add users(s)",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "draggable",
+									"grouping": "Properties",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "1024px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentHeight",
+									"grouping": "Properties",
+									"value": "700px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "endButton",
+									"grouping": "Associations",
+									"value": "diaAddUsersClose",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "beginButton",
+									"grouping": "Associations",
+									"value": "diaAddUsersSave",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "5c5f29e7-bcc4-4b50-e746-00d9fe143c8e",
+									"fieldName": "tabSystemUsers",
+									"fieldParent": "10df7a42-f3c1-4ebe-9449-6d86100f9d7e",
+									"fieldType": "sap.m.Table",
+									"script": "",
+									"customComponent": false,
+									"bindingType": "h",
+									"modelPath": "MasterData>/users",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "showNoData",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "mode",
+											"grouping": "Properties",
+											"value": "MultiSelect",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "includeItemInSelection",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "fixedLayout",
+											"grouping": "Properties",
+											"value": "false",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "updateFinished",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": "file://event/sap.m.Table/tabSystemUsers/updateFinished.script",
+											"language": "javascript",
+											"translation": []
+										},
+										{
+											"attribute": "selectionChange",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": "file://event/sap.m.Table/tabSystemUsers/selectionChange.script",
+											"translation": []
+										},
+										{
+											"attribute": "sticky",
+											"grouping": "Properties",
+											"value": "[\"ColumnHeaders\",\"HeaderToolbar\"]",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "contextualWidth",
+											"grouping": "Properties",
+											"value": "Auto",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "32818e3e-12db-4e2e-899b-d5d9c8c52fc5",
+											"fieldName": "coltabSystemUsersName",
+											"fieldParent": "5c5f29e7-bcc4-4b50-e746-00d9fe143c8e",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "69bb3776-6de5-479e-c049-8d8e5aef8f83",
+													"fieldName": "colHtabSystemUsersName",
+													"fieldParent": "32818e3e-12db-4e2e-899b-d5d9c8c52fc5",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Name",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "7ff3692d-5741-4bc3-e9f2-f0fbf2b43397",
+											"fieldName": "coltabSystemUsersUsername",
+											"fieldParent": "5c5f29e7-bcc4-4b50-e746-00d9fe143c8e",
+											"fieldType": "sap.m.Column",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "0bf8aa4d-33bf-40d7-c057-91a63734d529",
+													"fieldName": "colHtabSystemUsersUsername",
+													"fieldParent": "7ff3692d-5741-4bc3-e9f2-f0fbf2b43397",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Username",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "574bc9d2-a3c4-410d-a2a8-1f126939e412",
+											"fieldName": "colItemtabSystemUsers",
+											"fieldParent": "5c5f29e7-bcc4-4b50-e746-00d9fe143c8e",
+											"fieldType": "sap.m.ColumnListItem",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "8b29a614-5299-4836-bbf2-78c4308452d3",
+													"fieldName": "txttabSystemUsersName",
+													"fieldParent": "574bc9d2-a3c4-410d-a2a8-1f126939e412",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{MasterData>name}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "8ff90727-81bd-4bb1-b32a-aeb66df87951",
+													"fieldName": "txttabSystemUsersUsername",
+													"fieldParent": "574bc9d2-a3c4-410d-a2a8-1f126939e412",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{MasterData>username}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
 							"fieldNo": "61cbf72b-4518-4994-eb0b-966653249ffa",
 							"fieldName": "oPopoverQuestionMenu",
 							"fieldParent": "ec12e509-2cdb-4db2-d745-1a72e6b35c2f",
@@ -15550,7 +16548,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.19.822",
+	"ver": "22.12.19.957",
 	"application": "surveydesigner",
 	"title": "Neptune FORMS",
 	"description": "Neptune FORMS",
@@ -15590,7 +16588,7 @@
 		{
 			"id": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",
 			"name": "SurveyClient",
-			"ver": "22.12.15.721"
+			"ver": "22.12.19.951"
 		}
 	],
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1"

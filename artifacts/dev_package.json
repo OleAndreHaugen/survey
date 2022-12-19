@@ -47,6 +47,11 @@
 	"odataMock": [],
 	"dictionary": [
 		{
+			"id": "f239fdc2-6088-4ce0-9f13-bc22a7da5924",
+			"name": "survey_users",
+			"description": "Survey: Users"
+		},
+		{
 			"id": "e7b354dd-f2ba-4f33-bd28-e8873b2cb895",
 			"name": "survey_form",
 			"description": "Survey: Form"
@@ -144,6 +149,11 @@
 			"description": null
 		},
 		{
+			"id": "3acb8c42-1296-4c12-958c-74c04cebec44",
+			"name": "UsersDelete",
+			"description": null
+		},
+		{
 			"id": "2c2b94ce-b82b-4282-9db7-f18df8c4f355",
 			"name": "SurveyGet",
 			"description": null
@@ -161,6 +171,11 @@
 		{
 			"id": "17081f73-234b-4aa3-9c2f-9fa7a9500bc9",
 			"name": "FormGet",
+			"description": null
+		},
+		{
+			"id": "0fa1cc17-c1ab-4c81-890b-63c13224e2b5",
+			"name": "UsersSave",
 			"description": null
 		},
 		{

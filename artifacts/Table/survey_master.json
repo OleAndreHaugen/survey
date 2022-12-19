@@ -42,13 +42,21 @@
 			"isUnique": false,
 			"description": "Distribution Details",
 			"isNullable": true
+		},
+		{
+			"id": "27f09370-f65e-4ec9-9847-13863be643f0",
+			"fieldName": "protected",
+			"fieldType": "boolean",
+			"isUnique": false,
+			"description": "Protected Mode",
+			"isNullable": true
 		}
 	],
 	"indices": [],
 	"foreignKeys": [],
 	"name": "survey_master",
 	"description": "Survey: Master Survey",
-	"ver": "22.12.9.1316",
+	"ver": "22.12.19.851",
 	"enableAudit": false,
 	"includeDataInPackage": false,
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1",

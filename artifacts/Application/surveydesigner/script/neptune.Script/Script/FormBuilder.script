@@ -273,6 +273,33 @@ const formBuilder = {
         });
     },
 
+    addUsers: function (users) {
+        apiUsersSave({
+            data: users,
+            parameters: {
+                id: modelSurveyMaster.oData.survey.id,
+            },
+        }).then(function (res) {
+            tabSystemUsers.removeSelections();
+            modelSurveyMaster.oData.users = res.users;
+            modelSurveyMaster.refresh();
+            formBuilder.dataSaved = modelSurveyMaster.getJSON();
+        });
+    },
+
+    deleteUsers: function (id) {
+        apiUsersDelete({
+            parameters: {
+                id: id,
+            },
+        }).then(function (res) {
+            tabUsers.removeSelections();
+            ModelData.Delete(modelSurveyMaster.oData.users, "id", id);
+            modelSurveyMaster.refresh();
+            formBuilder.dataSaved = modelSurveyMaster.getJSON();
+        });
+    },
+
     addReceivers: function (data, groupid) {
         const emails = data.split(";");
 

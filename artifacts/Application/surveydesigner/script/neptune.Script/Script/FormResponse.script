@@ -738,6 +738,25 @@ const formResponse = {
         let qNum = 1;
         let actions = [];
 
+        // Overall Result
+        const doOverall = ModelData.Find(modelSurveyData.oData.questions, "includeInOverall", true);
+        if (doOverall) {
+            let questionData = {
+                id: formResponse.overallId,
+                type: "Overall",
+                title: "Overall Result",
+                imageData: "/public/images/nsball.png",
+                imageWidth: 550,
+                enableImage: true,
+                enableTable: false,
+                responsesCount: tabSurveyResponse.getCount(),
+                responses: [],
+            };
+
+            actions.push(formResponse.generateImage(questionData));
+            pdfData.questions.push(questionData);
+        }
+
         modelSurveyData.oData.questions.forEach((question) => {
             let questionData = {
                 id: question.id,
@@ -776,7 +795,6 @@ const formResponse = {
             }
 
             pdfData.questions.push(questionData);
-
             qNum++;
         });
 

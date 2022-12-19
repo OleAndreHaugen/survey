@@ -228,6 +228,34 @@
 			"endpoints": [],
 			"serverScript": "b886ecb2-d482-436e-9bf0-229a923a7b95",
 			"tags": "Report"
+		},
+		{
+			"id": "90c26154-c0ca-4af1-acc3-666e6bd7a842",
+			"method": "POST",
+			"path": "/usersave",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"tags": "Users",
+			"serverScript": "0fa1cc17-c1ab-4c81-890b-63c13224e2b5"
+		},
+		{
+			"id": "f462cbd9-9f14-4daf-d709-5b37499e0a42",
+			"method": "DELETE",
+			"path": "/userdelete",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"tags": "Users",
+			"serverScript": "3acb8c42-1296-4c12-958c-74c04cebec44"
 		}
 	],
 	"definitions": [
@@ -1142,7 +1170,7 @@
 	"documentation": [],
 	"name": "SurveyClient",
 	"endpoint": "/api/serverscript/surveyclient",
-	"ver": "22.12.15.721",
+	"ver": "22.12.19.951",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,
