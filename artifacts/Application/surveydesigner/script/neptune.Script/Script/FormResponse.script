@@ -1,4 +1,7 @@
 const formResponse = {
+    overallId: ModelData.genID(),
+    overallSeries: null,
+    overallCategory: null,
     pdfContent: null,
     response: null,
     anonymous: null,
@@ -18,7 +21,10 @@ const formResponse = {
 
     buildReport: function () {
         const parent = panResponse;
+
         formResponse.charts = [];
+        formResponse.overallSeries = {};
+        formResponse.overallCategory = [];
 
         parent.destroyContent();
 
@@ -44,12 +50,16 @@ const formResponse = {
 
         parent.addContent(surveyHeader);
 
+        // Overall Result
+        const doOverall = ModelData.Find(modelSurveyData.oData.questions, "includeInOverall", true);
+        if (doOverall) formResponse.buildOverallChart(parent);
+
         let qNum = 1;
         modelSurveyData.oData.questions.forEach((question) => {
             const questionTop = new sap.m.Panel({
                 expanded: true,
                 expandable: true,
-                backgroundDesign: "Solid"
+                backgroundDesign: "Solid",
             });
             questionTop.addStyleClass("formBorder sapUiMediumMarginTopBottom");
 
@@ -62,7 +72,7 @@ const formResponse = {
 
             const questionParent = new sap.m.VBox({
                 renderType: sap.m.FlexRendertype.Bare,
-            }).addStyleClass("formChart"); 
+            }).addStyleClass("formChart");
 
             questionToolbar.addContent(
                 new nep.bootstrap.Text({
@@ -185,6 +195,90 @@ const formResponse = {
         parent.addItem(toolbar);
     },
 
+    buildOverallChart: function (parent) {
+        const questionTop = new sap.m.Panel({
+            expanded: true,
+            expandable: true,
+            backgroundDesign: "Solid",
+        });
+        questionTop.addStyleClass("formBorder sapUiMediumMarginTopBottom");
+
+        const questionToolbar = new sap.m.Toolbar({
+            width: "100%",
+            height: "60px",
+        }).addStyleClass("sapUiSizeCompact");
+
+        questionTop.setHeaderToolbar(questionToolbar);
+
+        const questionParent = new sap.m.VBox({
+            renderType: sap.m.FlexRendertype.Bare,
+        }).addStyleClass("formChart");
+
+        questionTop.addContent(questionParent);
+
+        questionToolbar.addContent(
+            new nep.bootstrap.Text({
+                text: "Overall Result",
+                textColor: "Secondary",
+                fontSize: "FontSize5",
+                fontWeight: "Bold",
+                textWrapping: true,
+            })
+        );
+
+        const question = {
+            id: formResponse.overallId,
+        };
+
+        // Chart
+        // Default Settings
+        if (!modelpanResponse.oData["chartType" + question.id]) {
+            modelpanResponse.oData["chartType" + question.id] = "bar";
+        }
+
+        const chartparent = new sap.m.Panel("questionParent" + question.id, { height: "500px" });
+        questionParent.addItem(chartparent);
+
+        chartparent.onAfterRendering = function () {
+            // Chart Data
+            let series = [];
+            const resGroupsItems = Object.keys(formResponse.overallSeries);
+
+            resGroupsItems.forEach(function (keyGroup) {
+                const groupValues = formResponse.overallSeries[keyGroup];
+
+                let seriesData = {
+                    name: keyGroup,
+                    data: groupValues,
+                    borderWidth: 0,
+                };
+
+                if (modelpanResponse.oData["chartPolar" + question.id]) {
+                    seriesData.pointPlacement = "on";
+                }
+
+                const group = ModelData.FindFirst(modelMasterData.oData.groups, "name", keyGroup);
+                if (group && group.setup && group.setup.color) seriesData.color = group.setup.color;
+
+                series.push(seriesData);
+            });
+
+            let options = formResponse.setChartDefaults(
+                formResponse.overallCategory,
+                series,
+                question
+            );
+
+            Highcharts.chart(chartparent.getDomRef(), options);
+            formResponse.charts.push(chartparent.sId);
+        };
+
+        // Toolbar
+        formResponse.buildToolbar(question, questionParent);
+
+        parent.addContent(questionTop);
+    },
+
     buildReportNPS: function (question, parent) {
         const response = formResponse.response[question.id];
         if (!response) return;
@@ -242,6 +336,9 @@ const formResponse = {
         const response = formResponse.response[question.id];
         if (!response) return;
 
+        // Overall
+        if (question.includeInOverall) formResponse.overallCategory.push(question.title);
+
         // Default Settings
         if (!modelpanResponse.oData["chartType" + question.id]) {
             modelpanResponse.oData["chartType" + question.id] = "bar";
@@ -280,6 +377,9 @@ const formResponse = {
             if (group && group.setup && group.setup.color) seriesData.color = group.setup.color;
 
             series.push(seriesData);
+
+            // Overall
+            if (question.includeInOverall) formResponse.calculateOverall(seriesData);
         });
 
         question.items.forEach(function (item) {
@@ -296,6 +396,9 @@ const formResponse = {
     buildReportLikert: function (question, parent) {
         const response = formResponse.response[question.id];
         if (!response) return;
+
+        // Overall
+        if (question.includeInOverall) formResponse.overallCategory.push(question.title);
 
         // Default Settings
         if (!modelpanResponse.oData["chartType" + question.id]) {
@@ -344,6 +447,9 @@ const formResponse = {
             if (group && group.setup && group.setup.color) seriesData.color = group.setup.color;
 
             series.push(seriesData);
+
+            // Overall
+            if (question.includeInOverall) formResponse.calculateOverall(seriesData);
         });
 
         chartparent.onAfterRendering = function () {
@@ -351,6 +457,24 @@ const formResponse = {
             Highcharts.chart(chartparent.getDomRef(), options);
             formResponse.charts.push(chartparent.sId);
         };
+    },
+
+    calculateOverall: function (seriesData) {
+        let overallValue = 0;
+        let overallCounter = 0;
+
+        seriesData.data.forEach(function (value) {
+            overallValue += value;
+            overallCounter++;
+        });
+
+        if (!formResponse.overallSeries[seriesData.name]) {
+            formResponse.overallSeries[seriesData.name] = [];
+        }
+
+        formResponse.overallSeries[seriesData.name].push(
+            parseFloat((overallValue / overallCounter).toFixed(2))
+        );
     },
 
     setChartDefaults: function (categories, series, question) {
@@ -665,6 +789,7 @@ const formResponse = {
             apiReportGenerate({
                 data: pdfData,
             }).then(function (res) {
+                oBusy.close();
                 formResponse.pdfContent = res;
                 diaPDF.open();
             });

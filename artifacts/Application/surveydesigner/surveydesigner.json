@@ -38,7 +38,15 @@
 					"customComponent": false,
 					"request": [],
 					"response": [],
-					"attributes": [],
+					"attributes": [
+						{
+							"attribute": "sideExpanded",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						}
+					],
 					"data": [
 						{
 							"fieldNo": "73b6b5ed-5a7f-4748-b11f-11ecb1905eb0",
@@ -3567,13 +3575,6 @@
 																																			"script": "file://event/sap.f.Avatar/insertNewQuestion/press.script",
 																																			"language": "javascript",
 																																			"translation": []
-																																		},
-																																		{
-																																			"attribute": "backgroundColor",
-																																			"grouping": "Properties",
-																																			"value": "Accent6",
-																																			"script": "",
-																																			"translation": []
 																																		}
 																																	],
 																																	"data": []
@@ -5624,6 +5625,46 @@
 																																					"data": []
 																																				},
 																																				{
+																																					"fieldNo": "02ec89f7-5d83-482e-cb1a-4fe2d229aa49",
+																																					"fieldName": "questionLikertToolbarOverall",
+																																					"fieldParent": "cb56b085-1422-4021-ee0e-8789c20f9067",
+																																					"fieldType": "sap.m.Switch",
+																																					"script": "",
+																																					"customComponent": false,
+																																					"request": [],
+																																					"response": [],
+																																					"attributes": [
+																																						{
+																																							"attribute": "state",
+																																							"grouping": "Properties",
+																																							"value": "{SurveyData>includeInOverall}",
+																																							"script": "",
+																																							"translation": []
+																																						}
+																																					],
+																																					"data": []
+																																				},
+																																				{
+																																					"fieldNo": "3cdf31be-b4d9-44ce-b898-2fcd48c0e178",
+																																					"fieldName": "questionLikertToolbarOverallLabel",
+																																					"fieldParent": "cb56b085-1422-4021-ee0e-8789c20f9067",
+																																					"fieldType": "sap.m.Label",
+																																					"script": "",
+																																					"customComponent": false,
+																																					"request": [],
+																																					"response": [],
+																																					"attributes": [
+																																						{
+																																							"attribute": "text",
+																																							"grouping": "Properties",
+																																							"value": "Include in Overall Results",
+																																							"script": "",
+																																							"translation": []
+																																						}
+																																					],
+																																					"data": []
+																																				},
+																																				{
 																																					"fieldNo": "eb1b978a-400a-4301-d1d1-f000b01d6ff4",
 																																					"fieldName": "questionLikertToolbarRequired",
 																																					"fieldParent": "cb56b085-1422-4021-ee0e-8789c20f9067",
@@ -6742,6 +6783,46 @@
 																																					"data": []
 																																				},
 																																				{
+																																					"fieldNo": "2d59892f-dbfd-49b9-ec93-c62ae742fe85",
+																																					"fieldName": "questionSingleChoiceToolbarOverall",
+																																					"fieldParent": "c0f8c56d-8ec5-47db-a2df-af6c1638fdaf",
+																																					"fieldType": "sap.m.Switch",
+																																					"script": "",
+																																					"customComponent": false,
+																																					"request": [],
+																																					"response": [],
+																																					"attributes": [
+																																						{
+																																							"attribute": "state",
+																																							"grouping": "Properties",
+																																							"value": "{SurveyData>includeInOverall}",
+																																							"script": "",
+																																							"translation": []
+																																						}
+																																					],
+																																					"data": []
+																																				},
+																																				{
+																																					"fieldNo": "2a6f6956-4631-40a1-db90-67f84ec08aa8",
+																																					"fieldName": "questionSingleChoiceToolbarOverallLabel",
+																																					"fieldParent": "c0f8c56d-8ec5-47db-a2df-af6c1638fdaf",
+																																					"fieldType": "sap.m.Label",
+																																					"script": "",
+																																					"customComponent": false,
+																																					"request": [],
+																																					"response": [],
+																																					"attributes": [
+																																						{
+																																							"attribute": "text",
+																																							"grouping": "Properties",
+																																							"value": "Include in Overall Results",
+																																							"script": "",
+																																							"translation": []
+																																						}
+																																					],
+																																					"data": []
+																																				},
+																																				{
 																																					"fieldNo": "50422d31-ed79-46b6-c2de-c8df448a99fd",
 																																					"fieldName": "questionSingleChoiceToolbarRequired",
 																																					"fieldParent": "c0f8c56d-8ec5-47db-a2df-af6c1638fdaf",
@@ -7467,6 +7548,46 @@
 																																					"data": []
 																																				},
 																																				{
+																																					"fieldNo": "53723ba6-4766-4fe8-f87c-8d2b8bc7437e",
+																																					"fieldName": "questionMultipleChoiceToolbarOverall",
+																																					"fieldParent": "ef3b6de5-4cee-49c9-dccc-45857808b427",
+																																					"fieldType": "sap.m.Switch",
+																																					"script": "",
+																																					"customComponent": false,
+																																					"request": [],
+																																					"response": [],
+																																					"attributes": [
+																																						{
+																																							"attribute": "state",
+																																							"grouping": "Properties",
+																																							"value": "{SurveyData>includeInOverall}",
+																																							"script": "",
+																																							"translation": []
+																																						}
+																																					],
+																																					"data": []
+																																				},
+																																				{
+																																					"fieldNo": "cfd75bfc-f3e9-430f-f88a-1e9efcbb655d",
+																																					"fieldName": "questionMultipleChoiceToolbarOverallLabel",
+																																					"fieldParent": "ef3b6de5-4cee-49c9-dccc-45857808b427",
+																																					"fieldType": "sap.m.Label",
+																																					"script": "",
+																																					"customComponent": false,
+																																					"request": [],
+																																					"response": [],
+																																					"attributes": [
+																																						{
+																																							"attribute": "text",
+																																							"grouping": "Properties",
+																																							"value": "Include in Overall Results",
+																																							"script": "",
+																																							"translation": []
+																																						}
+																																					],
+																																					"data": []
+																																				},
+																																				{
 																																					"fieldNo": "1e7d8402-cb00-499e-8d79-23e30676fe32",
 																																					"fieldName": "questionMultipleChoiceToolbarRequired",
 																																					"fieldParent": "ef3b6de5-4cee-49c9-dccc-45857808b427",
@@ -8137,13 +8258,6 @@
 																													"grouping": "Events",
 																													"value": "formBuilder.openQuestionMenu(this);",
 																													"script": "formBuilder.openQuestionMenu(this);",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "backgroundColor",
-																													"grouping": "Properties",
-																													"value": "Accent6",
-																													"script": "",
 																													"translation": []
 																												}
 																											],
@@ -13046,8 +13160,9 @@
 																								{
 																									"attribute": "press",
 																									"grouping": "Events",
-																									"value": "formResponse.generatePDF();",
-																									"script": "formResponse.generatePDF();",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Button/toolResponsePDF/press.script",
+																									"language": "javascript",
 																									"translation": []
 																								}
 																							],
@@ -13839,6 +13954,26 @@
 					"response": [],
 					"attributes": [],
 					"data": [
+						{
+							"fieldNo": "4897f91d-4a89-47b8-cf6e-eac4c24660af",
+							"fieldName": "oBusy",
+							"fieldParent": "ec12e509-2cdb-4db2-d745-1a72e6b35c2f",
+							"fieldType": "sap.m.BusyDialog",
+							"script": "",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "text",
+									"grouping": "Properties",
+									"value": "Report is beeing generated. Please wait...",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": []
+						},
 						{
 							"fieldNo": "518f313a-db16-4c50-ee63-97c17f394a28",
 							"fieldName": "diaPDFClose",
@@ -15415,7 +15550,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.18.837",
+	"ver": "22.12.19.822",
 	"application": "surveydesigner",
 	"title": "Neptune FORMS",
 	"description": "Neptune FORMS",

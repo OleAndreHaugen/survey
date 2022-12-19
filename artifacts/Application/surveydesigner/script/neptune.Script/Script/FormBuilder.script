@@ -77,6 +77,7 @@ const formBuilder = {
                 break;
 
             case "SingleChoice":
+                newQuestion.includeInOverall = false;
                 newQuestion.items = [
                     { id: ModelData.genID(), title: "Option 1", value: 1 },
                     { id: ModelData.genID(), title: "Option 2", value: 2 },
@@ -85,6 +86,7 @@ const formBuilder = {
                 break;
 
             case "MultipleChoice":
+                newQuestion.includeInOverall = false;
                 newQuestion.items = [
                     { id: ModelData.genID(), title: "Option 1", value: 1 },
                     { id: ModelData.genID(), title: "Option 2", value: 2 },
@@ -102,6 +104,7 @@ const formBuilder = {
                 break;
 
             case "Likert":
+                newQuestion.includeInOverall = false;
                 newQuestion.colTitle0 = "Statement";
                 newQuestion.colTitle1 = "Strongly Disagree";
                 newQuestion.colTitle2 = "Disagree";

@@ -24,6 +24,9 @@ if (survey && receiver) {
         response.email = receiver.email;
     }
 
+    response.createdBy = "system";
+    response.updatedBy = "system";
+
     await entities.survey_response.save(response);
 
     result.data = {
