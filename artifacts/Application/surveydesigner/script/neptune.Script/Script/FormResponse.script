@@ -34,7 +34,9 @@ const formResponse = {
 
         surveyHeader.addContent(
             new nep.bootstrap.Text({
-                text: modelSurveyData.oData.name,
+                text: modelSurveyMaster.oData.survey.distribution.enableSurveyTitle
+                    ? modelSurveyMaster.oData.survey.name
+                    : modelSurveyData.oData.name,
                 fontSize: "FontSize2",
             })
         );
@@ -42,7 +44,9 @@ const formResponse = {
         if (modelSurveyData.oData.description) {
             surveyHeader.addContent(
                 new nep.bootstrap.Text({
-                    text: modelSurveyData.oData.description,
+                    text: modelSurveyMaster.oData.survey.distribution.enableSurveySubTitle
+                        ? modelSurveyMaster.oData.survey.description
+                        : modelSurveyData.oData.description,
                     type: "Paragraph",
                 })
             );
@@ -729,8 +733,12 @@ const formResponse = {
     generatePDF: function () {
         let pdfData = {
             survey: {
-                title: modelSurveyData.oData.name,
-                subTitle: modelSurveyData.oData.description,
+                title: modelSurveyMaster.oData.survey.distribution.enableSurveyTitle
+                    ? modelSurveyMaster.oData.survey.name
+                    : modelSurveyData.oData.name,
+                subTitle: modelSurveyMaster.oData.survey.distribution.enableSurveySubTitle
+                    ? modelSurveyMaster.oData.survey.description
+                    : modelSurveyData.oData.description,
             },
             questions: [],
         };

@@ -11554,8 +11554,9 @@
 																								{
 																									"attribute": "select",
 																									"grouping": "Events",
-																									"value": "formBuilder.buildForm();",
-																									"script": "formBuilder.buildForm();",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.CheckBox/inpageSurveyDetailSurveyOverideTitle/select.script",
+																									"language": "javascript",
 																									"translation": []
 																								}
 																							],
@@ -11588,8 +11589,9 @@
 																								{
 																									"attribute": "select",
 																									"grouping": "Events",
-																									"value": "formBuilder.buildForm();",
-																									"script": "formBuilder.buildForm();",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.CheckBox/inpageSurveyDetailSurveyOverideSubTitle/select.script",
+																									"language": "javascript",
 																									"translation": []
 																								}
 																							],
@@ -16104,6 +16106,20 @@
 									"translation": []
 								},
 								{
+									"attribute": "beforeOpen",
+									"grouping": "Events",
+									"value": "toolSystemUsersFilter.setValue();",
+									"script": "toolSystemUsersFilter.setValue();",
+									"translation": []
+								},
+								{
+									"attribute": "afterOpen",
+									"grouping": "Events",
+									"value": "toolSystemUsersFilter.focus();",
+									"script": "toolSystemUsersFilter.focus();",
+									"translation": []
+								},
+								{
 									"attribute": "endButton",
 									"grouping": "Associations",
 									"value": "diaAddUsersClose",
@@ -16160,6 +16176,13 @@
 											"translation": []
 										},
 										{
+											"attribute": "enableCompactMode",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										},
+										{
 											"attribute": "updateFinished",
 											"grouping": "Events",
 											"value": "Anonymous Function",
@@ -16190,6 +16213,54 @@
 										}
 									],
 									"data": [
+										{
+											"fieldNo": "c196bd85-f45d-4dd0-e82f-0eec1f03b412",
+											"fieldName": "toolSystemUsers",
+											"fieldParent": "5c5f29e7-bcc4-4b50-e746-00d9fe143c8e",
+											"fieldType": "sap.m.Toolbar",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "HeaderToolbar",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "15db22ee-7625-45d3-ad55-7dfecd3b4f08",
+													"fieldName": "toolSystemUsersFilter",
+													"fieldParent": "c196bd85-f45d-4dd0-e82f-0eec1f03b412",
+													"fieldType": "sap.m.SearchField",
+													"script": "",
+													"customComponent": false,
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "width",
+															"grouping": "Properties",
+															"value": "300px",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "liveChange",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": "file://event/sap.m.SearchField/toolSystemUsersFilter/liveChange.script",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
 										{
 											"fieldNo": "32818e3e-12db-4e2e-899b-d5d9c8c52fc5",
 											"fieldName": "coltabSystemUsersName",
@@ -16548,7 +16619,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.19.957",
+	"ver": "22.12.19.1025",
 	"application": "surveydesigner",
 	"title": "Neptune FORMS",
 	"description": "Neptune FORMS",
