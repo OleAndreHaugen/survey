@@ -56,7 +56,7 @@ const formResponse = {
 
         // Overall Result
         const doOverall = ModelData.Find(modelSurveyData.oData.questions, "includeInOverall", true);
-        if (doOverall) formResponse.buildOverallChart(parent);
+        if (doOverall.length) formResponse.buildOverallChart(parent);
 
         let qNum = 1;
         modelSurveyData.oData.questions.forEach((question) => {
@@ -748,7 +748,7 @@ const formResponse = {
 
         // Overall Result
         const doOverall = ModelData.Find(modelSurveyData.oData.questions, "includeInOverall", true);
-        if (doOverall) {
+        if (doOverall.length) {
             let questionData = {
                 id: formResponse.overallId,
                 type: "Overall",

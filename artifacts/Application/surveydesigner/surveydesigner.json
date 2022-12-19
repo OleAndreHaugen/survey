@@ -13786,13 +13786,6 @@
 																									"translation": []
 																								},
 																								{
-																									"attribute": "fixedLayout",
-																									"grouping": "Properties",
-																									"value": "true",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
 																									"attribute": "updateFinished",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
@@ -16619,7 +16612,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.19.1025",
+	"ver": "22.12.19.1030",
 	"application": "surveydesigner",
 	"title": "Neptune FORMS",
 	"description": "Neptune FORMS",
