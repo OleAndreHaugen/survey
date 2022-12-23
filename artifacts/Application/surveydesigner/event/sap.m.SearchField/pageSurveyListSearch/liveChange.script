@@ -8,7 +8,7 @@ let filter = new sap.ui.model.Filter({
     and: false
 })
 
-if (pageFormListUser.getSelectedKey() === 'Mine') {
+if (pageSurveyListUser.getSelectedKey() === 'Mine') {
     let filter2 = new sap.ui.model.Filter('updatedBy', 'EQ', modelMasterData.oData.user.username);
     binding.filter([filter, filter2]);
 } else {

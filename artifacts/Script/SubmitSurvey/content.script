@@ -24,10 +24,13 @@ if (survey && receiver) {
         response.email = receiver.email;
     }
 
+    // Response
     response.createdBy = "system";
     response.updatedBy = "system";
+    response.createdAt = new Date("11-07-2011");
+    response.updatedAt = new Date("11-07-2011");
 
-    await entities.survey_response.save(response);
+    await entityManager.save("survey_response", response);
 
     result.data = {
         status: "OK"
