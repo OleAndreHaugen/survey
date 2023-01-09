@@ -6,8 +6,8 @@
 		"remote": "https://github.com/OleAndreHaugen/survey.git"
 	},
 	"name": "com.neptune-software.survey",
-	"description": "Neptune Survey Solution",
-	"ver": "22.12.10.67",
+	"description": "Neptune FORMS",
+	"ver": "23.1.9.1534",
 	"enableCICD": true,
 	"apps": [
 		{
