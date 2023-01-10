@@ -2041,7 +2041,7 @@
 																		{
 																			"attribute": "height",
 																			"grouping": "Properties",
-																			"value": "100%",
+																			"value": "calc(100% - 100px)",
 																			"script": "",
 																			"translation": []
 																		}
@@ -16612,10 +16612,10 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.19.1151",
+	"ver": "23.1.10.181",
 	"application": "surveydesigner",
-	"title": "Neptune FORMS",
-	"description": "Neptune FORMS",
+	"title": "Neptune SURVEY",
+	"description": "Neptune SURVEY",
 	"enableFileStorage": false,
 	"enableManifest": false,
 	"enableStylesheet": true,
