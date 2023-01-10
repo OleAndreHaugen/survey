@@ -4,14 +4,15 @@
 	"createdBy": "ole-andre.haugen@neptune-software.com",
 	"translation": null,
 	"name": "Survey Invitation Template",
-	"description": "{=surveyName} Survey",
+	"description": "{=surveyName}",
 	"content": [
 		"==OBJECT STRING==",
-		"<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"></head><body class=\"sun-editor-editable\" style=\"\" ><p>​​Hi!",
-		"<br><br>Please take the time to respond to {=surveyName}. {=description}",
-		"<br><br><a href=\"https://neptune-sap-development.neptune-software.cloud/%7B=link%7D\" alt=\"Start Survey\"><strong>Start Survey</strong></a>&nbsp;&nbsp;</p><p><br>Thank you!<meta charset=\"utf-8\">​<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"><br></p></body></html>"
+		"<!DOCTYPE html><html><head>",
+		"<meta charset=\"utf-8\">",
+		"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">",
+		"</head><body class=\"sun-editor-editable\" style=\"\" ><p>​​Hi!</p><p>Please take the time to respond to {=surveyName}. {=description}<br><br><a href=\"{=link}\" alt=\"Start Survey\"><strong>Start Survey</strong></a>&nbsp;&nbsp;</p><p><br>Thank you!<meta charset=\"utf-8\">​<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"><br></p></body></html>"
 	],
-	"ver": "22.12.19.123",
+	"ver": "23.1.10.1715",
 	"type": "template",
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1"
 }

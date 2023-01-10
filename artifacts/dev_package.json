@@ -6,8 +6,8 @@
 		"remote": "https://github.com/OleAndreHaugen/survey.git"
 	},
 	"name": "com.neptune-software.survey",
-	"description": "Neptune FORMS",
-	"ver": "23.1.9.1534",
+	"description": "Neptune SURVEY Solution",
+	"ver": "23.1.10.1714",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -220,7 +220,7 @@
 		{
 			"id": "cdccf4de-54cd-4ffb-b863-8a240a12971b",
 			"name": "Survey Invitation Template",
-			"description": "{=surveyName} Survey"
+			"description": "{=surveyName}"
 		}
 	],
 	"department": [],
