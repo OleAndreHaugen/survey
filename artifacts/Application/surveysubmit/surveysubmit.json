@@ -610,10 +610,10 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "22.12.18.825",
+	"ver": "23.1.13.75",
 	"application": "surveysubmit",
-	"title": "Neptune FORMS",
-	"description": "Neptune FORMS",
+	"title": "Neptune SURVEY",
+	"description": "Neptune SURVEY",
 	"enableFileStorage": false,
 	"enableManifest": false,
 	"enableStylesheet": true,

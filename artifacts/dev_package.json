@@ -5,9 +5,9 @@
 	"git": {
 		"remote": "https://github.com/OleAndreHaugen/survey.git"
 	},
-	"name": "com.neptune-software.survey",
+	"name": "neptunesoftware-survey",
 	"description": "Neptune SURVEY Solution",
-	"ver": "23.1.10.1714",
+	"ver": "23.1.13.73",
 	"enableCICD": true,
 	"apps": [
 		{
@@ -25,8 +25,8 @@
 		{
 			"id": "37aaeb45-bcc3-4fef-b167-fcdf4961cd04",
 			"application": "surveysubmit",
-			"title": "Neptune FORMS",
-			"description": "Neptune FORMS"
+			"title": "Neptune SURVEY",
+			"description": "Neptune SURVEY"
 		}
 	],
 	"api": [
