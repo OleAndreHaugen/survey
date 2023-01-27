@@ -16,9 +16,11 @@ function buildForm(
         response: {},
     });
 
-    const surveyHeader = new nep.bootstrap.Alert({
-        contextColor: data.setup.headerColor,
-    });
+    const surveyHeader = new nep.bootstrap.Alert();
+
+    if (data.setup && data.setup.headerColor) {
+        surveyHeader.setContextColor(data.setup.headerColor);
+    }
 
     surveyHeader.addContent(
         new nep.bootstrap.Text({
