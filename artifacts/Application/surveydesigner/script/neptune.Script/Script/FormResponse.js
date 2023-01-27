@@ -28,9 +28,11 @@ const formResponse = {
 
         parent.destroyContent();
 
-        const surveyHeader = new nep.bootstrap.Alert({
-            contextColor: modelSurveyData.oData.setup.headerColor,
-        });
+        const surveyHeader = new nep.bootstrap.Alert();
+
+        if (modelSurveyData.oData.setup && modelSurveyData.oData.setup.headerColor) {
+            surveyHeader.setContextColor(modelSurveyData.oData.setup.headerColor);
+        }
 
         surveyHeader.addContent(
             new nep.bootstrap.Text({
