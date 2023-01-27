@@ -25,7 +25,7 @@
 	"name": "SubmitSurvey",
 	"ver": "22.12.23.914",
 	"description": null,
-	"content": "file:///content.script",
+	"content": "file:///content.js",
 	"useAsGlobalScript": false,
 	"transpiledContent": null,
 	"lastRunSuccessful": false,

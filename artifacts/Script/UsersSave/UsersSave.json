@@ -15,7 +15,7 @@
 	"name": "UsersSave",
 	"ver": "22.12.19.920",
 	"description": null,
-	"content": "file:///content.script",
+	"content": "file:///content.js",
 	"useAsGlobalScript": false,
 	"transpiledContent": null,
 	"lastRunSuccessful": false,

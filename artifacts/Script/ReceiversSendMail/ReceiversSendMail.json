@@ -20,7 +20,7 @@
 	"name": "ReceiversSendMail",
 	"ver": "22.12.10.1331",
 	"description": null,
-	"content": "file:///content.script",
+	"content": "file:///content.js",
 	"useAsGlobalScript": false,
 	"transpiledContent": null,
 	"lastRunSuccessful": false,

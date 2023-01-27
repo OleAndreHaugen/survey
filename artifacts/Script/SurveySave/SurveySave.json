@@ -25,7 +25,7 @@
 	"name": "SurveySave",
 	"ver": "22.12.9.1419",
 	"description": null,
-	"content": "file:///content.script",
+	"content": "file:///content.js",
 	"useAsGlobalScript": false,
 	"transpiledContent": null,
 	"lastRunSuccessful": false,

@@ -918,7 +918,7 @@
 																							"attribute": "press",
 																							"grouping": "Events",
 																							"value": "Anonymous Function",
-																							"script": "file://event/sap.m.Button/toolFormCreate/press.script",
+																							"script": "file://event/sap.m.Button/toolFormCreate/press.js",
 																							"language": "javascript",
 																							"translation": []
 																						}
@@ -1085,7 +1085,7 @@
 																					"attribute": "liveChange",
 																					"grouping": "Events",
 																					"value": "Anonymous Function",
-																					"script": "file://event/sap.m.SearchField/pageFormListSearch/liveChange.script",
+																					"script": "file://event/sap.m.SearchField/pageFormListSearch/liveChange.js",
 																					"language": "javascript",
 																					"translation": []
 																				}
@@ -1261,7 +1261,7 @@
 																			"attribute": "updateFinished",
 																			"grouping": "Events",
 																			"value": "Anonymous Function",
-																			"script": "file://event/sap.f.GridList/gridForm/updateFinished.script",
+																			"script": "file://event/sap.f.GridList/gridForm/updateFinished.js",
 																			"language": "javascript",
 																			"translation": []
 																		}
@@ -1288,7 +1288,7 @@
 																					"attribute": "press",
 																					"grouping": "Events",
 																					"value": "Anonymous Function",
-																					"script": "file://event/sap.f.GridListItem/gridFormItem/press.script",
+																					"script": "file://event/sap.f.GridListItem/gridFormItem/press.js",
 																					"language": "javascript",
 																					"translation": []
 																				}
@@ -1983,7 +1983,7 @@
 																							"attribute": "press",
 																							"grouping": "Events",
 																							"value": "Anonymous Function",
-																							"script": "file://event/sap.m.Button/toolFormDetailClose/press.script",
+																							"script": "file://event/sap.m.Button/toolFormDetailClose/press.js",
 																							"language": "javascript",
 																							"translation": []
 																						}
@@ -2468,7 +2468,7 @@
 																									"attribute": "change",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Select/inpageFormSetupHeaderColor/change.script",
+																									"script": "file://event/sap.m.Select/inpageFormSetupHeaderColor/change.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -2684,6 +2684,309 @@
 																											"attribute": "key",
 																											"grouping": "Properties",
 																											"value": "Warning",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								}
+																							]
+																						},
+																						{
+																							"fieldNo": "32faa964-3f74-4693-837a-c1507de93142",
+																							"fieldName": "lblpageFormSetupTextColor",
+																							"fieldParent": "9874885b-2426-4083-c5d4-a7194683e671",
+																							"fieldType": "sap.m.Label",
+																							"script": "",
+																							"customComponent": false,
+																							"disabled": true,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "text",
+																									"grouping": "Properties",
+																									"value": "Question Text Color",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
+																							"fieldNo": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																							"fieldName": "inpageFormSetupTextColor",
+																							"fieldParent": "9874885b-2426-4083-c5d4-a7194683e671",
+																							"fieldType": "sap.m.Select",
+																							"script": "",
+																							"customComponent": false,
+																							"disabled": true,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "selectedKey",
+																									"grouping": "Properties",
+																									"value": "{SurveyData>/setup/textColor}",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "change",
+																									"grouping": "Events",
+																									"value": "Anonymous Function",
+																									"script": "file://event/sap.m.Select/inpageFormSetupTextColor/change.js",
+																									"language": "javascript",
+																									"translation": []
+																								}
+																							],
+																							"data": [
+																								{
+																									"fieldNo": "aa17af2e-8666-451f-f449-99e6fd9e6e56",
+																									"fieldName": "oItemTextCol5",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Danger",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Danger",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "9550c9d8-6b55-44ef-a2cf-655773161c15",
+																									"fieldName": "oItemTextCol6",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Dark",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Dark",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "406689aa-0820-4eb8-bb8e-94baffae5c42",
+																									"fieldName": "oItemTextCol7",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Info",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Info",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "2016834a-b04f-43c0-ea86-84d4e7123deb",
+																									"fieldName": "oItemTextCol8",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Light",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Light",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "23abee1a-c96a-442e-dc0c-eee41a5cb223",
+																									"fieldName": "oItemTextCol20",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Primary",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Primary",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "1da3fd4d-ad52-4236-c627-55ccf001ac90",
+																									"fieldName": "oItemTextCol2",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Secondary",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Secondary",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "0f997873-8808-4526-e250-986cf39eb353",
+																									"fieldName": "oItemTextCol22",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Success",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Success",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "a861c2fa-3812-4087-fa08-32eb385d9ffb",
+																									"fieldName": "oItemTextCol23",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "Warning",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "Warning",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								},
+																								{
+																									"fieldNo": "3323aa38-63f4-418b-b7d3-d16110609c39",
+																									"fieldName": "oItemTextCol24",
+																									"fieldParent": "7b16dfe9-17d2-456c-8d95-8417326cdbfe",
+																									"fieldType": "sap.ui.core.Item",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "White",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "key",
+																											"grouping": "Properties",
+																											"value": "White",
 																											"script": "",
 																											"translation": []
 																										}
@@ -3429,7 +3732,7 @@
 																											"attribute": "updateFinished",
 																											"grouping": "Events",
 																											"value": "Anonymous Function",
-																											"script": "file://event/sap.m.Table/tabQuestions/updateFinished.script",
+																											"script": "file://event/sap.m.Table/tabQuestions/updateFinished.js",
 																											"language": "javascript",
 																											"translation": []
 																										}
@@ -3572,7 +3875,7 @@
 																																			"attribute": "press",
 																																			"grouping": "Events",
 																																			"value": "Anonymous Function",
-																																			"script": "file://event/sap.f.Avatar/insertNewQuestion/press.script",
+																																			"script": "file://event/sap.f.Avatar/insertNewQuestion/press.js",
 																																			"language": "javascript",
 																																			"translation": []
 																																		}
@@ -3721,6 +4024,27 @@
 																																			"data": []
 																																		},
 																																		{
+																																			"fieldNo": "e78faebb-446e-47be-b24b-af84d4537bb4",
+																																			"fieldName": "questionTypeLabel",
+																																			"fieldParent": "82f9f93b-32d2-4c3e-bbd5-1e543ebb65bd",
+																																			"fieldType": "sap.m.Label",
+																																			"script": "",
+																																			"customComponent": false,
+																																			"disabled": true,
+																																			"request": [],
+																																			"response": [],
+																																			"attributes": [
+																																				{
+																																					"attribute": "text",
+																																					"grouping": "Properties",
+																																					"value": "{SurveyData>typeText}",
+																																					"script": "",
+																																					"translation": []
+																																				}
+																																			],
+																																			"data": []
+																																		},
+																																		{
 																																			"fieldNo": "9ff5066c-8566-45ef-cc2b-9ce128495244",
 																																			"fieldName": "questionToolbarCopy",
 																																			"fieldParent": "82f9f93b-32d2-4c3e-bbd5-1e543ebb65bd",
@@ -3782,7 +4106,7 @@
 																																					"attribute": "press",
 																																					"grouping": "Events",
 																																					"value": "Anonymous Function",
-																																					"script": "file://event/sap.m.Button/questionToolbarUp/press.script",
+																																					"script": "file://event/sap.m.Button/questionToolbarUp/press.js",
 																																					"language": "javascript",
 																																					"translation": []
 																																				}
@@ -3817,7 +4141,7 @@
 																																					"attribute": "press",
 																																					"grouping": "Events",
 																																					"value": "Anonymous Function",
-																																					"script": "file://event/sap.m.Button/questionToolbarDown/press.script",
+																																					"script": "file://event/sap.m.Button/questionToolbarDown/press.js",
 																																					"language": "javascript",
 																																					"translation": []
 																																				}
@@ -4216,18 +4540,6 @@
 																																				}
 																																			],
 																																			"data": [
-																																				{
-																																					"fieldNo": "380b78c8-7617-4585-84ab-648950e8deb4",
-																																					"fieldName": "oButton",
-																																					"fieldParent": "8b7ea753-d3ce-4d5e-d67a-a8d3010fb89a",
-																																					"fieldType": "sap.m.Button",
-																																					"script": "",
-																																					"customComponent": false,
-																																					"request": [],
-																																					"response": [],
-																																					"attributes": [],
-																																					"data": []
-																																				},
 																																				{
 																																					"fieldNo": "0ab8e4b8-b279-4650-9f58-b36713e1ffe9",
 																																					"fieldName": "questionTextToolbarSpacer",
@@ -4889,7 +5201,7 @@
 																																					"attribute": "delete",
 																																					"grouping": "Events",
 																																					"value": "Anonymous Function",
-																																					"script": "file://event/sap.m.Table/tabLikert/delete.script",
+																																					"script": "file://event/sap.m.Table/tabLikert/delete.js",
 																																					"language": "javascript",
 																																					"translation": []
 																																				}
@@ -6969,7 +7281,7 @@
 																																					"attribute": "updateStarted",
 																																					"grouping": "Events",
 																																					"value": "Anonymous Function",
-																																					"script": "file://event/sap.m.Table/tabMultipleChoices/updateStarted.script",
+																																					"script": "file://event/sap.m.Table/tabMultipleChoices/updateStarted.js",
 																																					"language": "javascript",
 																																					"translation": []
 																																				},
@@ -7364,7 +7676,7 @@
 																																							"attribute": "change",
 																																							"grouping": "Events",
 																																							"value": "Anonymous Function",
-																																							"script": "file://event/sap.m.Select/selectValidationType/change.script",
+																																							"script": "file://event/sap.m.Select/selectValidationType/change.js",
 																																							"language": "javascript",
 																																							"translation": []
 																																						}
@@ -7608,7 +7920,7 @@
 																																							"attribute": "change",
 																																							"grouping": "Events",
 																																							"value": "Anonymous Function",
-																																							"script": "file://event/sap.m.Switch/questionMultipleChoiceToolbarRequired/change.script",
+																																							"script": "file://event/sap.m.Switch/questionMultipleChoiceToolbarRequired/change.js",
 																																							"language": "javascript",
 																																							"translation": []
 																																						}
@@ -7848,7 +8160,7 @@
 																																							"attribute": "change",
 																																							"grouping": "Events",
 																																							"value": "Anonymous Function",
-																																							"script": "file://event/sap.m.Select/questionRatingToolbarLevels/change.script",
+																																							"script": "file://event/sap.m.Select/questionRatingToolbarLevels/change.js",
 																																							"language": "javascript",
 																																							"translation": []
 																																						}
@@ -8850,7 +9162,7 @@
 																							"attribute": "press",
 																							"grouping": "Events",
 																							"value": "Anonymous Function",
-																							"script": "file://event/sap.m.Button/toolGroupCreate/press.script",
+																							"script": "file://event/sap.m.Button/toolGroupCreate/press.js",
 																							"language": "javascript",
 																							"translation": []
 																						}
@@ -9017,7 +9329,7 @@
 																					"attribute": "liveChange",
 																					"grouping": "Events",
 																					"value": "Anonymous Function",
-																					"script": "file://event/sap.m.SearchField/pageGroupListSearch/liveChange.script",
+																					"script": "file://event/sap.m.SearchField/pageGroupListSearch/liveChange.js",
 																					"language": "javascript",
 																					"translation": []
 																				}
@@ -9207,7 +9519,7 @@
 																			"attribute": "updateFinished",
 																			"grouping": "Events",
 																			"value": "Anonymous Function",
-																			"script": "file://event/sap.m.Table/tabGroups/updateFinished.script",
+																			"script": "file://event/sap.m.Table/tabGroups/updateFinished.js",
 																			"language": "javascript",
 																			"translation": []
 																		},
@@ -9380,7 +9692,7 @@
 																					"attribute": "press",
 																					"grouping": "Events",
 																					"value": "Anonymous Function",
-																					"script": "file://event/sap.m.ColumnListItem/colItemotabGroups/press.script",
+																					"script": "file://event/sap.m.ColumnListItem/colItemotabGroups/press.js",
 																					"language": "javascript",
 																					"translation": []
 																				}
@@ -10109,7 +10421,7 @@
 																					"attribute": "liveChange",
 																					"grouping": "Events",
 																					"value": "Anonymous Function",
-																					"script": "file://event/sap.m.SearchField/pageSurveyListSearch/liveChange.script",
+																					"script": "file://event/sap.m.SearchField/pageSurveyListSearch/liveChange.js",
 																					"language": "javascript",
 																					"translation": []
 																				}
@@ -10292,7 +10604,7 @@
 																			"attribute": "updateFinished",
 																			"grouping": "Events",
 																			"value": "Anonymous Function",
-																			"script": "file://event/sap.m.Table/tabSurvey/updateFinished.script",
+																			"script": "file://event/sap.m.Table/tabSurvey/updateFinished.js",
 																			"language": "javascript",
 																			"translation": []
 																		},
@@ -10465,7 +10777,7 @@
 																					"attribute": "press",
 																					"grouping": "Events",
 																					"value": "Anonymous Function",
-																					"script": "file://event/sap.m.ColumnListItem/colItemotabSurvey/press.script",
+																					"script": "file://event/sap.m.ColumnListItem/colItemotabSurvey/press.js",
 																					"language": "javascript",
 																					"translation": []
 																				}
@@ -10953,7 +11265,7 @@
 																							"attribute": "press",
 																							"grouping": "Events",
 																							"value": "Anonymous Function",
-																							"script": "file://event/sap.m.Button/toolSurveyDetailSave/press.script",
+																							"script": "file://event/sap.m.Button/toolSurveyDetailSave/press.js",
 																							"language": "javascript",
 																							"translation": []
 																						}
@@ -11077,7 +11389,7 @@
 																							"attribute": "press",
 																							"grouping": "Events",
 																							"value": "Anonymous Function",
-																							"script": "file://event/sap.m.Button/toolSurveyDetailClose/press.script",
+																							"script": "file://event/sap.m.Button/toolSurveyDetailClose/press.js",
 																							"language": "javascript",
 																							"translation": []
 																						}
@@ -11555,7 +11867,7 @@
 																									"attribute": "select",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.CheckBox/inpageSurveyDetailSurveyOverideTitle/select.script",
+																									"script": "file://event/sap.m.CheckBox/inpageSurveyDetailSurveyOverideTitle/select.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -11590,7 +11902,7 @@
 																									"attribute": "select",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.CheckBox/inpageSurveyDetailSurveyOverideSubTitle/select.script",
+																									"script": "file://event/sap.m.CheckBox/inpageSurveyDetailSurveyOverideSubTitle/select.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -11758,7 +12070,7 @@
 																									"attribute": "change",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Select/inpageSurveyDistribTemplate/change.script",
+																									"script": "file://event/sap.m.Select/inpageSurveyDistribTemplate/change.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -12481,7 +12793,7 @@
 																									"attribute": "press",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Button/toolReceiversSend/press.script",
+																									"script": "file://event/sap.m.Button/toolReceiversSend/press.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -12523,7 +12835,7 @@
 																									"attribute": "press",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Button/toolReceiversReset/press.script",
+																									"script": "file://event/sap.m.Button/toolReceiversReset/press.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -12653,7 +12965,7 @@
 																									"attribute": "press",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Button/toolReceiversDelete/press.script",
+																									"script": "file://event/sap.m.Button/toolReceiversDelete/press.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -12739,7 +13051,7 @@
 																									"attribute": "updateFinished",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Table/tabReceivers/updateFinished.script",
+																									"script": "file://event/sap.m.Table/tabReceivers/updateFinished.js",
 																									"language": "javascript",
 																									"translation": []
 																								},
@@ -12799,6 +13111,41 @@
 																													"attribute": "text",
 																													"grouping": "Properties",
 																													"value": "Link",
+																													"script": "",
+																													"translation": []
+																												}
+																											],
+																											"data": []
+																										}
+																									]
+																								},
+																								{
+																									"fieldNo": "d4aa042d-1594-40b4-9eb0-ae0652484a9b",
+																									"fieldName": "coltabReceiversgroup",
+																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
+																									"fieldType": "sap.m.Column",
+																									"script": "",
+																									"customComponent": false,
+																									"disabled": true,
+																									"request": [],
+																									"response": [],
+																									"attributes": [],
+																									"data": [
+																										{
+																											"fieldNo": "b13b04fd-826d-4a13-b312-b8a362c648ca",
+																											"fieldName": "colHtabReceiversgroup",
+																											"fieldParent": "d4aa042d-1594-40b4-9eb0-ae0652484a9b",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"disabled": true,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "Group",
 																													"script": "",
 																													"translation": []
 																												}
@@ -13012,6 +13359,34 @@
 																													"data": []
 																												}
 																											]
+																										},
+																										{
+																											"fieldNo": "64313db3-0eed-40d6-a7d7-e0b51748141e",
+																											"fieldName": "txttabReceiversgroup",
+																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
+																											"fieldType": "sap.m.Text",
+																											"script": "",
+																											"customComponent": false,
+																											"disabled": true,
+																											"request": [],
+																											"response": [],
+																											"attributes": [
+																												{
+																													"attribute": "text",
+																													"grouping": "Properties",
+																													"value": "{SurveyMaster>groupid}",
+																													"script": "",
+																													"translation": []
+																												},
+																												{
+																													"attribute": "text",
+																													"grouping": "Formatter",
+																													"value": "Anonymous Function",
+																													"script": "file://event/sap.m.Text/txttabReceiversgroup/text.script",
+																													"translation": []
+																												}
+																											],
+																											"data": []
 																										},
 																										{
 																											"fieldNo": "f056e19e-d233-434e-9ff2-4cddbec8d1a9",
@@ -13290,7 +13665,7 @@
 																									"attribute": "press",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Button/toolResponsePDF/press.script",
+																									"script": "file://event/sap.m.Button/toolResponsePDF/press.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -13717,7 +14092,7 @@
 																									"attribute": "press",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Button/toolUsersDelete/press.script",
+																									"script": "file://event/sap.m.Button/toolUsersDelete/press.js",
 																									"language": "javascript",
 																									"translation": []
 																								}
@@ -13789,7 +14164,7 @@
 																									"attribute": "updateFinished",
 																									"grouping": "Events",
 																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Table/tabUsers/updateFinished.script",
+																									"script": "file://event/sap.m.Table/tabUsers/updateFinished.js",
 																									"language": "javascript",
 																									"translation": []
 																								},
@@ -14113,7 +14488,7 @@
 									"attribute": "ajaxSuccess",
 									"grouping": "Events",
 									"value": "Anonymous Function",
-									"script": "file://event/neptune.restapi/Master/ajaxSuccess.script",
+									"script": "file://event/neptune.restapi/Master/ajaxSuccess.js",
 									"language": "javascript",
 									"translation": []
 								}
@@ -14550,7 +14925,15 @@
 							],
 							"request": [],
 							"response": [],
-							"attributes": [],
+							"attributes": [
+								{
+									"attribute": "setSizeLimit",
+									"grouping": "Model",
+									"value": "10000",
+									"script": "",
+									"translation": []
+								}
+							],
 							"data": []
 						},
 						{
@@ -14747,7 +15130,7 @@
 									"attribute": "afterOpen",
 									"grouping": "Events",
 									"value": "Anonymous Function",
-									"script": "file://event/sap.m.Dialog/diaPDF/afterOpen.script",
+									"script": "file://event/sap.m.Dialog/diaPDF/afterOpen.js",
 									"language": "javascript",
 									"translation": []
 								},
@@ -14784,6 +15167,41 @@
 											"data": []
 										}
 									]
+								},
+								{
+									"fieldNo": "1eb63128-5004-46a8-993d-96709b36ec8f",
+									"fieldName": "panPDF",
+									"fieldParent": "383de004-4a1c-44bd-cd45-2a796b66d41e",
+									"fieldType": "sap.m.Panel",
+									"script": "",
+									"customComponent": false,
+									"disabled": true,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClassPadding",
+											"grouping": "Properties",
+											"value": "sapUiNoContentPadding",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "height",
+											"grouping": "Properties",
+											"value": "100%",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "backgroundDesign",
+											"grouping": "Properties",
+											"value": "Transparent",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
 								}
 							]
 						},
@@ -14873,7 +15291,7 @@
 													"attribute": "press",
 													"grouping": "Events",
 													"value": "Anonymous Function",
-													"script": "file://event/sap.m.ColumnListItem/itemForms/press.script",
+													"script": "file://event/sap.m.ColumnListItem/itemForms/press.js",
 													"language": "javascript",
 													"translation": []
 												}
@@ -14981,7 +15399,7 @@
 									"attribute": "press",
 									"grouping": "Events",
 									"value": "Anonymous Function",
-									"script": "file://event/sap.m.Button/diaGroupsSave/press.script",
+									"script": "file://event/sap.m.Button/diaGroupsSave/press.js",
 									"language": "javascript",
 									"translation": []
 								}
@@ -15697,7 +16115,7 @@
 									"attribute": "press",
 									"grouping": "Events",
 									"value": "Anonymous Function",
-									"script": "file://event/sap.m.Button/diaAddReceiversSave/press.script",
+									"script": "file://event/sap.m.Button/diaAddReceiversSave/press.js",
 									"language": "javascript",
 									"translation": []
 								}
@@ -16053,7 +16471,7 @@
 									"attribute": "press",
 									"grouping": "Events",
 									"value": "Anonymous Function",
-									"script": "file://event/sap.m.Button/diaAddUsersSave/press.script",
+									"script": "file://event/sap.m.Button/diaAddUsersSave/press.js",
 									"language": "javascript",
 									"translation": []
 								}
@@ -16179,7 +16597,7 @@
 											"attribute": "updateFinished",
 											"grouping": "Events",
 											"value": "Anonymous Function",
-											"script": "file://event/sap.m.Table/tabSystemUsers/updateFinished.script",
+											"script": "file://event/sap.m.Table/tabSystemUsers/updateFinished.js",
 											"language": "javascript",
 											"translation": []
 										},
@@ -16459,7 +16877,7 @@
 													"attribute": "press",
 													"grouping": "Events",
 													"value": "Anonymous Function",
-													"script": "file://event/sap.m.StandardListItem/oItemsQuestionTypes/press.script",
+													"script": "file://event/sap.m.StandardListItem/oItemsQuestionTypes/press.js",
 													"language": "javascript",
 													"translation": []
 												}
@@ -16500,7 +16918,7 @@
 							"fieldName": "FormBuilder",
 							"fieldParent": "99239812-d768-490b-bde6-7795dc2330e6",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/FormBuilder.script",
+							"script": "file://script/neptune.Script/Script/FormBuilder.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -16512,7 +16930,7 @@
 							"fieldName": "FormResponse",
 							"fieldParent": "99239812-d768-490b-bde6-7795dc2330e6",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/FormResponse.script",
+							"script": "file://script/neptune.Script/Script/FormResponse.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -16524,7 +16942,7 @@
 							"fieldName": "Utils",
 							"fieldParent": "99239812-d768-490b-bde6-7795dc2330e6",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/Utils.script",
+							"script": "file://script/neptune.Script/Script/Utils.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -16536,7 +16954,7 @@
 							"fieldName": "Init",
 							"fieldParent": "99239812-d768-490b-bde6-7795dc2330e6",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/Init.script",
+							"script": "file://script/neptune.Script/Script/Init.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -16548,7 +16966,7 @@
 							"fieldName": "DomToImage",
 							"fieldParent": "99239812-d768-490b-bde6-7795dc2330e6",
 							"fieldType": "neptune.Script",
-							"script": "file://script/neptune.Script/Script/DomToImage.script",
+							"script": "file://script/neptune.Script/Script/DomToImage.js",
 							"customComponent": false,
 							"request": [],
 							"response": [],
@@ -16612,7 +17030,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.1.10.181",
+	"ver": "23.1.27.1335",
 	"application": "surveydesigner",
 	"title": "Neptune SURVEY",
 	"description": "Neptune SURVEY",
@@ -16636,7 +17054,7 @@
 	"ui5_language": null,
 	"ui5_url": "",
 	"cus_theme": "",
-	"css": "file:///css.script",
+	"css": "file:///css.css",
 	"header": "",
 	"manifest": "",
 	"globalScript": null,
