@@ -7,7 +7,7 @@
 	},
 	"name": "neptunesoftware-survey",
 	"description": "Neptune SURVEY Solution",
-	"ver": "23.1.13.73",
+	"ver": "23.1.31.1521",
 	"enableCICD": true,
 	"apps": [
 		{

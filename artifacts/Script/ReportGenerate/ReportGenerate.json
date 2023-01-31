@@ -7,7 +7,7 @@
 	"entitySets": [],
 	"apis": [],
 	"name": "ReportGenerate",
-	"ver": "22.12.19.1530",
+	"ver": "23.1.31.1520",
 	"description": null,
 	"content": "file:///content.js",
 	"useAsGlobalScript": false,
