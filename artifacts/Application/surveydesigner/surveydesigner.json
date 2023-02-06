@@ -16813,13 +16813,6 @@
 									"translation": []
 								},
 								{
-									"attribute": "placement",
-									"grouping": "Properties",
-									"value": "Right",
-									"script": "",
-									"translation": []
-								},
-								{
 									"attribute": "contentWidth",
 									"grouping": "Properties",
 									"value": "250px",
@@ -17030,7 +17023,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.1.27.1354",
+	"ver": "23.2.3.658",
 	"application": "surveydesigner",
 	"title": "Neptune SURVEY",
 	"description": "Neptune SURVEY",

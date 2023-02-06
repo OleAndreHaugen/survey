@@ -42,5 +42,16 @@
 		"name": "Initial",
 		"state": "None",
 		"icon": null
+	},
+	{
+		"id": "12bfc4b2-864f-475f-8429-48134308c87f",
+		"createdAt": "1675681646071",
+		"updatedAt": "1675681646071",
+		"createdBy": "ole-andre.haugen@neptune-software.com",
+		"updatedBy": "ole-andre.haugen@neptune-software.com",
+		"status": "9",
+		"name": "Invite Sending Error",
+		"state": "Error",
+		"icon": null
 	}
 ]

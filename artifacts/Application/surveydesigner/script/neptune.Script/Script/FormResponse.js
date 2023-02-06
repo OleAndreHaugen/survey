@@ -768,6 +768,10 @@ const formResponse = {
         }
 
         modelSurveyData.oData.questions.forEach((question) => {
+            let responseCount = formResponse.response[question.id]
+                ? formResponse.response[question.id].responseCount
+                : 0;
+
             let questionData = {
                 id: question.id,
                 type: question.type,
@@ -777,7 +781,7 @@ const formResponse = {
                 imageWidth: 550,
                 enableImage: false,
                 enableTable: false,
-                responsesCount: formResponse.response[question.id].responseCount,
+                responsesCount: responseCount,
                 responses: [],
             };
 
@@ -792,12 +796,15 @@ const formResponse = {
 
                 default:
                     const questionParent = sap.ui.getCore().byId("questionParent" + question.id);
-                    questionData.responses = questionParent.getModel().getData();
 
-                    // Remove illegal characters
-                    questionData.responses.forEach((response) => {
-                        response.text = response.text.replace(/\n/g, " ");
-                    });
+                    if (questionParent) {
+                        questionData.responses = questionParent.getModel().getData();
+
+                        // Remove illegal characters
+                        questionData.responses.forEach((response) => {
+                            response.text = response.text.replace(/\n/g, " ");
+                        });
+                    }
 
                     questionData.imageWidth = 0;
                     questionData.enableTable = true;

@@ -20,14 +20,19 @@ receivers.forEach(async function (receiver) {
         link: link,
     }
 
-    await sendEmail({
+    const sendStatus = await sendEmail({
         to: receiver.email,
         subject: `${survey.name} Survey`,
         templateId: survey.distribution.emailTemplate,
         primitives: primitives
     });
 
-    receiver.status = '2';
+    if (sendStatus && sendStatus.status === "error") {
+        receiver.status = "9";
+    } else {
+        receiver.status = "2";
+    }
+
     await entities.survey_receivers.save(receiver);
 
 })
