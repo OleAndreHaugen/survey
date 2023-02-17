@@ -635,6 +635,7 @@
 	"ui5_url": "",
 	"cus_theme": "",
 	"css": "file:///css.css",
+	"compiledCss": null,
 	"header": "",
 	"manifest": "",
 	"globalScript": null,
@@ -646,6 +647,8 @@
 	"ui5_ionic": false,
 	"useV2AppHandler": false,
 	"compilerTarget": 3,
+	"tabWidth": null,
+	"printWidth": null,
 	"apis": [
 		{
 			"id": "f1d490cb-f81c-453d-b7df-3b1e3055a391",

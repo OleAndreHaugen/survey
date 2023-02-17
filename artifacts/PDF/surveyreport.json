@@ -133,10 +133,58 @@
 			"attributes": []
 		},
 		{
+			"fieldNo": "450a2e68-1c46-4b68-d600-be9bb066efd1",
+			"fieldName": "oListBulleted",
+			"fieldParent": "d6194d86-8696-4491-b25a-08162f084272",
+			"fieldPos": 3,
+			"fieldType": "neptune.pdf.ul",
+			"dataSource": "{/questions}",
+			"attributes": []
+		},
+		{
+			"fieldNo": "4861ab68-2942-45c3-fcee-4c11c35580c0",
+			"fieldName": "oText",
+			"fieldParent": "450a2e68-1c46-4b68-d600-be9bb066efd1",
+			"fieldPos": 4,
+			"fieldType": "neptune.pdf.text",
+			"attributes": [
+				{
+					"attribute": "text",
+					"grouping": "Properties",
+					"value": "{/questions/title}",
+					"script": "",
+					"translation": []
+				}
+			]
+		},
+		{
+			"fieldNo": "08fc95f2-2f63-420c-d67e-32f91ecb4dcc",
+			"fieldName": "oText1",
+			"fieldParent": "450a2e68-1c46-4b68-d600-be9bb066efd1",
+			"fieldPos": 5,
+			"fieldType": "neptune.pdf.text",
+			"attributes": [
+				{
+					"attribute": "text",
+					"grouping": "Properties",
+					"value": "Drer",
+					"script": "",
+					"translation": []
+				},
+				{
+					"attribute": "font",
+					"grouping": "Font",
+					"value": "Helvetica",
+					"script": "",
+					"translation": []
+				}
+			]
+		},
+		{
 			"fieldNo": "91d554e1-4c9e-4328-d182-96eeb5f1bd1e",
 			"fieldName": "txtTitle",
 			"fieldParent": "d6194d86-8696-4491-b25a-08162f084272",
-			"fieldPos": 3,
+			"fieldPos": 6,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -180,7 +228,7 @@
 			"fieldNo": "85c47578-8d81-4ce5-fbc9-97e80113866c",
 			"fieldName": "txtSubTitle",
 			"fieldParent": "d6194d86-8696-4491-b25a-08162f084272",
-			"fieldPos": 4,
+			"fieldPos": 7,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -224,7 +272,7 @@
 			"fieldNo": "d6297044-3ec4-4602-f5ef-f92009e30504",
 			"fieldName": "tabQuestions",
 			"fieldParent": "d6194d86-8696-4491-b25a-08162f084272",
-			"fieldPos": 5,
+			"fieldPos": 8,
 			"fieldType": "neptune.pdf.table",
 			"dataSource": "{/questions}",
 			"attributes": [
@@ -248,7 +296,7 @@
 			"fieldNo": "552c4afc-81ce-4845-917a-0479235ea14b",
 			"fieldName": "coloTableRows",
 			"fieldParent": "d6297044-3ec4-4602-f5ef-f92009e30504",
-			"fieldPos": 6,
+			"fieldPos": 9,
 			"fieldType": "neptune.pdf.tablerow",
 			"attributes": []
 		},
@@ -256,7 +304,7 @@
 			"fieldNo": "b448c258-191b-4800-80ff-06b107bdbfd8",
 			"fieldName": "oStack",
 			"fieldParent": "552c4afc-81ce-4845-917a-0479235ea14b",
-			"fieldPos": 7,
+			"fieldPos": 10,
 			"fieldType": "neptune.pdf.stack",
 			"attributes": [
 				{
@@ -307,7 +355,7 @@
 			"fieldNo": "1468ef06-b347-4878-accf-1a1852acfc77",
 			"fieldName": "txtoTabletitle",
 			"fieldParent": "b448c258-191b-4800-80ff-06b107bdbfd8",
-			"fieldPos": 8,
+			"fieldPos": 11,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -351,7 +399,7 @@
 			"fieldNo": "b3c9fe6d-2475-413f-9f48-df085a4258c5",
 			"fieldName": "txtoTablesubTitle",
 			"fieldParent": "b448c258-191b-4800-80ff-06b107bdbfd8",
-			"fieldPos": 9,
+			"fieldPos": 12,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -395,7 +443,7 @@
 			"fieldNo": "6cb65732-c75b-4bf7-bd22-e2b049bce2b3",
 			"fieldName": "txtoTableResponses",
 			"fieldParent": "b448c258-191b-4800-80ff-06b107bdbfd8",
-			"fieldPos": 10,
+			"fieldPos": 13,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -439,7 +487,7 @@
 			"fieldNo": "ab4fbd03-8ae1-4750-fb1a-33431f62b768",
 			"fieldName": "chartImage",
 			"fieldParent": "b448c258-191b-4800-80ff-06b107bdbfd8",
-			"fieldPos": 11,
+			"fieldPos": 14,
 			"fieldType": "neptune.pdf.image",
 			"imageData": "",
 			"attributes": [
@@ -470,7 +518,7 @@
 			"fieldNo": "3cd34249-2cfd-4f8d-93c4-c26af68be0a2",
 			"fieldName": "tabResponses",
 			"fieldParent": "b448c258-191b-4800-80ff-06b107bdbfd8",
-			"fieldPos": 12,
+			"fieldPos": 15,
 			"fieldType": "neptune.pdf.table",
 			"dataSource": "{/questions/responses}",
 			"attributes": [
@@ -501,7 +549,7 @@
 			"fieldNo": "48cfa06f-5021-461b-c361-bf0ab1565a6b",
 			"fieldName": "oTableRow",
 			"fieldParent": "3cd34249-2cfd-4f8d-93c4-c26af68be0a2",
-			"fieldPos": 13,
+			"fieldPos": 16,
 			"fieldType": "neptune.pdf.tablerow",
 			"attributes": []
 		},
@@ -509,7 +557,7 @@
 			"fieldNo": "4d8beaf7-1d2d-43d7-aa1f-e88b4e49d5f0",
 			"fieldName": "txtGroup",
 			"fieldParent": "48cfa06f-5021-461b-c361-bf0ab1565a6b",
-			"fieldPos": 14,
+			"fieldPos": 17,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -532,7 +580,7 @@
 			"fieldNo": "d391c96a-c593-4912-d639-d41ae1307df8",
 			"fieldName": "txtAnswer",
 			"fieldParent": "48cfa06f-5021-461b-c361-bf0ab1565a6b",
-			"fieldPos": 15,
+			"fieldPos": 18,
 			"fieldType": "neptune.pdf.text",
 			"attributes": [
 				{
@@ -555,7 +603,7 @@
 			"fieldNo": "f41e316f-1ed8-4c70-b2f1-433b31367830",
 			"fieldName": "Styles",
 			"fieldParent": 0,
-			"fieldPos": 16,
+			"fieldPos": 19,
 			"fieldType": "neptune.pdf.styles",
 			"fieldDescription": "Define your custom styles and assign to objects",
 			"attributes": []
@@ -565,10 +613,10 @@
 	"description": "",
 	"status": "Active",
 	"disabled": false,
-	"ver": "22.12.18.757",
+	"ver": "23.2.16.1434",
 	"publicAccess": false,
 	"enableStorage": false,
-	"dd": "dd = {'pageMargins':[20,40,20,40],'content': [{'text':'{/survey/title}','color':'#6c757d','fontSize':28,'margin':[10,0,0,5]},{'text':'{/survey/subTitle}','color':'#9e9e9e','fontSize':16,'margin':[10,0,0,20]},{'layout':'noBorders','$model':'{/questions}','table': {'widths':['100%'],'body': [[{ 'stack': [{'text':'{/questions/title}','bold':true,'color':'#6c757d','fontSize':14,'visible':'{/survey/show}'},{'text':'{/questions/subTitle}','color':'#9e9e9e','fontSize':12,'margin':[0,5,0,20]},{'text':'{/questions/responsesCount} RESPONSES','bold':true,'color':'#efab01','fontSize':12,'margin':[0,0,0,20]},{ 'image':'','src':'{/questions/imageData}','width':'{/questions/imageWidth}','visible':'{/questions/enableImage}'},,{'layout':'noBorders','margin':[0,10,0,0],'$model':'{/questions/responses}','table': {'widths':[200,350],'body': [[{'text':'{/questions/responses/group}','color':'#9e9e9e'},{'text':'{/questions/responses/text}','color':'#9e9e9e'}]]}}],'width':'100%','pageBreak':'after','margin':[10,10,10,10]}]]}}],'styles': {}}",
+	"dd": "dd = {'pageMargins':[20,40,20,40],'content': [{'ul': [{'text':'{/questions/title}'},{'text':'Drer','font':'Helvetica'}]},{'text':'{/survey/title}','color':'#6c757d','fontSize':28,'margin':[10,0,0,5]},{'text':'{/survey/subTitle}','color':'#9e9e9e','fontSize':16,'margin':[10,0,0,20]},{'layout':'noBorders','$model':'{/questions}','table': {'widths':['100%'],'body': [[{ 'stack': [{'text':'{/questions/title}','bold':true,'color':'#6c757d','fontSize':14,'visible':'{/survey/show}'},{'text':'{/questions/subTitle}','color':'#9e9e9e','fontSize':12,'margin':[0,5,0,20]},{'text':'{/questions/responsesCount} RESPONSES','bold':true,'color':'#efab01','fontSize':12,'margin':[0,0,0,20]},{ 'image':'','src':'{/questions/imageData}','width':'{/questions/imageWidth}','visible':'{/questions/enableImage}'},,{'layout':'noBorders','margin':[0,10,0,0],'$model':'{/questions/responses}','table': {'widths':[200,350],'body': [[{'text':'{/questions/responses/group}','color':'#9e9e9e'},{'text':'{/questions/responses/text}','color':'#9e9e9e'}]]}}],'width':'100%','pageBreak':'after','margin':[10,10,10,10]}]]}}],'styles': {}}",
 	"testdata": [
 		"==OBJECT STRING==",
 		"{\r",
@@ -580,6 +628,17 @@
 		"        {\r",
 		"            \"type\": \"Text\",\r",
 		"            \"title\": \"1. Some Question\",\r",
+		"            \"subTitle\": \"Some Subtitle\",\r",
+		"            \"imageData\": \"/public/images/nsball.png\",\r",
+		"            \"imageWidth\": 0,\r",
+		"            \"enableImage\": false,\r",
+		"            \"enableTable\": false,\r",
+		"            \"responsesCount\": 22,\r",
+		"            \"responses\": []\r",
+		"        },\r",
+		"              {\r",
+		"            \"type\": \"Text\",\r",
+		"            \"title\": \"2. Some Question\",\r",
 		"            \"subTitle\": \"Some Subtitle\",\r",
 		"            \"imageData\": \"/public/images/nsball.png\",\r",
 		"            \"imageWidth\": 0,\r",

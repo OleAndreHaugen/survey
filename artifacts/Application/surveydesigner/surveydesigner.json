@@ -12855,6 +12855,33 @@
 																							"data": []
 																						},
 																						{
+																							"fieldNo": "ca3e0cb6-c846-4f60-ec3c-225c1af37eca",
+																							"fieldName": "toolReceiverFilterEmail",
+																							"fieldParent": "ce9426f4-e857-467f-b389-f12b439b9596",
+																							"fieldType": "sap.m.SearchField",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "placeholder",
+																									"grouping": "Properties",
+																									"value": "Filter by eMail",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "liveChange",
+																									"grouping": "Events",
+																									"value": "formBuilder.filterStatus();",
+																									"script": "formBuilder.filterStatus();",
+																									"translation": []
+																								}
+																							],
+																							"data": []
+																						},
+																						{
 																							"fieldNo": "2a0c453f-703f-4391-a6c1-b7c391c2c325",
 																							"fieldName": "toolReceiverFilter",
 																							"fieldParent": "ce9426f4-e857-467f-b389-f12b439b9596",
@@ -12975,528 +13002,418 @@
 																					]
 																				},
 																				{
-																					"fieldNo": "cf060440-33da-4fbe-a376-26c01424e58d",
-																					"fieldName": "scrollReceivers",
+																					"fieldNo": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																					"fieldName": "tabReceivers",
 																					"fieldParent": "04b6d855-2271-46d1-a38a-0cc30733c9b0",
-																					"fieldType": "sap.m.ScrollContainer",
+																					"fieldType": "sap.ui.table.Table",
 																					"script": "",
 																					"customComponent": false,
+																					"bindingType": "h",
+																					"modelPath": "SurveyMaster>/receivers",
 																					"request": [],
 																					"response": [],
 																					"attributes": [
 																						{
-																							"attribute": "vertical",
+																							"attribute": "visibleRowCountMode",
 																							"grouping": "Properties",
-																							"value": "true",
+																							"value": "Auto",
 																							"script": "",
 																							"translation": []
 																						},
 																						{
-																							"attribute": "horizontal",
+																							"attribute": "selectionMode",
 																							"grouping": "Properties",
-																							"value": "false",
+																							"value": "MultiToggle",
 																							"script": "",
 																							"translation": []
 																						},
 																						{
-																							"attribute": "height",
+																							"attribute": "selectionBehavior",
 																							"grouping": "Properties",
-																							"value": "calc(100% - 50px)",
+																							"value": "Row",
 																							"script": "",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "rowSelectionChange",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": "file://event/sap.ui.table.Table/tabReceivers/rowSelectionChange.js",
+																							"language": "javascript",
+																							"translation": []
+																						},
+																						{
+																							"attribute": "rowsUpdated",
+																							"grouping": "Events",
+																							"value": "Anonymous Function",
+																							"script": "file://event/sap.ui.table.Table/tabReceivers/rowsUpdated.js",
+																							"language": "javascript",
 																							"translation": []
 																						}
 																					],
 																					"data": [
 																						{
-																							"fieldNo": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																							"fieldName": "tabReceivers",
-																							"fieldParent": "cf060440-33da-4fbe-a376-26c01424e58d",
-																							"fieldType": "sap.m.Table",
+																							"fieldNo": "67735aa1-5236-4ea7-cd53-755ab22b1f3b",
+																							"fieldName": "oColReceiversLink",
+																							"fieldParent": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																							"fieldType": "sap.ui.table.Column",
 																							"script": "",
 																							"customComponent": false,
-																							"bindingType": "h",
-																							"modelPath": "SurveyMaster>/receivers",
 																							"request": [],
 																							"response": [],
 																							"attributes": [
 																								{
-																									"attribute": "showNoData",
+																									"attribute": "width",
 																									"grouping": "Properties",
-																									"value": "false",
+																									"value": "60px",
 																									"script": "",
 																									"translation": []
 																								},
 																								{
-																									"attribute": "mode",
+																									"attribute": "label",
 																									"grouping": "Properties",
-																									"value": "MultiSelect",
+																									"value": "Link",
 																									"script": "",
 																									"translation": []
 																								},
 																								{
-																									"attribute": "includeItemInSelection",
+																									"attribute": "hAlign",
 																									"grouping": "Properties",
-																									"value": "true",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "fixedLayout",
-																									"grouping": "Properties",
-																									"value": "false",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "updateFinished",
-																									"grouping": "Events",
-																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Table/tabReceivers/updateFinished.js",
-																									"language": "javascript",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "selectionChange",
-																									"grouping": "Events",
-																									"value": "Anonymous Function",
-																									"script": "file://event/sap.m.Table/tabReceivers/selectionChange.script",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "sticky",
-																									"grouping": "Properties",
-																									"value": "[\"ColumnHeaders\",\"HeaderToolbar\"]",
-																									"script": "",
-																									"translation": []
-																								},
-																								{
-																									"attribute": "contextualWidth",
-																									"grouping": "Properties",
-																									"value": "Auto",
+																									"value": "Center",
 																									"script": "",
 																									"translation": []
 																								}
 																							],
 																							"data": [
 																								{
-																									"fieldNo": "79cc6fe2-6320-4480-cef5-5944553fb188",
-																									"fieldName": "coltabReceiversLink",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
+																									"fieldNo": "c0432274-7b26-4b18-ab7c-1d0bab4e424e",
+																									"fieldName": "txttabReceiversBox",
+																									"fieldParent": "67735aa1-5236-4ea7-cd53-755ab22b1f3b",
+																									"fieldType": "sap.m.VBox",
 																									"script": "",
 																									"customComponent": false,
 																									"request": [],
 																									"response": [],
 																									"attributes": [
 																										{
-																											"attribute": "width",
+																											"attribute": "enableCompactMode",
 																											"grouping": "Properties",
-																											"value": "80px",
+																											"value": "true",
 																											"script": "",
 																											"translation": []
 																										}
 																									],
 																									"data": [
 																										{
-																											"fieldNo": "bf2f1f95-d7f1-4088-e349-4dd19db2d9b5",
-																											"fieldName": "colHtabReceiversLink",
-																											"fieldParent": "79cc6fe2-6320-4480-cef5-5944553fb188",
-																											"fieldType": "sap.m.Text",
+																											"fieldNo": "7e618bb6-2b71-4095-e12b-e57b72bacd2e",
+																											"fieldName": "txttabReceiversLink",
+																											"fieldParent": "c0432274-7b26-4b18-ab7c-1d0bab4e424e",
+																											"fieldType": "sap.m.Button",
 																											"script": "",
 																											"customComponent": false,
 																											"request": [],
 																											"response": [],
 																											"attributes": [
 																												{
-																													"attribute": "text",
+																													"attribute": "type",
 																													"grouping": "Properties",
-																													"value": "Link",
+																													"value": "Attention",
 																													"script": "",
+																													"translation": []
+																												},
+																												{
+																													"attribute": "icon",
+																													"grouping": "Properties",
+																													"value": "sap-icon://chain-link",
+																													"script": "",
+																													"translation": []
+																												},
+																												{
+																													"attribute": "press",
+																													"grouping": "Events",
+																													"value": "Anonymous Function",
+																													"script": "file://event/sap.m.Button/txttabReceiversLink/press.script",
 																													"translation": []
 																												}
 																											],
 																											"data": []
 																										}
 																									]
-																								},
+																								}
+																							]
+																						},
+																						{
+																							"fieldNo": "9b37147c-01e5-45e5-ee3c-874915dbce15",
+																							"fieldName": "oColReceiversGroup",
+																							"fieldParent": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																							"fieldType": "sap.ui.table.Column",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
 																								{
-																									"fieldNo": "d4aa042d-1594-40b4-9eb0-ae0652484a9b",
-																									"fieldName": "coltabReceiversgroup",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
+																									"attribute": "width",
+																									"grouping": "Properties",
+																									"value": "150px",
 																									"script": "",
-																									"customComponent": false,
-																									"disabled": true,
-																									"request": [],
-																									"response": [],
-																									"attributes": [],
-																									"data": [
-																										{
-																											"fieldNo": "b13b04fd-826d-4a13-b312-b8a362c648ca",
-																											"fieldName": "colHtabReceiversgroup",
-																											"fieldParent": "d4aa042d-1594-40b4-9eb0-ae0652484a9b",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"disabled": true,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "Group",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										}
-																									]
+																									"translation": []
 																								},
 																								{
-																									"fieldNo": "6a0b4d12-fdab-4837-a239-3e64c47440b5",
-																									"fieldName": "coltabReceiversemail",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
+																									"attribute": "label",
+																									"grouping": "Properties",
+																									"value": "Group",
 																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [],
-																									"data": [
-																										{
-																											"fieldNo": "fe0c277f-c930-4a00-ee8d-0317de9cb0cf",
-																											"fieldName": "colHtabReceiversemail",
-																											"fieldParent": "6a0b4d12-fdab-4837-a239-3e64c47440b5",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "eMail",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										}
-																									]
-																								},
+																									"translation": []
+																								}
+																							],
+																							"data": [
 																								{
-																									"fieldNo": "91a91a7d-6b1b-44a8-c637-38abde61a6b9",
-																									"fieldName": "coltabReceiversstatus",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [],
-																									"data": [
-																										{
-																											"fieldNo": "24b7ef49-198f-4ebf-d679-19a9e38d57f5",
-																											"fieldName": "colHtabReceiversStatus",
-																											"fieldParent": "91a91a7d-6b1b-44a8-c637-38abde61a6b9",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "Status",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										}
-																									]
-																								},
-																								{
-																									"fieldNo": "e24fb442-d834-4fda-8693-422c4161efac",
-																									"fieldName": "coltabReceiversupdatedat",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
-																									"script": "",
-																									"customComponent": false,
-																									"request": [],
-																									"response": [],
-																									"attributes": [],
-																									"data": [
-																										{
-																											"fieldNo": "a3efc69f-7ba2-46c1-bd62-922d1d3573fa",
-																											"fieldName": "colHtabReceiversupdatedat",
-																											"fieldParent": "e24fb442-d834-4fda-8693-422c4161efac",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "Updated At",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										}
-																									]
-																								},
-																								{
-																									"fieldNo": "52d7dcfd-51c9-41bb-c94b-d6b54703637e",
-																									"fieldName": "coltabReceiversupdatedby",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.Column",
+																									"fieldNo": "64313db3-0eed-40d6-a7d7-e0b51748141e",
+																									"fieldName": "txttabReceiversgroup",
+																									"fieldParent": "9b37147c-01e5-45e5-ee3c-874915dbce15",
+																									"fieldType": "sap.m.Text",
 																									"script": "",
 																									"customComponent": false,
 																									"request": [],
 																									"response": [],
 																									"attributes": [
 																										{
-																											"attribute": "minScreenWidth",
+																											"attribute": "text",
 																											"grouping": "Properties",
-																											"value": "XXLarge",
+																											"value": "{SurveyMaster>groupid}",
 																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "text",
+																											"grouping": "Formatter",
+																											"value": "Anonymous Function",
+																											"script": "file://event/sap.m.Text/txttabReceiversgroup/text.script",
 																											"translation": []
 																										}
 																									],
-																									"data": [
-																										{
-																											"fieldNo": "aa4b9fe4-667b-440d-b979-8bce852e4915",
-																											"fieldName": "colHtabReceiversupdatedby",
-																											"fieldParent": "52d7dcfd-51c9-41bb-c94b-d6b54703637e",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "Updated By",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										}
-																									]
+																									"data": []
+																								}
+																							]
+																						},
+																						{
+																							"fieldNo": "f0870529-2cb9-45d5-ddca-55527ae396c4",
+																							"fieldName": "oColReceiversEmail",
+																							"fieldParent": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																							"fieldType": "sap.ui.table.Column",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "label",
+																									"grouping": "Properties",
+																									"value": "eMail",
+																									"script": "",
+																									"translation": []
 																								},
 																								{
-																									"fieldNo": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																									"fieldName": "colItemtabReceivers",
-																									"fieldParent": "a3edee29-d9c6-4278-81eb-e4f5340413fe",
-																									"fieldType": "sap.m.ColumnListItem",
+																									"attribute": "sorted",
+																									"grouping": "Properties",
+																									"value": "true",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "sortProperty",
+																									"grouping": "Properties",
+																									"value": "email",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "sortOrder",
+																									"grouping": "Properties",
+																									"value": "Ascending",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": [
+																								{
+																									"fieldNo": "f056e19e-d233-434e-9ff2-4cddbec8d1a9",
+																									"fieldName": "txttabReceiversemail",
+																									"fieldParent": "f0870529-2cb9-45d5-ddca-55527ae396c4",
+																									"fieldType": "sap.m.Text",
 																									"script": "",
 																									"customComponent": false,
 																									"request": [],
 																									"response": [],
-																									"attributes": [],
-																									"data": [
+																									"attributes": [
 																										{
-																											"fieldNo": "c0432274-7b26-4b18-ab7c-1d0bab4e424e",
-																											"fieldName": "txttabReceiversBox",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.VBox",
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{SurveyMaster>email}",
 																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "enableCompactMode",
-																													"grouping": "Properties",
-																													"value": "true",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": [
-																												{
-																													"fieldNo": "7e618bb6-2b71-4095-e12b-e57b72bacd2e",
-																													"fieldName": "txttabReceiversLink",
-																													"fieldParent": "c0432274-7b26-4b18-ab7c-1d0bab4e424e",
-																													"fieldType": "sap.m.Button",
-																													"script": "",
-																													"customComponent": false,
-																													"request": [],
-																													"response": [],
-																													"attributes": [
-																														{
-																															"attribute": "type",
-																															"grouping": "Properties",
-																															"value": "Attention",
-																															"script": "",
-																															"translation": []
-																														},
-																														{
-																															"attribute": "icon",
-																															"grouping": "Properties",
-																															"value": "sap-icon://chain-link",
-																															"script": "",
-																															"translation": []
-																														},
-																														{
-																															"attribute": "press",
-																															"grouping": "Events",
-																															"value": "Anonymous Function",
-																															"script": "file://event/sap.m.Button/txttabReceiversLink/press.script",
-																															"translation": []
-																														}
-																													],
-																													"data": []
-																												}
-																											]
-																										},
-																										{
-																											"fieldNo": "64313db3-0eed-40d6-a7d7-e0b51748141e",
-																											"fieldName": "txttabReceiversgroup",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"disabled": true,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>groupid}",
-																													"script": "",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "text",
-																													"grouping": "Formatter",
-																													"value": "Anonymous Function",
-																													"script": "file://event/sap.m.Text/txttabReceiversgroup/text.script",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										},
-																										{
-																											"fieldNo": "f056e19e-d233-434e-9ff2-4cddbec8d1a9",
-																											"fieldName": "txttabReceiversemail",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>email}",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										},
-																										{
-																											"fieldNo": "ece37ce6-1bc5-4710-a747-d3cb95695273",
-																											"fieldName": "txttabReceiversstatus",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.ObjectStatus",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>status}",
-																													"script": "",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "state",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>status}",
-																													"script": "",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "text",
-																													"grouping": "Formatter",
-																													"value": "Anonymous Function",
-																													"script": "file://event/sap.m.ObjectStatus/txttabReceiversstatus/text.script",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "state",
-																													"grouping": "Formatter",
-																													"value": "Anonymous Function",
-																													"script": "file://event/sap.m.ObjectStatus/txttabReceiversstatus/state.script",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										},
-																										{
-																											"fieldNo": "138c369b-1dcb-4ed4-c9c6-36656f540cc8",
-																											"fieldName": "txttabReceiversupdatedat",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>updatedAt}",
-																													"script": "",
-																													"translation": []
-																												},
-																												{
-																													"attribute": "text",
-																													"grouping": "Formatter",
-																													"value": "date:Relative",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
-																										},
-																										{
-																											"fieldNo": "dc03714a-9392-4a95-fc06-23aedaafb6b0",
-																											"fieldName": "txttabReceiversupdatedby",
-																											"fieldParent": "c84efc09-13c2-476c-b8d7-a26bd5f075d7",
-																											"fieldType": "sap.m.Text",
-																											"script": "",
-																											"customComponent": false,
-																											"request": [],
-																											"response": [],
-																											"attributes": [
-																												{
-																													"attribute": "text",
-																													"grouping": "Properties",
-																													"value": "{SurveyMaster>updatedBy}",
-																													"script": "",
-																													"translation": []
-																												}
-																											],
-																											"data": []
+																											"translation": []
 																										}
-																									]
+																									],
+																									"data": []
+																								}
+																							]
+																						},
+																						{
+																							"fieldNo": "ae2a5445-41f8-4159-8bb6-f36dd6e90a58",
+																							"fieldName": "oColReceiversStatus",
+																							"fieldParent": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																							"fieldType": "sap.ui.table.Column",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "label",
+																									"grouping": "Properties",
+																									"value": "Status",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": [
+																								{
+																									"fieldNo": "ece37ce6-1bc5-4710-a747-d3cb95695273",
+																									"fieldName": "txttabReceiversstatus",
+																									"fieldParent": "ae2a5445-41f8-4159-8bb6-f36dd6e90a58",
+																									"fieldType": "sap.m.ObjectStatus",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{SurveyMaster>status}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "state",
+																											"grouping": "Properties",
+																											"value": "{SurveyMaster>status}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "text",
+																											"grouping": "Formatter",
+																											"value": "Anonymous Function",
+																											"script": "file://event/sap.m.ObjectStatus/txttabReceiversstatus/text.script",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "state",
+																											"grouping": "Formatter",
+																											"value": "Anonymous Function",
+																											"script": "file://event/sap.m.ObjectStatus/txttabReceiversstatus/state.script",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								}
+																							]
+																						},
+																						{
+																							"fieldNo": "2664aaa0-9b4a-49c8-bb72-7d221990ddf2",
+																							"fieldName": "oColReceiversUpdatedAt",
+																							"fieldParent": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																							"fieldType": "sap.ui.table.Column",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "width",
+																									"grouping": "Properties",
+																									"value": "150px",
+																									"script": "",
+																									"translation": []
+																								},
+																								{
+																									"attribute": "label",
+																									"grouping": "Properties",
+																									"value": "Updated At",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": [
+																								{
+																									"fieldNo": "138c369b-1dcb-4ed4-c9c6-36656f540cc8",
+																									"fieldName": "txttabReceiversupdatedat",
+																									"fieldParent": "2664aaa0-9b4a-49c8-bb72-7d221990ddf2",
+																									"fieldType": "sap.m.Text",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{SurveyMaster>updatedAt}",
+																											"script": "",
+																											"translation": []
+																										},
+																										{
+																											"attribute": "text",
+																											"grouping": "Formatter",
+																											"value": "date:Relative",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
+																								}
+																							]
+																						},
+																						{
+																							"fieldNo": "643305af-505c-495c-9c92-8a86140021e1",
+																							"fieldName": "oColReceiversUpdatedBy",
+																							"fieldParent": "b5b6c1e1-4f11-4215-86a1-9900d2eb1a1e",
+																							"fieldType": "sap.ui.table.Column",
+																							"script": "",
+																							"customComponent": false,
+																							"request": [],
+																							"response": [],
+																							"attributes": [
+																								{
+																									"attribute": "label",
+																									"grouping": "Properties",
+																									"value": "Updated By",
+																									"script": "",
+																									"translation": []
+																								}
+																							],
+																							"data": [
+																								{
+																									"fieldNo": "dc03714a-9392-4a95-fc06-23aedaafb6b0",
+																									"fieldName": "txttabReceiversupdatedby",
+																									"fieldParent": "643305af-505c-495c-9c92-8a86140021e1",
+																									"fieldType": "sap.m.Text",
+																									"script": "",
+																									"customComponent": false,
+																									"request": [],
+																									"response": [],
+																									"attributes": [
+																										{
+																											"attribute": "text",
+																											"grouping": "Properties",
+																											"value": "{SurveyMaster>updatedBy}",
+																											"script": "",
+																											"translation": []
+																										}
+																									],
+																									"data": []
 																								}
 																							]
 																						}
@@ -17023,7 +16940,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.2.3.658",
+	"ver": "23.2.17.110",
 	"application": "surveydesigner",
 	"title": "Neptune SURVEY",
 	"description": "Neptune SURVEY",
@@ -17038,7 +16955,7 @@
 	"appType": "A",
 	"ui5_m": true,
 	"ui5_f": true,
-	"ui5_table": false,
+	"ui5_table": true,
 	"ui5_tnt": true,
 	"ui5_uxap": false,
 	"ui5_chart": false,
@@ -17048,6 +16965,7 @@
 	"ui5_url": "",
 	"cus_theme": "",
 	"css": "file:///css.css",
+	"compiledCss": "file://script/undefined/undefined.script",
 	"header": "",
 	"manifest": "",
 	"globalScript": null,
@@ -17059,6 +16977,8 @@
 	"ui5_ionic": false,
 	"useV2AppHandler": false,
 	"compilerTarget": 3,
+	"tabWidth": null,
+	"printWidth": 200,
 	"apis": [
 		{
 			"id": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",

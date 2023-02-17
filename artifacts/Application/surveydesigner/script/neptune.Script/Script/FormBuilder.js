@@ -3,11 +3,7 @@ const formBuilder = {
     dataSaved: null,
 
     buildForm: function () {
-        let formData = ModelData.FindFirst(
-            modelMasterData.oData.form,
-            "id",
-            modelSurveyMaster.oData.survey.formid
-        );
+        let formData = ModelData.FindFirst(modelMasterData.oData.form, "id", modelSurveyMaster.oData.survey.formid);
 
         formData = JSON.parse(JSON.stringify(formData));
 
@@ -161,20 +157,12 @@ const formBuilder = {
 
     doSave: function (ignoreWarning = false) {
         modelSurveyData.oData.questions.forEach((question) => {
-            if (
-                (question.type === "Likert" ||
-                    question.type === "SingleChoice" ||
-                    question.type === "MultipleChoice") &&
-                question.items.length === 0
-            ) {
-                sap.m.MessageBox.show(
-                    "One or more of your questions are missing options and can not be answered by the receiver.",
-                    {
-                        icon: sap.m.MessageBox.Icon.WARNING,
-                        actions: sap.m.MessageBox.Action.OK,
-                        title: "Warning",
-                    }
-                );
+            if ((question.type === "Likert" || question.type === "SingleChoice" || question.type === "MultipleChoice") && question.items.length === 0) {
+                sap.m.MessageBox.show("One or more of your questions are missing options and can not be answered by the receiver.", {
+                    icon: sap.m.MessageBox.Icon.WARNING,
+                    actions: sap.m.MessageBox.Action.OK,
+                    title: "Warning",
+                });
             }
         });
 
@@ -247,11 +235,7 @@ const formBuilder = {
             modelSurveyMaster.setData(res);
             formBuilder.dataSaved = modelSurveyMaster.getJSON();
 
-            const form = ModelData.FindFirst(
-                modelMasterData.oData.form,
-                "id",
-                modelSurveyMaster.oData.survey.formid
-            );
+            const form = ModelData.FindFirst(modelMasterData.oData.form, "id", modelSurveyMaster.oData.survey.formid);
 
             modelSurveyData.setData(form);
             formResponse.build(res.responses);
@@ -267,7 +251,7 @@ const formBuilder = {
                 }
             });
             const oSorter2 = new sap.ui.model.Sorter("email", false, false);
-            tabReceivers.getBinding("items").sort([oSorter1, oSorter2]);
+            tabReceivers.getBinding("rows").sort([oSorter1, oSorter2]);
 
             oApp.to(pageSurveyDetail);
         });
@@ -293,7 +277,7 @@ const formBuilder = {
                 id: id,
             },
         }).then(function (res) {
-            tabUsers.removeSelections();
+            tabUsers.clearSelection();
             ModelData.Delete(modelSurveyMaster.oData.users, "id", id);
             modelSurveyMaster.refresh();
             formBuilder.dataSaved = modelSurveyMaster.getJSON();
@@ -310,7 +294,7 @@ const formBuilder = {
                 groupid: groupid,
             },
         }).then(function (res) {
-            tabReceivers.removeSelections();
+            tabReceivers.clearSelection();
             modelSurveyMaster.oData.receivers = res.receivers;
             modelSurveyMaster.refresh();
             formBuilder.dataSaved = modelSurveyMaster.getJSON();
@@ -323,7 +307,7 @@ const formBuilder = {
                 id: id,
             },
         }).then(function (res) {
-            tabReceivers.removeSelections();
+            tabReceivers.clearSelection();
             ModelData.Delete(modelSurveyMaster.oData.receivers, "id", id);
             modelSurveyMaster.refresh();
             formBuilder.dataSaved = modelSurveyMaster.getJSON();
@@ -336,7 +320,7 @@ const formBuilder = {
                 id: id,
             },
         }).then(function (res) {
-            tabReceivers.removeSelections();
+            tabReceivers.clearSelection();
             ModelData.UpdateField(modelSurveyMaster.oData.receivers, "id", id, "status", true);
             modelSurveyMaster.refresh();
             formBuilder.dataSaved = modelSurveyMaster.getJSON();
@@ -367,14 +351,11 @@ const formBuilder = {
         } else {
             inpageSurveyDistribTemplate.setValueState("Error");
 
-            sap.m.MessageBox.show(
-                "Please select an email template to send invites, or create an email template if none exist.",
-                {
-                    icon: sap.m.MessageBox.Icon.ERROR,
-                    title: "Email template not selected",
-                    actions: sap.m.MessageBox.Action.CLOSE,
-                }
-            );
+            sap.m.MessageBox.show("Please select an email template to send invites, or create an email template if none exist.", {
+                icon: sap.m.MessageBox.Icon.ERROR,
+                title: "Email template not selected",
+                actions: sap.m.MessageBox.Action.CLOSE,
+            });
         }
     },
     filterStatus: function () {
@@ -389,18 +370,24 @@ const formBuilder = {
             });
         }
 
+        let filters = [];
+
         const statusFilter = [];
         filterItems.forEach((item) => {
             statusFilter.push(new sap.ui.model.Filter("status", "EQ", item.status));
         });
 
-        const binding = tabReceivers.getBinding("items");
-
         if (statusFilter.length) {
-            binding.filter(new sap.ui.model.Filter(statusFilter, false));
-        } else {
-            binding.filter();
+            filters.push(new sap.ui.model.Filter(statusFilter, false));
         }
+
+        if (toolReceiverFilterEmail.getValue()) {
+            filters.push(new sap.ui.model.Filter("email", "Contains", toolReceiverFilterEmail.getValue()));
+        }
+
+        const binding = tabReceivers.getBinding("rows");
+
+        binding.filter(filters);
     },
 };
 
