@@ -45,13 +45,14 @@ function buildForm(
         const questionTop = new sap.m.Panel("questionTop" + question.id);
         questionTop.addStyleClass("formBorder sapUiMediumMarginTopBottom");
 
-        const questionParent = new sap.m.VBox(undefined, { renderType: sap.m.FlexRendertype.Bare });
+        const questionParent = new sap.m.VBox(undefined, {
+            renderType: sap.m.FlexRendertype.Bare,
+        });
         const questionTitle = new sap.m.HBox();
 
         questionTitle.addItem(
             new nep.bootstrap.Text({
                 text: `${qNum++}. ${question.title}`,
-                textColor: "Secondary",
                 fontSize: "FontSize5",
                 fontWeight: "Bold",
             })
@@ -70,7 +71,6 @@ function buildForm(
             questionParent.addItem(
                 new nep.bootstrap.Text({
                     text: question.subtitle,
-                    textColor: "Secondary",
                     fontSize: "FontSize6",
                 })
             );
@@ -82,6 +82,7 @@ function buildForm(
 
         questionTop.addContent(questionParent);
         parent.addContent(questionTop);
+
         modelResponseData.refresh();
     });
 
@@ -212,6 +213,8 @@ function validateResponses(
         const compositeValText = [multiChoiceValidationText, reqValidationText]
             .filter((text) => !!text)
             .join("\n");
+
+        //@ts-ignore
         sap.m.MessageBox.show(compositeValText, {
             icon: sap.m.MessageBox.Icon.ERROR,
             title: "One or more required questions are missing answers.",

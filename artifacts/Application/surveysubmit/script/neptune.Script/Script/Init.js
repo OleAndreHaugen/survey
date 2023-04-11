@@ -15,6 +15,14 @@ sap.ui.getCore().attachInit(function (startParams) {
             },
         }).then(function (res) {
             if (res.form && res.survey) {
+                if (res.survey.distribution.darkTheme) {
+                    sap.ui.getCore().applyTheme("sap_horizon_dark");
+                }
+
+                setTimeout(function () {
+                    oApp.setVisible(true);
+                }, 100);
+
                 buildForm(panPreview, res.form, link, modelResponseData, surveyid, function () {
                     oApp.to("oPageSubmitted");
                 });

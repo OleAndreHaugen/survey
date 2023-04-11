@@ -2,55 +2,38 @@ const { Like, Any, IsNull } = operators;
 
 const manager = modules.typeorm.getConnection().manager;
 
-const emailTemplates = await manager.find('wf_notifications', {
+const emailTemplates = await manager.find("wf_notifications", {
     select: ["name", "description", "id"],
-    order: {
-        name: "ASC"
-    }
-});
-
-const users = await manager.find('users', {
-    select: ["name", "username", "id"],
-    order: {
-        name: "ASC"
-    }
+    order: { name: "ASC" },
 });
 
 const form = await entities.survey_form.find({
-    where: [
-        {
-            deleted: IsNull()
-        }, {
-            deleted: false
-        }
-    ],
-    order: {
-        name: "ASC"
-    }
+    where: [{ deleted: IsNull() }, { deleted: false }],
+    order: { name: "ASC" },
 });
 
-[
-    { firstName: "Timber", lastName: "Saw" },
-    { firstName: "Stan", lastName: "Lee" },
-]
-
 const survey = await entities.survey_master.find({
-    select: ["name", "description", "id", "updatedAt", "updatedBy", "protected", "createdAt", "createdBy"],
+    select: [
+        "name",
+        "description",
+        "id",
+        "updatedAt",
+        "updatedBy",
+        "protected",
+        "createdAt",
+        "createdBy",
+    ],
     order: {
-        name: "ASC"
-    }
+        name: "ASC",
+    },
 });
 
 const groups = await entities.survey_groups.find({
-    order: {
-        name: "ASC"
-    }
+    order: { name: "ASC" },
 });
 
 const status = await entities.survey_status.find({
-    order: {
-        name: "ASC"
-    }
+    order: { name: "ASC" },
 });
 
 // Check for protected mode
@@ -60,7 +43,6 @@ for (let i = 0; i < survey.length; i++) {
     const surveyData = survey[i];
 
     if (surveyData.protected) {
-
         let showSurvey = false;
 
         if (surveyData.createdBy === req.user.username) showSurvey = true;
@@ -68,18 +50,16 @@ for (let i = 0; i < survey.length; i++) {
         if (!showSurvey) {
             const permission = await entities.survey_users.findOne({
                 surveyid: surveyData.id,
-                username: req.user.username
+                username: req.user.username,
             });
 
             if (permission) showSurvey = true;
         }
 
         if (showSurvey) surveyToSee.push(surveyData);
-
     } else {
         surveyToSee.push(surveyData);
     }
-
 }
 
 result.data = {
@@ -88,10 +68,9 @@ result.data = {
     groups,
     survey: surveyToSee,
     emailTemplates,
-    users,
     user: {
-        username: req.user.username
-    }
-}
+        username: req.user.username,
+    },
+};
 
 complete();

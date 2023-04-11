@@ -256,6 +256,34 @@
 			"endpoints": [],
 			"tags": "Users",
 			"serverScript": "3acb8c42-1296-4c12-958c-74c04cebec44"
+		},
+		{
+			"id": "830f224f-e08a-4b29-f849-71576942508b",
+			"method": "GET",
+			"path": "/formlist",
+			"description": "",
+			"parameters": [],
+			"headers": [],
+			"responses": [
+				{
+					"id": "21437489-880b-4925-c288-790359ed3b50",
+					"status": "200",
+					"description": "OK",
+					"headers": [],
+					"content": [
+						{
+							"id": "899ba1ae-3c1e-49b5-f5a2-1a27157a3587",
+							"name": "MasterData",
+							"objectType": "object"
+						}
+					]
+				}
+			],
+			"content": [],
+			"auth": [],
+			"endpoints": [],
+			"serverScript": "a1c76b18-ebbc-469a-ba10-379bd16bb173",
+			"tags": "Form"
 		}
 	],
 	"definitions": [
@@ -1170,7 +1198,7 @@
 	"documentation": [],
 	"name": "SurveyClient",
 	"endpoint": "/api/serverscript/surveyclient",
-	"ver": "22.12.19.951",
+	"ver": "23.4.6.921",
 	"version": "1.0",
 	"description": null,
 	"mediaType": null,

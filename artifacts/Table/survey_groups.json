@@ -26,13 +26,21 @@
 			"isUnique": false,
 			"isNullable": true,
 			"description": "Setup"
+		},
+		{
+			"id": "575e7418-172f-43a2-a92d-708944d08a44",
+			"fieldName": "color",
+			"fieldType": "smalltext",
+			"isUnique": false,
+			"description": "Color",
+			"isNullable": true
 		}
 	],
 	"indices": [],
 	"foreignKeys": [],
 	"name": "survey_groups",
 	"description": "Survey: Receiver Groups",
-	"ver": "22.12.9.720",
+	"ver": "23.4.5.918",
 	"enableAudit": false,
 	"includeDataInPackage": false,
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1",

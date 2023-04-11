@@ -26,7 +26,7 @@ namespace QuestionBuilder {
             backgroundColor: getTheme() === "sap_horizon" ? "Light" : "",
             ...(definition.enableLongAnswer && {
                 type: "TextArea",
-                height: "120px",                
+                height: "120px",
             }),
         };
         parent.addItem(new nep.bootstrap.Input(options));
@@ -117,8 +117,6 @@ namespace QuestionBuilder {
             validationType === "noLimit"
                 ? textVersion[validationType]
                 : `${textVersion[validationType]} ${validationParam} options.`;
-        //@ts-ignore
-        parent.addItem(new sap.m.Label({ text: labelText }));
 
         question.items.forEach((item, index) => {
             parent.addItem(
@@ -139,6 +137,9 @@ namespace QuestionBuilder {
                 })
             );
         });
+
+        //@ts-ignore
+        parent.addItem(new sap.m.Text({ text: labelText }));
     }
 
     export function Rating(parent: ItemController, definition: QuestionDefinition) {
@@ -181,6 +182,7 @@ namespace QuestionBuilder {
             new nep.bootstrap.Text({
                 //@ts-ignore
                 text: definition.colTitle0,
+                fontSize: "FontSize6",
                 textColor: "Muted",
             })
         );
