@@ -2252,6 +2252,60 @@
 																	]
 																},
 																{
+																	"fieldNo": "4e66767f-8d52-42b4-e20e-24ecae96d9fc",
+																	"fieldName": "lblpageSurveyDetailSender",
+																	"fieldParent": "abd966dd-6a36-4449-b5e8-2d5ead1c0258",
+																	"fieldType": "sap.m.Label",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "text",
+																			"grouping": "Properties",
+																			"value": "From eMail",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": []
+																},
+																{
+																	"fieldNo": "504e061d-8cec-4981-ef49-e13214c5bd94",
+																	"fieldName": "inpageSurveyDetailSender",
+																	"fieldParent": "abd966dd-6a36-4449-b5e8-2d5ead1c0258",
+																	"fieldType": "sap.m.Input",
+																	"script": "",
+																	"customComponent": false,
+																	"request": [],
+																	"response": [],
+																	"attributes": [
+																		{
+																			"attribute": "value",
+																			"grouping": "Properties",
+																			"value": "{SurveyMaster>/survey/distribution/emailSender}",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "placeholder",
+																			"grouping": "Properties",
+																			"value": "Override default email sender address",
+																			"script": "",
+																			"translation": []
+																		},
+																		{
+																			"attribute": "editable",
+																			"grouping": "Properties",
+																			"value": "{appControl>/enableEdit}",
+																			"script": "",
+																			"translation": []
+																		}
+																	],
+																	"data": []
+																},
+																{
 																	"fieldNo": "0ac00fb9-a8aa-465e-e89f-19566dc9d8ba",
 																	"fieldName": "lblpageSurveyDetailSurveyOveride2",
 																	"fieldParent": "abd966dd-6a36-4449-b5e8-2d5ead1c0258",
@@ -6435,7 +6489,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.5.12.725",
+	"ver": "23.6.19.923",
 	"application": "neptune_survey_surveys",
 	"title": "Neptune SURVEY Surveys",
 	"description": "Neptune SURVEY Surveys",

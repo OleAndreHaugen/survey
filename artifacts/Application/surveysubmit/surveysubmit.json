@@ -96,6 +96,68 @@
 							],
 							"data": [
 								{
+									"fieldNo": "cadc475b-8ac6-43b4-a070-fb6c00f7d0d4",
+									"fieldName": "panLogo",
+									"fieldParent": "5ce0b2cc-63ec-41be-d2ad-190b7c8e9ebe",
+									"fieldType": "sap.m.Panel",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClass",
+											"grouping": "Properties",
+											"value": "nepForm",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "height",
+											"grouping": "Properties",
+											"value": "100%",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "backgroundDesign",
+											"grouping": "Properties",
+											"value": "Transparent",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "2c13c88d-befa-4659-b257-add23c9f27ad",
+											"fieldName": "oImage",
+											"fieldParent": "cadc475b-8ac6-43b4-a070-fb6c00f7d0d4",
+											"fieldType": "sap.m.Image",
+											"script": "",
+											"customComponent": false,
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "src",
+													"grouping": "Properties",
+													"value": "/public/images/poweredby_white.png",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "height",
+													"grouping": "Properties",
+													"value": "100px",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
 									"fieldNo": "f1abed31-ea78-4603-ef93-6225ef951745",
 									"fieldName": "panPreview",
 									"fieldParent": "5ce0b2cc-63ec-41be-d2ad-190b7c8e9ebe",
@@ -618,7 +680,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.4.11.1614",
+	"ver": "23.6.19.920",
 	"application": "surveysubmit",
 	"title": "Neptune SURVEY",
 	"description": "Neptune SURVEY",
