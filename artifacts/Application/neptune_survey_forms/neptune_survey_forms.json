@@ -9013,6 +9013,8 @@
 	"compilerTarget": 3,
 	"tabWidth": null,
 	"printWidth": 200,
+	"generateVersionOnActivation": false,
+	"activationHistoryCount": 0,
 	"apis": [
 		{
 			"id": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",

@@ -5616,7 +5616,7 @@
 								{
 									"attribute": "title",
 									"grouping": "Properties",
-									"value": "Add receiver(s) - Separated by semicolon",
+									"value": "Add receiver(s)",
 									"script": "",
 									"translation": []
 								},
@@ -6489,7 +6489,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.6.19.923",
+	"ver": "23.6.19.948",
 	"application": "neptune_survey_surveys",
 	"title": "Neptune SURVEY Surveys",
 	"description": "Neptune SURVEY Surveys",
@@ -6528,6 +6528,8 @@
 	"compilerTarget": 3,
 	"tabWidth": null,
 	"printWidth": 200,
+	"generateVersionOnActivation": false,
+	"activationHistoryCount": 0,
 	"apis": [
 		{
 			"id": "a2b1b0dc-7a0d-4f82-81b6-58a4f991444d",

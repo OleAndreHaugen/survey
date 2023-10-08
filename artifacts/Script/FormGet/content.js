@@ -1,2 +1,2 @@
-result.data = await entities.survey_form.findOne(req.query.id);
+result.data = await entities.survey_form.findOne({ id: req.query.id });
 complete();

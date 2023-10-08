@@ -139,6 +139,8 @@
 	"compilerTarget": 3,
 	"tabWidth": null,
 	"printWidth": null,
+	"generateVersionOnActivation": false,
+	"activationHistoryCount": 0,
 	"apis": [],
 	"package": "dad4ca23-ae9f-49aa-bae7-c84308bebda1"
 }

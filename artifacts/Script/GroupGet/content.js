@@ -1,2 +1,2 @@
-result.data = await entities.survey_groups.findOne(req.query.id);
+result.data = await entities.survey_groups.findOne({ id: req.query.id });
 complete();

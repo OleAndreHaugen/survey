@@ -247,16 +247,21 @@ const controller = {
     },
 
     addReceivers: function (data, groupid) {
-        data = data.replace(/\s+/g, "");
-        let emails = data.split(";");
+        let emails = data.split("\n");
+
+        // data = data.replace(/\s+/g, "");
+        // let emails = data.split(";");
 
         emails = emails.filter((item, index) => {
-            return (
-                index ===
-                emails.findIndex((obj) => {
-                    return JSON.stringify(obj) === JSON.stringify(item);
-                })
-            );
+            if (item && item.length) {
+                item = item.replace(/\s+/g, "");
+                return (
+                    index ===
+                    emails.findIndex((obj) => {
+                        return JSON.stringify(obj) === JSON.stringify(item);
+                    })
+                );
+            }
         });
 
         apiReceiversSave({

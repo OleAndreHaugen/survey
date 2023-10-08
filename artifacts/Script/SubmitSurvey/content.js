@@ -1,15 +1,13 @@
 const { Not } = operators;
 
-const survey = await entities.survey_master.findOne(req.body.surveyid);
+const survey = await entities.survey_master.findOne({ id: req.body.surveyid });
 
 const receiver = await entities.survey_receivers.findOne({
     surveyid: req.body.surveyid,
     id: req.body.link,
 });
 
-
 if (survey && receiver) {
-
     // Receiver Status
     receiver.status = "4";
     await entities.survey_receivers.save(receiver);
@@ -17,8 +15,8 @@ if (survey && receiver) {
     let response = {
         surveyid: req.body.surveyid,
         response: req.body.response,
-        groupid: receiver.groupid
-    }
+        groupid: receiver.groupid,
+    };
 
     if (!survey.distribution.anonymous) {
         response.email = receiver.email;
@@ -33,18 +31,15 @@ if (survey && receiver) {
     await entityManager.save("survey_response", response);
 
     result.data = {
-        status: "OK"
+        status: "OK",
     };
-
 } else {
-
     result.data = {
         status: "ERROR",
         message: "Survey or Receiver is not Active",
         survey,
-        receiver
+        receiver,
     };
-
 }
 
 complete();
